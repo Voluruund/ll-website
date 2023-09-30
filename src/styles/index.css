@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 @import 'cabinet-grotesk.css';
+@import 'navigation.css';
 
 :root{
   --default-lilac: #CCB5E2;
@@ -26,4 +27,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--default-bg-color);
 }
