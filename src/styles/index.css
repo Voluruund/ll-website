@@ -1,7 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import 'cabinet-grotesk.css';
+
+:root{
+  --default-lilac: #CCB5E2;
+  --default-bg-color: #F6F6F4;
+  --default-black: #121212;
+  --default-brd-rad: 10px;
+  --secondary-font: 'Pinyon Script', cursive;
+  --cabinet-variable: 'CabinetGrotesk-Variable';
+  --cabinet-regular: 'CabinetGrotesk-Regular';
+  --cabinet-thin: 'CabinetGrotesk-Thin';
+  --cabinet-extralight: 'CabinetGrotesk-ExtraLight';
+  --cabinet-light: 'CabinetGrotesk-Light';
+  --cabinet-medium: 'CabinetGrotesk-Medium';
+  --cabinet-bold: 'CabinetGrotesk-Bold';
+  --cabinet-extrabold: 'CabinetGrotesk-Extrabold';
+  --cabinet-black: 'CabinetGrotesk-Black';
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: var(--cabinet-regular), BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

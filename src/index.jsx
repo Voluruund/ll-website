@@ -2,16 +2,35 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
-import App from './App.jsx'
-import Clicker from './Clicker';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App clickersCount={ 4 }></App>
-    <h1 className='pippo'>pippo</h1>
-  </React.StrictMode>
-);
+import PageNotFound from './pages/404.jsx'
+import About from './pages/about';
+import Home from './pages/home';
+import Navigation from './common-comp/navigation';
+
+function index(){
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
+    <Router>
+      {/* inserire qui il codice extra router tipo la navbar */}
+      <Navigation/>
+      <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/home" element={<Home />}></Route>
+          <Route exact path="/about" element={<About />}></Route>
+          <Route path='*' element={<PageNotFound />}></Route>
+      </Routes>
+    </Router>
+  )
+}
+
+index()
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
