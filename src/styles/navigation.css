@@ -1,7 +1,7 @@
 /* BOTTOM NAVIGATION STYLES */
 .navigation{
     position: fixed;
-    bottom: 7vh;
+    bottom: 4vh;
     left: 50vw;
     transform: translateX(-50%);
     display: flex;
@@ -14,7 +14,7 @@
     width: 98px;
     height: 30px;
     background-color: var(--default-black);
-    border: solid 5px var(--default-bg-color);
+    /* border: solid 5px var(--default-bg-color); */
     border-radius: 40px;
     cursor: pointer;
     display: flex;
@@ -26,11 +26,11 @@
 
 .menu-toggle::before{
     color: var(--default-lilac);
-    content: 'menu';
+    content: var(--menu-content);
     font-size: 20px;
     text-transform: uppercase;
     font-family: var(--cabinet-medium);
-    transition: .5s;
+    transition: all .5s;
 }
 
 .menu-toggle:hover::before{
@@ -39,12 +39,14 @@
 
 .menu{
     position: absolute;
+    top: -77px;
     width: 0px;
     height: 0px;
     max-width: 90vw;
     border-radius: 10px;
     background-color: var(--default-black);
-    transition: tranform .5s, width .7s, height .7s;
+    transform-origin: bottom;
+    transition: transform .5s, width .7s, height .7s;
     transition-delay: 1s,0.5s,0.5s;
 }
 
@@ -52,6 +54,7 @@
     width: 574px;
     height: 77px;
     transition-delay: 0s, .7s, .7s;
+    transform-origin: bottom;
 }
 
 .menu-toggle.active ~ .menu ul li{
@@ -67,7 +70,7 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    line-height: 77px;
+    /* line-height: 77px; */
 }
 
 .menu ul li{

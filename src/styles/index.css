@@ -17,6 +17,7 @@
   --cabinet-bold: 'CabinetGrotesk-Bold';
   --cabinet-extrabold: 'CabinetGrotesk-Extrabold';
   --cabinet-black: 'CabinetGrotesk-Black';
+  --menu-content: 'menu';
 }
 
 body {
