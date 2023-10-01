@@ -22,6 +22,7 @@
     align-items: center;
     z-index: 10;
     transform: translateY(-30px);
+    font-weight: 500;
 }
 
 .menu-toggle::before{
@@ -31,6 +32,7 @@
     text-transform: uppercase;
     font-family: var(--cabinet-medium);
     transition: all .5s;
+    font-weight: 500;
 }
 
 .menu-toggle:hover::before{
@@ -48,6 +50,7 @@
     transform-origin: bottom;
     transition: transform .5s, width .7s, height .7s;
     transition-delay: 1s,0.5s,0.5s;
+    font-weight: 500;
 }
 
 .menu-toggle.active ~ .menu{
@@ -61,6 +64,7 @@
     opacity: 1;
     visibility: visible;
     transition-delay: 1s;
+    font-weight: 500;
 }
 
 .menu ul{
@@ -79,6 +83,7 @@
     visibility: hidden;
     transition: .25s;
     transition-delay: .5s;
+    font-weight: 500;
 }
 
 .nav-item{
@@ -86,6 +91,7 @@
     text-transform: uppercase;
     text-decoration: none;
     color: var(--default-lilac);
+    font-weight: 500;
 }
 
 @media screen and (max-width: 700px) {

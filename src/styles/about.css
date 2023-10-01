@@ -1,0 +1,65 @@
+.about-wp{
+    width: 100vw;
+    /* height: calc(100% + 200px); */
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.title-about-wp, .p-data-wp{
+    width: 100%;
+    height: inherit;
+}
+
+.p-data-wp{
+    display: grid;
+    grid-template-columns: 25% auto;
+}
+
+.title-cv, .parag-cv{
+    font-weight: 400;
+    margin: 0;
+    font-family: var(--clash-display-variable);
+}
+
+.title-cv{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.parag-testimonial{
+    width: 90%;
+    font-size: 30px;
+    margin: 0;
+}
+
+.parag-cv{
+    width: 90%;
+    font-size: 40px;
+}
+
+.work-pos-wp{
+    font-family: var(--clash-display-variable);
+    margin-top: 60px;
+    font-weight: 400;
+    font-size: 20px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 50px;
+    place-items: center;
+}
+
+.cv-job{
+    font-size: 20px;
+    margin: 0;
+}
+
+.cv-grid{
+    display: grid;
+    grid-template-columns: 30% 60%;
+}
+
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+}
