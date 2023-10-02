@@ -41,10 +41,58 @@ body {
   margin-top: 20px;
 }
 
+.mt-50{
+  margin-top: 50px;
+}
+
 .mt-70{
   margin-top: 70px;
 }
 
 .mt-120{
   margin-top: 120px;
+}
+
+.mtb-200{
+  margin: 200px 0;
+}
+
+.fl-bot{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* MARQUEE DESIGN */
+.text-wrapper{
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--default-lilac);
+  overflow: hidden;
+  width: fit-content;
+  animation: move-rtl 25s linear infinite;
+}
+
+.text-wrapper > h1{
+  z-index: 1;
+  font-family: var(--clash-display-variable);
+  font-weight: 400;
+  font-size: 50px;
+  margin: 30px 0;
+  text-transform: uppercase;
+  color: white;
+  white-space: nowrap;
+  padding: 0 6rem;
+  letter-spacing: 1px;
+}
+
+.r-5{
+  transform: rotate(5deg);
+}
+
+@keyframes move-rtl {
+  to{
+    transform: translateX(-50%);
+  }
 }
