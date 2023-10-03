@@ -3,6 +3,7 @@
 @import 'navigation.css';
 @import 'about.css';
 @import 'clash-display.css';
+@import 'form.css';
 
 :root{
   --default-lilac: #CCB5E2;
@@ -35,6 +36,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--default-bg-color);
+}
+
+.ml-10{
+  margin-left: 10px;
 }
 
 .mt-20{

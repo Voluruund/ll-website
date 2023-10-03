@@ -1,3 +1,5 @@
+import Form  from "../common-comp/form";
+
 function About(){
     return (
         <section className="about-page">
@@ -111,6 +113,7 @@ function About(){
                     <h1><span className="circle"></span>UX Design</h1>
                 </div>
             </div>
+            <Form></Form>
         </section>
     )
 }
