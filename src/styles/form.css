@@ -1,9 +1,9 @@
-.form-wrapper{
+.form-wrapper {
     width: 90%;
     margin: auto;
 }
 
-.form-title{
+.form-title {
     font-size: 55px;
     font-weight: 500;
     font-family: var(--clash-display-variable);
@@ -11,28 +11,29 @@
     width: 100%;
 }
 
-.form-grid{
+.form-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr) 3%;
     align-items: flex-end;
 }
 
-.title-form{
+.title-form {
     margin: 0;
     font-size: 20px;
     font-weight: 500;
     font-family: var(--clash-display-variable);
 }
 
-.form-item{
+.form-item {
     margin-top: 10px;
     height: 40px;
     border: solid 1px;
     border-color: var(--default-lilac);
     outline: none;
+    background-color: var(--default-bg-color);
 }
 
-.form-button{
+.form-button {
     width: 45px;
     aspect-ratio: 1;
     border-color: transparent;
@@ -42,10 +43,10 @@
 }
 
 .material-symbols-outlined {
-  color: white;
+    color: white;
 }
 
-.agree-wrapper{
+.agree-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -53,34 +54,6 @@
     flex-wrap: wrap;
 }
 
-.form-checkbox, input[type="checkbox" i]{
-    outline: none;
-    border-color: var(--default-lilac);
-    width: 20px;
-    aspect-ratio: 1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* The container */
 .container {
     display: block;
     position: relative;
@@ -92,53 +65,46 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  /* Hide the browser's default checkbox */
-  .container input {
+}
+
+.container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
+}
+
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
     width: 20px;
     aspect-ratio: 1;
-    background-color: white;
+    background-color: var(--default-bg-color);
     border: solid 1px var(--default-lilac);
     border-radius: 2px;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
+}
+
+.container:hover input~.checkmark {
     background-color: var(--default-bg-color);
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .container input:checked ~ .checkmark {
+}
+
+.container input:checked~.checkmark {
     background-color: var(--default-lilac);
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
+}
+
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .container input:checked ~ .checkmark:after {
+}
+
+.container input:checked~.checkmark:after {
     display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .container .checkmark:after {
+}
+
+.container .checkmark:after {
     left: 6px;
     top: 3px;
     width: 5px;
@@ -148,4 +114,4 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
+}

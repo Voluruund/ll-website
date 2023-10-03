@@ -13,6 +13,7 @@ import PageNotFound from './pages/404.jsx'
 import About from './pages/about';
 import Home from './pages/home';
 import Navigation from './common-comp/navigation';
+import Form from './common-comp/form';
 
 function index(){
   const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,6 +27,7 @@ function index(){
           <Route exact path="/about" element={<About />}></Route>
           <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
+      <Form></Form>
     </Router>
   )
 }
