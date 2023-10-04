@@ -1,5 +1,3 @@
-import Form  from "../common-comp/form";
-
 function About(){
     return (
         <section className="about-page">
@@ -8,7 +6,6 @@ function About(){
                     <h1 className="about-title">about <br /><span>me</span></h1>
                     <div className="personal-img-wp">
                         <div className='personal-img'></div>
-                        {/* <img src={require('../img/_DSC2424-2.jpg')} alt="Laura" className='personal-img' /> */}
                        <div className="fl-bot">
                             <p className="serious-cta">Serious photo</p>
                        </div>

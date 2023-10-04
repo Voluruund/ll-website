@@ -101,3 +101,31 @@ body {
     transform: translateX(-50%);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.root{
+  position: relative;
+  /* z-index: 100; */
+}
+
+canvas {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
