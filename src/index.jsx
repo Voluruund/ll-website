@@ -27,7 +27,7 @@ function index(){
           <Route exact path="/about" element={<About />}></Route>
           <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
-      {/* <Form></Form> */}
+      <Form></Form>
     </Router>
   )
 }

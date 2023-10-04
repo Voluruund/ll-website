@@ -38,6 +38,41 @@ body {
   background-color: var(--default-bg-color);
 }
 
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+   color: transparent;
+   font-family: var(--clash-display-variable);
+   padding: 0 10px;
+   font-size: 18px;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+   color: transparent;
+   font-family: var(--clash-display-variable);
+   padding: 0 10px;
+   font-size: 18px;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+   color: transparent;
+   font-family: var(--clash-display-variable);
+   padding: 0 10px;
+   font-size: 18px;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+   color: transparent;
+   font-family: var(--clash-display-variable);
+   padding: 0 10px;
+   font-size: 18px;
+}
+input::placeholder {
+   color: transparent;
+   font-family: var(--clash-display-variable);
+   padding: 0 10px;
+   font-size: 18px;
+}
+
 .def-border-radius{
   border-radius: var(--default-brd-rad);
 }
@@ -127,7 +162,7 @@ img{
 
 
 
-
+/* ================================================ */
 .root{
   position: relative;
   /* z-index: 100; */
@@ -142,9 +177,40 @@ canvas {
   z-index: 10;
 }
 
-
+/* ========================================== */
 
 @media screen and (max-width: 700px) {
+
+  /* responsive general styles */
+
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+      color: var(--default-lilac);
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+      color: var(--default-lilac);
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+      color: var(--default-lilac);
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+      color: var(--default-lilac);
+  }
+  input::placeholder {
+      color: var(--default-lilac);
+  }
+  .mobile-hidden{
+    display: none;
+  }
+  .text-wrapper.mtb-200{
+    margin: 100px 0;
+  }
+
+  /* responsive about */
+
   .desk-hidden{
     display: block;
   }
@@ -214,10 +280,29 @@ canvas {
   }
 
   /* responsive navbar */
+
   .menu{
     max-width: 98vw;
   }
   .menu-toggle.active ~ .menu{
     width: 98vw;
+  }
+
+  /* responsive form */
+
+  .form-title{
+    font-size: 30px;
+  }
+  .form-grid{
+    grid-template-columns: 100%;
+  }
+  .form-item{
+    margin: 0;
+  }
+  .agree-wrapper{
+    flex-wrap: nowrap;
+  }
+  .title-form{
+    font-size: 17px;
   }
 }
