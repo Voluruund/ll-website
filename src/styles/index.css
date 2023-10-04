@@ -38,6 +38,14 @@ body {
   background-color: var(--default-bg-color);
 }
 
+.def-border-radius{
+  border-radius: var(--default-brd-rad);
+}
+
+.desk-hidden{
+  display: none;
+}
+
 .ml-10{
   margin-left: 10px;
 }
@@ -66,6 +74,10 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+}
+
+img{
+  border-radius: var(--default-brd-rad) !important;
 }
 
 /* MARQUEE DESIGN */
@@ -128,4 +140,76 @@ canvas {
   top: 0;
   width: 100%;
   z-index: 10;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .desk-hidden{
+    display: block;
+  }
+  .about-wp, .p-data-wp{
+    display: block;
+  }
+  .p-data-wp{
+    width: 90%;
+    margin: auto;
+  }
+  .about-title{
+    font-size: 120px;
+    line-height: 80px;
+  }
+  .personal-img-wp{
+    flex-direction: column-reverse;
+    margin: 100px auto;
+  }
+  .personal-img-wp .fl-bot{
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .serious-cta{
+    margin: 10px 0;
+  }
+  .parag-cv, .parag-testimonial{
+    font-size: 28px;
+    width: 100%;
+  }
+  .title-cv{
+    margin: 20px 0;
+  }
+  .cv-grid{
+    display: block;
+  }
+  .cv-job:nth-child(odd){
+    margin: 10px 0;
+  }
+  .cv-job:nth-child(even){
+    margin: 0 0 50px 0;
+  }
+  .parag-cv-wp{
+    margin-top: 40px;
+  }
+  .work-pos-wp{
+    display: none;
+  }
+  .services-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .services-grid .cv-job{
+    margin: 10px 0;
+  }
+  hr{
+    margin: 40px 0;
+    width: 100%;
+    border-top: 2px solid var(--default-lilac);
+  }
+  .text-wrapper > h1{
+    font-size: 30px;
+  }
+  .circle{
+    width: 20px;
+  }
+  .title-cv-wp.mt-120{
+    margin-top: 70px !important;
+  }
 }

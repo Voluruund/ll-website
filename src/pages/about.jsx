@@ -5,7 +5,7 @@ function About(){
                 <div className="title-about-wp mt-20">
                     <h1 className="about-title">about <br /><span>me</span></h1>
                     <div className="personal-img-wp">
-                        <div className='personal-img'></div>
+                        <div className='personal-img def-border-radius'></div>
                        <div className="fl-bot">
                             <p className="serious-cta">Serious photo</p>
                        </div>
@@ -31,6 +31,7 @@ function About(){
                     </div>
 
                     <div className="title-cv-wp mt-120">
+                        <hr className="desk-hidden"/>
                         <h2 className="title-cv">Curriculum</h2>
                     </div>
                     <div className="parag-cv-wp cv-grid mt-120">
@@ -58,6 +59,7 @@ function About(){
                     </div>
 
                     <div className="title-cv-wp mt-70">
+                        <hr className="desk-hidden"/>
                         <h2 className="title-cv">Services</h2>
                     </div>
                     <div className="parag-cv-wp services-grid mt-70">
@@ -69,8 +71,9 @@ function About(){
                         <p className="cv-job mt-20">Branding</p>
                         <p className="cv-job mt-20">UX Design</p>
                     </div>
-
+                    
                     <div className="title-cv-wp mt-120">
+                        <hr className="desk-hidden"/>
                         <h2 className="title-cv">Testimonials</h2>
                     </div>
                     <div className="parag-cv-wp mt-120">
@@ -90,6 +93,7 @@ function About(){
                             doloremque laudantium, totam rem aperiam “
                         </p>
                         <ul><li>Nome persona</li></ul>
+                        <hr className="desk-hidden"/>
                     </div>
                 </div>
             </section>
