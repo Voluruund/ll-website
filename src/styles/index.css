@@ -212,4 +212,12 @@ canvas {
   .title-cv-wp.mt-120{
     margin-top: 70px !important;
   }
+
+  /* responsive navbar */
+  .menu{
+    max-width: 98vw;
+  }
+  .menu-toggle.active ~ .menu{
+    width: 98vw;
+  }
 }
