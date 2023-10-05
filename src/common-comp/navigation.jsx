@@ -23,10 +23,10 @@ function Navigation(){
         <section className="navigation">
             <div className="menu-toggle">
                 <ul>
-                    <li><Link to="/" className='nav-item d-100'>Home</Link></li>
-                    <li><Link to="/about" className='nav-item d-200'>about</Link></li>
-                    <li><Link to="/works" className='nav-item d-300'>works</Link></li>
-                    <li><Link to="/contact" className='nav-item d-400'>contact</Link></li>
+                    <li><Link to="/" className='nav-item d-500'>Home</Link></li>
+                    <li><Link to="/about" className='nav-item d-600'>about</Link></li>
+                    <li><Link to="/works" className='nav-item d-700'>works</Link></li>
+                    <li><Link to="/contact" className='nav-item d-800'>contact</Link></li>
                 </ul>
             </div>
         </section>

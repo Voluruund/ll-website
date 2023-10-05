@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
 }
 
 .menu-toggle{
@@ -20,7 +21,6 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    transform: translateY(-30px);
     font-weight: 500;
     flex-direction: column-reverse;
     transition: all .5s, width .5s, height .5s;
@@ -54,11 +54,9 @@
     display: block;
     font-weight: 500;
     margin: -30px 0 0 0;
-
-
-    animation: dropDown 0.1s forwards;
+    animation: dropDown 0.4s forwards;
     animation-delay: 600ms;
-    transition-timing-function: cubic-bezier(.98,.3,.3,.9);
+    animation-timing-function: cubic-bezier(.48,.3,.3,.9);
 }
 
 .menu-toggle ul{
@@ -71,8 +69,8 @@
 }
 
 .menu-toggle ul li{
+    margin: 0;
     list-style: none;
-    opacity: 0;
     display: none;
     font-weight: 500;
 }
@@ -81,19 +79,6 @@
     animation: showText forwards;
     animation-duration: .6s;
     margin: -10px 0 0 0;
-}
-
-.d-100{
-    animation-delay: 500ms !important;
-}
-.d-200{
-    animation-delay: 550ms !important;
-}
-.d-300{
-    animation-delay: 600ms !important;
-}
-.d-400{
-    animation-delay: 650ms !important;
 }
 
 .nav-item{
@@ -106,7 +91,8 @@
 
 @keyframes dropDown {
     100%{
-        margin: 0;
+        color: transparent;
+        margin-top: 0;
     }
 }
 
