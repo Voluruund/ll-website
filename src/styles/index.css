@@ -281,12 +281,15 @@ canvas {
 
   /* responsive navbar */
 
-  .menu{
+   .menu-toggle.active{
     max-width: 98vw;
   }
-  .menu-toggle.active ~ .menu{
-    width: 98vw;
+  .menu-toggle::before{
+    margin-bottom: 5px;
   }
+  .nav-item, .menu-toggle::before{
+      font-size: 16px;
+  } 
 
   /* responsive form */
 
