@@ -15,9 +15,9 @@ function Form(){
         <section className="form-wrapper">
             <h2 className="form-title">Drop me a line</h2>
             <div className="form-grid">
-                <p className="title-form mobile-hidden">Nome</p>
+                <p className="title-form mobile-hidden">Name</p>
                 <p className="title-form mobile-hidden">Email</p>
-                <p className="title-form mobile-hidden">Messaggio</p>
+                <p className="title-form mobile-hidden">Object</p>
                 <p className="title-form ml-10 mobile-hidden">Send</p>
 
                 <input type="text" className="form-item" placeholder='Nome'/>

@@ -1,11 +1,26 @@
-function About(){
+import {useParallax } from "react-scroll-parallax";
+import Laura from '../img/Laura-Lavorini.svg'
+
+const About = () => {
+
+    const parallax = useParallax({
+        // easing: 'easeInOutQuad',
+        shouldAlwaysCompleteAnimation: true,
+        // opacity: [.9, 1],
+        speed: 8,
+        scale: [1, .8]
+        // translateY: [0,100],
+    });
+
     return (
         <section className="about-page">
             <section className="about-wp">
                 <div className="title-about-wp mt-20">
                     <h1 className="about-title">about <br /><span>me</span></h1>
                     <div className="personal-img-wp">
-                        <div className='personal-img def-border-radius'></div>
+                        <div className='personal-img def-border-radius'>
+                            <img src={Laura} alt="Laura" className="img-sizes" ref={parallax.ref}/>
+                        </div>
                        <div className="fl-bot">
                             <p className="serious-cta">Serious photo</p>
                        </div>
@@ -17,11 +32,36 @@ function About(){
                         <h2 className="title-cv">bio</h2>
                     </div>
                     <div className="parag-cv-wp">
-                        <p className="parag-cv">
-                            With over 7 years of design experience I have had the opportunity to take on many different projects and
-                            challenges. My classical art degree focused in painting and sculpture gave me the ability to focus on
-                            visual key points to realize a good design project.
+                        <div className="text-anim-wp mobile-hidden">
+                            <p className="parag-cv text-anim d-100">With over 7 years of design </p>
+                        </div>
+                        <div className="text-anim-wp mobile-hidden">
+                            <p className="parag-cv text-anim d-200">experience I have had the opportunity </p>
+                        </div>
+                        <div className="text-anim-wp mobile-hidden">
+                            <p className="parag-cv text-anim d-300">to take on many different projects and </p>
+                        </div>
+                        <div className="text-anim-wp mobile-hidden">
+                            <p className="parag-cv text-anim d-400">challenges. My classical art degree </p>
+                        </div>
+                        <div className="text-anim-wp mobile-hidden">
+                            <p className="parag-cv text-anim d-500"> focused in painting and sculpture gave </p>
+                        </div>
+                        <div className="text-anim-wp mobile-hidden">
+                            <p className="parag-cv text-anim d-600">me the ability to focus onvisual key </p>
+                        </div>
+                        <div className="text-anim-wp mobile-hidden">
+                            <p className="parag-cv text-anim d-700">points to realize a good design project.</p>
+                        </div>
+                        <p className="parag-cv desk-hidden">
+                            With over 7 years of design experience I have had the opportunity to take on many different projects and challenges. 
+                            My classical art degree focused in painting and sculpture gave me the ability to focus on visual key points to realize
+                            a good design project.
                         </p>
+                        
+                        
+                        
+                        
                         <div className="work-pos-wp">
                             <p className="work-pos-p">Graphic Supervisor of the Web Graphic Design Course at Nemo Academy of Digital
                                 Arts</p>

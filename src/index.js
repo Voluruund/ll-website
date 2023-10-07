@@ -14,7 +14,7 @@ import Home from './pages/home';
 import Navigation from './common-comp/navigation';
 import Form from './common-comp/form';
 import Footer from './common-comp/footer'
-
+import { ParallaxProvider } from 'react-scroll-parallax';
 import React, { useState, useRef, useLayoutEffect } from "react";
 
 import { Canvas, useFrame } from "@react-three/fiber"
@@ -65,23 +65,41 @@ function index(){
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <>
-      <Router>
-        <section className='cta-wp'>
-          <a href='#'>Lavoro</a>
-          <a href='#'>Lavoro</a>
-        </section>
-        <Navigation/>
-        <SmoothScroll>
-          <Routes>
-              <Route path='*' element={<PageNotFound />}></Route>
-              <Route exact path="/" element={<Home />}></Route>
-              <Route exact path="/home" element={<Home />}></Route>
-              <Route exact path="/about" element={<About />}></Route>
-          </Routes>
-          <Form></Form>
-          <Footer></Footer>
-        </SmoothScroll>
-      </Router>
+      <ParallaxProvider>
+        <Router>
+          <section className='cta-wp'>
+          <a href="https://florencepopsorchestra.it/product/la-magia-dello-studio-ghibli-in-concerto/" className="button-outline button--atlas-outline">
+            <span href="https://florencepopsorchestra.it/product/la-magia-dello-studio-ghibli-in-concerto/">Works</span>
+            <div className="marqueebutton-outline" aria-hidden="true">
+              <div className="marquee__inner-outline">
+                <span>Works</span>
+                <span>Works</span>
+                <span>Works</span>
+                <span>Works</span>
+                <span>Works</span>
+
+                <span>Works</span>
+                <span>Works</span>
+                <span>Works</span>
+                <span>Works</span>
+                <span>Works</span>
+              </div>
+            </div>
+          </a>
+          </section>
+          <Navigation/>
+          <SmoothScroll>
+            <Routes>
+                <Route path='*' element={<PageNotFound />}></Route>
+                <Route exact path="/" element={<Home />}></Route>
+                <Route exact path="/home" element={<Home />}></Route>
+                <Route exact path="/about" element={<About />}></Route>
+            </Routes>
+            <Form></Form>
+            <Footer></Footer>
+          </SmoothScroll>
+        </Router>
+      </ParallaxProvider>
     </>
   )
 }
