@@ -11,14 +11,11 @@ import {
 import PageNotFound from './pages/404.jsx'
 import About from './pages/about';
 import Home from './pages/home';
+
 import Navigation from './common-comp/navigation';
-import Form from './common-comp/form';
-import Footer from './common-comp/footer'
+
 import { ParallaxProvider } from 'react-scroll-parallax';
 import React, { useState, useRef, useLayoutEffect } from "react";
-
-import { Canvas, useFrame } from "@react-three/fiber"
-import * as THREE from "three"
 
 const config = {
   ease: 0.08,
@@ -61,32 +58,12 @@ const SmoothScroll = ({ children }) => {
   );
 };
 
-function index(){
+function App () {
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <>
       <ParallaxProvider>
         <Router>
-          <section className='cta-wp'>
-          <a href="https://florencepopsorchestra.it/product/la-magia-dello-studio-ghibli-in-concerto/" className="button-outline button--atlas-outline">
-            <span href="https://florencepopsorchestra.it/product/la-magia-dello-studio-ghibli-in-concerto/">Works</span>
-            <div className="marqueebutton-outline" aria-hidden="true">
-              <div className="marquee__inner-outline">
-                <span>Works</span>
-                <span>Works</span>
-                <span>Works</span>
-                <span>Works</span>
-                <span>Works</span>
-
-                <span>Works</span>
-                <span>Works</span>
-                <span>Works</span>
-                <span>Works</span>
-                <span>Works</span>
-              </div>
-            </div>
-          </a>
-          </section>
           <Navigation/>
           <SmoothScroll>
             <Routes>
@@ -95,8 +72,6 @@ function index(){
                 <Route exact path="/home" element={<Home />}></Route>
                 <Route exact path="/about" element={<About />}></Route>
             </Routes>
-            <Form></Form>
-            <Footer></Footer>
           </SmoothScroll>
         </Router>
       </ParallaxProvider>
@@ -104,7 +79,7 @@ function index(){
   )
 }
 
-index()
+App()
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

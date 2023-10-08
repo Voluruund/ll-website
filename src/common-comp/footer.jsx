@@ -2,7 +2,7 @@ import img from '../img/copy-footer.svg'
 
 function Footer(){
     return(
-        <footer className='footer-wp'>
+        <footer className='footer-wp' id='footer'>
             <img src={img} alt="footer" className='img-footer'/>
             <div className="data-footer-wp mt-20">
                 <p className='piva'><a href='#'>P.IVA 02435900978</a></p>
