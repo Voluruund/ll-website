@@ -7,7 +7,7 @@ const Home = () => {
         <>
             <Navigationtop></Navigationtop>
             <h1>pippo home</h1>
-            <div className="r-5">
+            <div className="r-4 z-100">
                 <div className="text-wrapper">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
@@ -24,7 +24,7 @@ const Home = () => {
                     <h1><span className="circle"></span>UX Design</h1>
                 </div>
             </div>
-            <div className="r-5">
+            <div className="">
                 <div className="text-wrapper">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
@@ -41,7 +41,7 @@ const Home = () => {
                     <h1><span className="circle"></span>UX Design</h1>
                 </div>
             </div>
-            <div className="r-5">
+            <div className="r-7 z-100">
                 <div className="text-wrapper">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
@@ -58,7 +58,7 @@ const Home = () => {
                     <h1><span className="circle"></span>UX Design</h1>
                 </div>
             </div>
-            <div className="r-5">
+            <div className="r-m4 z-80">
                 <div className="text-wrapper">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
@@ -75,7 +75,7 @@ const Home = () => {
                     <h1><span className="circle"></span>UX Design</h1>
                 </div>
             </div>
-            <div>
+            <div className='mb-150'>
                 <div className="text-wrapper">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>

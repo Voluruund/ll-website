@@ -105,6 +105,10 @@ input::placeholder {
   margin-top: 70px;
 }
 
+.mb-150{
+  margin-bottom: 150px;
+}
+
 .mt-120{
   margin-top: 120px;
 }
@@ -156,6 +160,7 @@ img{
   overflow: hidden;
   width: fit-content;
   animation: move-rtl 25s linear infinite;
+  border: solid 1px var(--default-bg-color);
 }
 
 .text-wrapper > h1{
@@ -171,8 +176,30 @@ img{
   letter-spacing: 1px;
 }
 
+.r-m4{
+  transform: rotate(-4deg);
+}
+
+.r-4{
+  transform: rotate(4deg);
+}
+
 .r-5{
   transform: rotate(5deg);
+}
+
+.r-7{
+  transform: rotate(7deg);
+}
+
+.z-80{
+  z-index: 80;
+  position: relative;
+}
+
+.z-100{
+  z-index: 100;
+  position: relative;
 }
 
 @keyframes move-rtl {
