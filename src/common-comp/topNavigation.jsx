@@ -20,7 +20,7 @@ const Navigation = () => {
                     </div>
                 </div>
             </a>
-            <a href="#footer" className="button-outline button--atlas-outline js-end">
+            <a href="#form" className="button-outline button--atlas-outline js-end">
                 <span href="https://florencepopsorchestra.it/product/la-magia-dello-studio-ghibli-in-concerto/">Say Hi!</span>
                 <div className="marqueebutton-outline" aria-hidden="true">
                     <div className="marquee__inner-outline">

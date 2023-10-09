@@ -1,13 +1,25 @@
 import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
-import Navigationtop from '../common-comp/topNavigation';
+import Logo from '../img/laura lavorini-logo.svg'
 
 const Home = () => {
     return (
         <>
-            <Navigationtop></Navigationtop>
-            <h1>pippo home</h1>
-            <div className="r-4 z-100">
+            <section className='f-home-section'>
+                <div className="main-title-wp">
+
+                </div>
+                <div className='text-anim-wp main-logo-wp'>
+                    <img src={Logo} alt="laura lavorini"  className='main-logo'/>
+                </div>
+            </section>
+            <section className="main-p-wp">
+
+            </section>
+            <section className="main-img-wp">
+
+            </section>
+            <div className="r-4 z-100 mobile-hidden">
                 <div className="text-wrapper">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
@@ -24,7 +36,24 @@ const Home = () => {
                     <h1><span className="circle"></span>UX Design</h1>
                 </div>
             </div>
-            <div className="">
+            <div className="mobile-hidden">
+                <div className="text-wrapper rev-anim">
+                    <h1><span className="circle"></span>Graphic Design</h1>
+                    <h1><span className="circle"></span>Web Design</h1>
+                    <h1><span className="circle"></span>Illustration</h1>
+                    <h1><span className="circle"></span>Logo Design</h1>
+                    <h1><span className="circle"></span>Branding</h1>
+                    <h1><span className="circle"></span>UX Design</h1>
+
+                    <h1><span className="circle"></span>Graphic Design</h1>
+                    <h1><span className="circle"></span>Web Design</h1>
+                    <h1><span className="circle"></span>Illustration</h1>
+                    <h1><span className="circle"></span>Logo Design</h1>
+                    <h1><span className="circle"></span>Branding</h1>
+                    <h1><span className="circle"></span>UX Design</h1>
+                </div>
+            </div>
+            <div className="r-7 z-100 mobile-hidden">
                 <div className="text-wrapper">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
@@ -41,25 +70,8 @@ const Home = () => {
                     <h1><span className="circle"></span>UX Design</h1>
                 </div>
             </div>
-            <div className="r-7 z-100">
-                <div className="text-wrapper">
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
-
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
-                </div>
-            </div>
-            <div className="r-m4 z-80">
-                <div className="text-wrapper">
+            <div className="r-m4 z-80 mobile-hidden">
+                <div className="text-wrapper rev-anim">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
                     <h1><span className="circle"></span>Illustration</h1>
@@ -76,7 +88,24 @@ const Home = () => {
                 </div>
             </div>
             <div className='mb-150'>
-                <div className="text-wrapper">
+                <div className="text-wrapper mobile-hidden">
+                    <h1><span className="circle"></span>Graphic Design</h1>
+                    <h1><span className="circle"></span>Web Design</h1>
+                    <h1><span className="circle"></span>Illustration</h1>
+                    <h1><span className="circle"></span>Logo Design</h1>
+                    <h1><span className="circle"></span>Branding</h1>
+                    <h1><span className="circle"></span>UX Design</h1>
+
+                    <h1><span className="circle"></span>Graphic Design</h1>
+                    <h1><span className="circle"></span>Web Design</h1>
+                    <h1><span className="circle"></span>Illustration</h1>
+                    <h1><span className="circle"></span>Logo Design</h1>
+                    <h1><span className="circle"></span>Branding</h1>
+                    <h1><span className="circle"></span>UX Design</h1>
+                </div>
+            </div>
+            <div className="r-5 desk-hidden">
+                <div className="text-wrapper mtb-200">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
                     <h1><span className="circle"></span>Illustration</h1>

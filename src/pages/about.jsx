@@ -3,20 +3,18 @@ import Laura from '../img/Laura-Lavorini.svg'
 
 import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
-import Navigationtop from '../common-comp/topNavigation';
 
 const About = () => {
 
     const parallax = useParallax({
-        // easing: 'easeInOutQuad',
+        easing: 'easeInOut',
         shouldAlwaysCompleteAnimation: true,
         speed: 8,
-        scale: [1, .8]
+        scale: [1, .85]
     });
 
     return (
-        <>
-            <Navigationtop></Navigationtop>
+        <>  
             <section className="about-page">
                 <section className="about-wp">
                     <div className="title-about-wp mt-20">

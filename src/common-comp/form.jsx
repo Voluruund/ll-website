@@ -12,7 +12,7 @@ function Form(){
       };
 
     return(
-        <section className="form-wrapper">
+        <section className="form-wrapper" id='form'>
             <h2 className="form-title">Drop me a line</h2>
             <div className="form-grid">
                 <p className="title-form mobile-hidden">Name</p>
