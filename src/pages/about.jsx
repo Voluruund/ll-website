@@ -8,7 +8,7 @@ const About = () => {
 
     const parallax = useParallax({
         easing: 'easeInOut',
-        shouldAlwaysCompleteAnimation: true,
+        // shouldAlwaysCompleteAnimation: true,
         speed: 8,
         scale: [1, .85]
     });
