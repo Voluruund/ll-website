@@ -1,6 +1,7 @@
 import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
 import Logo from '../img/laura lavorini-logo.svg'
+import Faccia from '../img/faccia.jpg'
 
 const Home = () => {
     return (
@@ -17,7 +18,14 @@ const Home = () => {
 
             </section>
             <section className="main-img-wp">
-
+                <div className="two-img-wp">
+                    <div className='top-align'>
+                        <img src={Faccia} alt="faccia" className='img-home'/>
+                    </div>
+                    <div className='bot-align'>
+                        <img src={Faccia} alt="faccia" className='img-home'/>
+                    </div>
+                </div>
             </section>
             <div className="r-4 z-100 mobile-hidden">
                 <div className="text-wrapper">

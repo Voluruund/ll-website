@@ -22,12 +22,6 @@
   --menu-content: 'menu';
 }
 
-
-
-
-
-
-
 html.lenis {
   height: auto;
 }
@@ -48,16 +42,6 @@ html.lenis {
   pointer-events: none;
 }
 
-
-
-
-
-
-
-
-
-
-
 body {
   margin: 0;
   max-width: 100vw;
@@ -66,13 +50,13 @@ body {
   font-family: var(--clash-display-variable), BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
   background-color: var(--default-bg-color);
 }
 
 *, html, body{
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 .js-end{
@@ -497,7 +481,7 @@ hr{
 
 .img-sizes{
   position: absolute;
-  top: -13vh;
+  top: -4vh;
   left: -12.5vw;
   border-radius: 10px;
   width: 800px;
@@ -714,10 +698,27 @@ hr{
 }
 
 .main-img-wp{
-  width: 80vw;
+  width: 85vw;
   margin: 30vh auto;
   height: 200vh;
   background-color: var(--default-lilac);
+}
+
+.two-img-wp{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: red;
+  width: 100%;
+}
+
+.img-home{
+  width: 60%;
+}
+
+.bot-align{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 /* ========================================== */
@@ -880,7 +881,7 @@ hr{
   /* responsive about */
   .img-sizes{
     left: -65vw;
-    top: -12vh;
+    top: -7vh;
     width: 900px;
   }
   .personal-img{
