@@ -1,18 +1,15 @@
 import {useParallax } from "react-scroll-parallax";
-import Laura from '../img/Laura-Lavorini.svg'
-
+import Laura from '../img/Laura-Lavorini.png'
 import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
 
 const About = () => {
-
     const parallax = useParallax({
         easing: 'easeInOut',
         // shouldAlwaysCompleteAnimation: true,
         speed: 4,
         scale: [1, .9]
     });
-
     return (
         <>  
             <section className="about-page">
@@ -29,7 +26,6 @@ const About = () => {
                         </div>
                     </div>
                     <div className="p-data-wp mt-50">
-
                         <div className="title-cv-wp">
                             <h2 className="title-cv">bio</h2>
                         </div>
@@ -74,8 +70,7 @@ const About = () => {
                         </div>
                         <div className="parag-cv-wp cv-grid mt-120">
                             <p className="cv-job">2023 - present</p>
-                            <p className="cv-job">Graphic Supervisor of the Web Graphic Design Course at Nemo Academy of Digital Arts
-                            </p>
+                            <p className="cv-job">Graphic Supervisor of the Web Graphic Design Course at Nemo Academy of Digital Arts</p>
 
                             <p className="cv-job mt-20">2020 - present</p>
                             <p className="cv-job mt-20">Web Graphic Designer Teacher at Nemo Academy of Digital Arts</p>

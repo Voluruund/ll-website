@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
+// const vitals = React.lazy(() => import('./reportWebVitals'))
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  // Link
 } from "react-router-dom";
 
 import PageNotFound from './pages/404.jsx'
@@ -14,21 +14,14 @@ import Home from './pages/home';
 
 import Navigation from './common-comp/navigation';
 import Navigationtop from './common-comp/topNavigation';
+import ScrollToTop from './utils/scrollTop';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
-import {React, useEffect, useState, useRef, useLayoutEffect} from "react";
+import {React} from "react";
 import Lenis from '@studio-freight/lenis'
 
-const config = {
-  ease: 0.08,
-  current: .8,
-  next: 10,
-  previous: 10,
-  rounded: 0
-};
-
 const lenis = new Lenis({
-  duration: 1.2,
+  duration: 2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   direction: "vertical",
   gestureDirection: "vertical",
@@ -46,12 +39,12 @@ function raf(time) {
 }
 
 function App () {
-  
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <>
       <ParallaxProvider>
         <Router>
+          <ScrollToTop></ScrollToTop>
           <Navigation/>
           <Navigationtop></Navigationtop>
           <Routes>
@@ -68,8 +61,7 @@ function App () {
 
 requestAnimationFrame(raf);
 App()
-
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals(console.log);
+// reportWebVitals(console.log);

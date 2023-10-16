@@ -1,4 +1,4 @@
-import img from '../img/copy-footer.svg'
+import img from '../img/copy-footer.png'
 
 function Footer(){
     return(

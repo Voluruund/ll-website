@@ -1,7 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
-@import 'cabinet-grotesk.css';
-@import 'clash-display.css';
-/* @import 'about.css'; */
+/* @import 'cabinet-grotesk.css'; */
+/* @import 'clash-display.css'; */
+
+@font-face {
+  font-family: 'CabinetGrotesk-Variable';
+  src: url('../fonts/CabinetGrotesk-Variable.woff2') format('woff2'),
+       url('../fonts/CabinetGrotesk-Variable.woff') format('woff'),
+       url('../fonts/CabinetGrotesk-Variable.ttf') format('truetype');
+       font-weight: 100 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinetGrotesk-Thin';
+  src: url('../fonts/CabinetGrotesk-Thin.woff2') format('woff2'),
+       url('../fonts/CabinetGrotesk-Thin.woff') format('woff'),
+       url('../fonts/CabinetGrotesk-Thin.ttf') format('truetype');
+       font-weight: 100;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinetGrotesk-Extralight';
+  src: url('../fonts/CabinetGrotesk-Extralight.woff2') format('woff2'),
+       url('../fonts/CabinetGrotesk-Extralight.woff') format('woff'),
+       url('../fonts/CabinetGrotesk-Extralight.ttf') format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinetGrotesk-Light';
+  src: url('../fonts/CabinetGrotesk-Light.woff2') format('woff2'),
+       url('../fonts/CabinetGrotesk-Light.woff') format('woff'),
+       url('../fonts/CabinetGrotesk-Light.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinetGrotesk-Regular';
+  src: url('../fonts/CabinetGrotesk-Regular.woff2') format('woff2'),
+       url('../fonts/CabinetGrotesk-Regular.woff') format('woff'),
+       url('../fonts/CabinetGrotesk-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinetGrotesk-Medium';
+  src: url('../fonts/CabinetGrotesk-Medium.woff2') format('woff2'),
+       url('../fonts/CabinetGrotesk-Medium.woff') format('woff'),
+       url('../fonts/CabinetGrotesk-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinetGrotesk-Bold';
+  src: url('../fonts/CabinetGrotesk-Bold.woff2') format('woff2'),
+       url('../fonts/CabinetGrotesk-Bold.woff') format('woff'),
+       url('../fonts/CabinetGrotesk-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinetGrotesk-Extrabold';
+  src: url('../fonts/CabinetGrotesk-Extrabold.woff2') format('woff2'),
+       url('../fonts/CabinetGrotesk-Extrabold.woff') format('woff'),
+       url('../fonts/CabinetGrotesk-Extrabold.ttf') format('truetype');
+       font-weight: 800;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinetGrotesk-Black';
+  src: url('../fonts/CabinetGrotesk-Black.woff2') format('woff2'),
+       url('../fonts/CabinetGrotesk-Black.woff') format('woff'),
+       url('../fonts/CabinetGrotesk-Black.ttf') format('truetype');
+       font-weight: 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Variable';
+  src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Variable.woff') format('woff'),
+       url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Extralight';
+  src: url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Extralight.woff') format('woff'),
+       url('../fonts/ClashDisplay-Extralight.ttf') format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Light';
+  src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Light.woff') format('woff'),
+       url('../fonts/ClashDisplay-Light.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Regular.woff') format('woff'),
+       url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Medium.woff') format('woff'),
+       url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Semibold';
+  src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
+       url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Bold.woff') format('woff'),
+       url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
 
 :root{
   --default-lilac: #CCB5E2;
@@ -28,6 +187,7 @@ html.lenis {
 
 .lenis.lenis-smooth {
   scroll-behavior: auto;
+  overflow: hidden;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
@@ -50,13 +210,9 @@ body {
   font-family: var(--clash-display-variable), BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: var(--default-bg-color);
-}
-
-*, html, body{
-  /* scroll-behavior: smooth; */
 }
 
 .js-end{
@@ -144,11 +300,20 @@ input::placeholder {
 .d-100{
   animation-delay: 100ms !important;
 }
+.d-150{
+  animation-delay: 150ms !important;
+}
 .d-200{
   animation-delay: 200ms !important;
 }
+.d-250{
+  animation-delay: 250ms !important;
+}
 .d-300{
   animation-delay: 300ms !important;
+}
+.d-350{
+  animation-delay: 350ms !important;
 }
 .d-400{
   animation-delay: 400ms !important;
@@ -687,14 +852,43 @@ hr{
   width: 40vw;
   height: 20vh;
   margin: auto;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title-wp div{
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.main-title-wp p{
+  margin: 0;
+}
+
+.main-title-h{
+  font-size: 4.375em;
+  font-weight: 500;
+}
+
+.cursive-title-h{
+  font-size: 50px;
+  font-family: var(--secondary-font);
+}
+
+.subtitle-h{
+  font-size: 1,25em;
+  font-weight: 500;
 }
 
 .main-p-wp{
-  width: 80vw;
-  margin: 30vh auto;
-  height: 70vw;
-  background-color: green;
+  width: 85vw;
+  margin: 60vh auto;
+}
+
+.main-p-wp .text-anim-wp{
+  width: 90%;
+  margin: auto;
 }
 
 .main-img-wp{
@@ -719,6 +913,72 @@ hr{
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.p-num{
+  font-family: var(--secondary-font);
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+  width: 10%;
+  font-size: 1.25em;
+}
+
+.circular-btn{
+  width: 2.5vw;
+  aspect-ratio: 1;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  margin: 0;
+  position: absolute;
+  background-color: var(--default-lilac);
+  display: inline-block;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.circular-btn .material-symbols-outlined{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 300;
+  font-size: 1.7em;
+}
+
+.btnP-anim{
+  animation: prova 1.3s cubic-bezier(.98,.3,.3,.9) forwards;
+  animation-delay: 1s;
+}
+
+@keyframes prova {
+  from{
+    left: 45%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }to{
+    left: 60%;
+    transform: translate(-50%, -50%) rotate(720deg);
+  }
+}
+
+.main-p-wp .parag-cv{
+  font-size: 3.825em;
+  transform: translateY(3em) rotate(3deg);
+  width: 100%;
+}
+
+.main-p-wp .text-anim-wp:first-of-type .parag-cv{
+  width: 90%;
+}
+
+.main-p-wp .text-anim-wp:last-of-type{
+  position: relative;
+}
+
+.main-p-wp .text-anim-wp:last-of-type .parag-cv{
+  width: fit-content;
 }
 
 /* ========================================== */
