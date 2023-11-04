@@ -17,7 +17,7 @@ import Navigationtop from './common-comp/topNavigation';
 import ScrollToTop from './utils/scrollTop';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
-import {React} from "react";
+import {React, useState} from "react";
 import Lenis from '@studio-freight/lenis'
 
 const lenis = new Lenis({

@@ -782,11 +782,19 @@ hr{
 /* ======================================================= */
 
 /* ================================== footer styles */
+.p-abs-100{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
 .footer-wp{
   padding-top: 20vh;
   width: 95vw;
+  position: relative;
   margin: auto;
+  height: 60vh;
 }
 
 .img-footer{
