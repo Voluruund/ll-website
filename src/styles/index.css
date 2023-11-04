@@ -392,6 +392,11 @@ img{
   position: relative;
 }
 
+.z--1{
+  position: relative;
+  z-index: -1;
+}
+
 @keyframes move-rtl {
   to{
     transform: translateX(-50%);
@@ -794,7 +799,7 @@ hr{
   width: 95vw;
   position: relative;
   margin: auto;
-  height: 60vh;
+  height: 51vh;
 }
 
 .img-footer{
@@ -872,6 +877,7 @@ hr{
 
 .main-title-wp p{
   margin: 0;
+  line-height: 1;
 }
 
 .main-title-h{
