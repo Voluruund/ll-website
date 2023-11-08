@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
-/* @import 'cabinet-grotesk.css'; */
-/* @import 'clash-display.css'; */
 
 @font-face {
   font-family: 'CabinetGrotesk-Variable';
@@ -200,6 +198,10 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+.leva-c-kWgxhW{
+  z-index: 100000000 !important;
 }
 
 body {
@@ -404,6 +406,8 @@ img{
 }
 
 .cta-wp{
+  z-index: 100000;
+  position: relative;
   width: 95vw;
   margin: auto;
   display: grid;
@@ -840,10 +844,114 @@ hr{
 
 /* ================================================== */
 
+/* ======================================= works wp styles */
+.works-bg{
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px 0;
+  background-color: #121212;
+  height: fit-content;
+  position: absolute;
+  top: 100vh;
+  animation: showWorks .7s forwards cubic-bezier(.48,.3,.3,.9);
+  z-index: 999;
+  border-radius: 10px;
+}
+
+@keyframes showWorks {
+    to{
+     top: 7vh;
+    }
+}
+
+.cta-page-switch{
+  margin-top: 5vh !important;
+  font-size: 65px;
+  font-weight: 500;
+}
+
+.cta-page-switch:nth-of-type(2){
+  text-align: right;
+}
+
+.work-cta-wp, .works-desc-wp,.works-grid{
+  width: 86vw;
+  margin: auto;
+}
+
+.work-cta-wp{
+  padding: 5vh 0 20vh 0;
+}
+
+.works-desc-wp{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.works-desc-wp p{
+  margin: 0;
+}
+
+.work-subtitle{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.work-p{
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.works-grid{
+  display: grid;
+  gap: 10px;
+  grid-template-areas: 
+            "tlfirst trfirst"
+            "second second"
+            "tlthird trthird"
+            "fourth fourth";
+}
+
+.tl-first-row,.tr-first-row,.second-row,.fourth-row,.tl-third-row,.tr-third-row{
+  width: 100%;
+  height: 80vh;
+  background-color: red;
+}
+
+.tl-first-row img,.tr-first-row img,.second-row img,.fourth-row img,.tl-third-row img,.tr-third-row img{
+  border-radius: 0 !important;
+  width: 100%;
+  margin: auto;
+}
+
+.tl-first-row{
+  grid-area: tlfirst;
+}
+
+.tr-first-row{
+  grid-area: trfirst;
+}
+
+.second-row{
+  grid-area: second;
+}
+
+.tl-third-row{
+  grid-area: tlthird;
+}
+
+.tr-third-row{
+  grid-area: trthird;
+}
+
+.fourth-row{
+  grid-area: fourth;
+}
+/* ========================================================= */
+
 /* =============================== home styles */
 .f-home-section{
-  height: 84vh;
-  /* background-color: red; */
+  height: 90vh;
   width: 95vw;
   margin: auto;
   margin-bottom: 30vh;
@@ -864,7 +972,7 @@ hr{
 .main-title-wp{
   width: 40vw;
   height: 20vh;
-  margin: auto;
+  margin: -6vh auto auto auto;
   display: flex;
   flex-direction: column;
 }

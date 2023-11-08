@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
-// const vitals = React.lazy(() => import('./reportWebVitals'))
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,8 +8,8 @@ import {
 } from "react-router-dom";
 
 import PageNotFound from './pages/404.jsx'
-import About from './pages/about';
-import Home from './pages/home';
+import About from './pages/About.jsx';
+import Home from './pages/Home.jsx';
 
 import Navigation from './common-comp/navigation';
 import Navigationtop from './common-comp/topNavigation';

@@ -1,5 +1,4 @@
 import {useParallax } from "react-scroll-parallax";
-import Laura from '../img/Laura-Lavorini.png'
 import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
 
@@ -18,7 +17,7 @@ const About = () => {
                         <h1 className="about-title">about <br /><span>me</span></h1>
                         <div className="personal-img-wp">
                             <div className='personal-img def-border-radius'>
-                                <img src={Laura} alt="Laura" className="img-sizes" ref={parallax.ref}/>
+                                <img src={'./img/Laura-Lavorini.png'} alt="Laura" className="img-sizes" ref={parallax.ref}/>
                             </div>
                         <div className="fl-bot">
                                 <p className="serious-cta">Serious photo</p>

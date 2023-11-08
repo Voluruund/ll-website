@@ -1,8 +1,7 @@
 import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
-import Logo from '../img/laura lavorini-logo.png'
-import Faccia from '../img/faccia.jpg'
 import {Link} from "react-router-dom";
+import MultBaloons from '../common-comp/MultBaloons';
 
 var isInViewport = function(elem) {
     var distance = elem.getBoundingClientRect();
@@ -41,13 +40,14 @@ const Home = () => {
     return (
         <>
             <section className='f-home-section'>
+                <MultBaloons />
                 <div className="main-title-wp">
                     <div><p className='main-title-h'>Web Designer</p></div>
                     <div><p className='main-title-h'><span className='cursive-title-h'>and</span> Graphic Designer</p></div>
                     <div><p className='subtitle-h'>Scroll down</p></div>
                 </div>
                 <div className='text-anim-wp main-logo-wp'>
-                    <img src={Logo} alt="laura lavorini"  className='main-logo' loading='lazy'/>
+                    <img src={'./img/laura-lavorini-logo.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
                 </div>
             </section>
             <section className="main-p-wp">
@@ -75,10 +75,10 @@ const Home = () => {
             <section className="main-img-wp">
                 <div className="two-img-wp">
                     <div className='top-align'>
-                        <img src={Faccia} alt="faccia" className='img-home' loading='lazy'/>
+                        <img src={'./img/faccia.jpg'} alt="faccia" className='img-home' loading='lazy'/>
                     </div>
                     <div className='bot-align'>
-                        <img src={Faccia} alt="faccia" className='img-home' loading='lazy'/>
+                        <img src='./img/faccia.jpg' alt="faccia" className='img-home' loading='lazy'/>
                     </div>
                 </div>
             </section>

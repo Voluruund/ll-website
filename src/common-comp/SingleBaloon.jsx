@@ -8,17 +8,7 @@ export default function SingleBaloon(){
     return <>
         <StrictMode>
             <Leva collapsed />
-            <Canvas
-                shadows
-                // camera={
-                //     {
-                //         fov: 90,
-                //         near: 100,
-                //         far: 200,
-                //         position: [0,0,0]
-                //     }
-                // }
-            >
+            <Canvas>
                 <Baloon></Baloon>
             </Canvas>
         </StrictMode>
