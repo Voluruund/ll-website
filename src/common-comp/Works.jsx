@@ -46,16 +46,16 @@ export default function Works(props){
                     <img src="./img/prova.jpg" alt="prova" />
                 </div>
                 <div className="grid-item second-row">
-
+                    <img src="./img/longimg.jpg" alt="prova" />
                 </div>
                 <div className="grid-item tl-third-row">
-
+                    <img src="./img/prova.jpg" alt="prova" />   
                 </div>
                 <div className="grid-item tr-third-row">
-
+                    <img src="./img/prova.jpg" alt="prova" />
                 </div>
                 <div className="grid-item fourth-row">
-
+                    <img src="./img/longimg.jpg" alt="prova" />
                 </div>
             </div>
             <div className="works-desc-wp">

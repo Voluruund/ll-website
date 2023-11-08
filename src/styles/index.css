@@ -865,7 +865,7 @@ hr{
 }
 
 .cta-page-switch{
-  margin-top: 5vh !important;
+  margin-top: 8vh !important;
   font-size: 65px;
   font-weight: 500;
 }
@@ -915,12 +915,11 @@ hr{
 .tl-first-row,.tr-first-row,.second-row,.fourth-row,.tl-third-row,.tr-third-row{
   width: 100%;
   height: 80vh;
-  background-color: red;
 }
 
 .tl-first-row img,.tr-first-row img,.second-row img,.fourth-row img,.tl-third-row img,.tr-third-row img{
-  border-radius: 0 !important;
   width: 100%;
+  max-height: 100%;
   margin: auto;
 }
 
