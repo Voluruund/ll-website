@@ -1,17 +1,25 @@
 import {useParallax } from "react-scroll-parallax";
 import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
+import { useEffect } from "react";
 
 const About = () => {
+  
+    useEffect(() => {
+        document.getElementById('top')?.scrollIntoView();
+        console.log(document.getElementById('top'))
+    })
+
     const parallax = useParallax({
         easing: 'easeInOut',
         // shouldAlwaysCompleteAnimation: true,
         speed: 4,
         scale: [1, .9]
     });
+
     return (
         <>  
-            <section className="about-page">
+            <section className="about-page" id="top">
                 <section className="about-wp">
                     <div className="title-about-wp mt-20">
                         <h1 className="about-title">about <br /><span>me</span></h1>

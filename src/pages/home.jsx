@@ -83,7 +83,7 @@ const Home = () => {
                 </div>
             </section>
             <div className="r-4 z-100 mobile-hidden">
-                <div className="text-wrapper">
+                <div className="text-wrapper a-50">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
                     <h1><span className="circle"></span>Illustration</h1>
@@ -100,7 +100,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="mobile-hidden">
-                <div className="text-wrapper rev-anim">
+                <div className="text-wrapper rev-anim a-35">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
                     <h1><span className="circle"></span>Illustration</h1>
@@ -134,7 +134,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="r-m4 z-80 mobile-hidden">
-                <div className="text-wrapper rev-anim">
+                <div className="text-wrapper rev-anim a-50">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
                     <h1><span className="circle"></span>Illustration</h1>
@@ -151,7 +151,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='mb-150'>
-                <div className="text-wrapper mobile-hidden">
+                <div className="text-wrapper mobile-hidden a-40">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Web Design</h1>
                     <h1><span className="circle"></span>Illustration</h1>

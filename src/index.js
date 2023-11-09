@@ -16,7 +16,7 @@ import Navigationtop from './common-comp/topNavigation';
 import ScrollToTop from './utils/scrollTop';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
-import {React, useState} from "react";
+import {React, useEffect, useState} from "react";
 import Lenis from '@studio-freight/lenis'
 
 const lenis = new Lenis({
@@ -37,7 +37,15 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 
+document.querySelectorAll('a[href^="#"].scrollto').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    lenis.scrollTo(this.getAttribute('href'))
+  });
+})
+
 function App () {
+
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <>

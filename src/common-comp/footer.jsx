@@ -4,8 +4,8 @@ function Footer(){
     return(
         <footer className='footer-wp' id='footer'>
             <SingleBaloon />
-            <div className='z--1 p-abs-100'>
-                <img src={'./img/copy-footer.png'} alt="footer" className='img-footer'/>
+            <div className='p-abs-100'>
+                <img src={'./img/copy-footer.svg'} alt="footer" className='img-footer'/>
                 <div className="data-footer-wp mt-20">
                     <p className='piva'><a href='#'>P.IVA 02435900978</a></p>
                     <div className='social'>

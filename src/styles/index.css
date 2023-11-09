@@ -204,7 +204,7 @@ html.lenis {
   z-index: 100000000 !important;
 }
 
-body {
+body,html {
   margin: 0;
   max-width: 100vw;
   overflow-x: hidden;
@@ -215,6 +215,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--default-bg-color);
+  overscroll-behavior: none;
 }
 
 .js-end{
@@ -1100,6 +1101,18 @@ hr{
 
 .main-p-wp .text-anim-wp:last-of-type .parag-cv{
   width: fit-content;
+}
+
+.a-35{
+  animation-duration: 35s;
+}
+
+.a-40{
+  animation-duration: 40s;
+}
+
+.a-50{
+  animation-duration: 50s;
 }
 
 /* ========================================== */

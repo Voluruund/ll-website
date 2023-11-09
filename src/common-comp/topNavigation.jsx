@@ -3,40 +3,35 @@ import { useState } from "react";
 import Works from '../common-comp/Works';
 
 
-// const lenis = new Lenis({
-//   duration: 1.2,
-//   easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net
-//   direction: 'vertical',
-//   smooth: true,
-//   smoothTouch: false,
-//   touchMultiplier: 2,
-// })
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net
+  direction: 'vertical',
+  smooth: true,
+  smoothTouch: false,
+  touchMultiplier: 2,
+})
 
-// window.lenis = lenis;
+window.lenis = lenis;
 
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
 
-//get scroll value
-//lenis.on("scroll", ({ scroll, limit }) => {
-//  console.log({ scroll, limit });
-//});
+requestAnimationFrame(raf);
 
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
-
-// requestAnimationFrame(raf);
-
-
+console.log(document.querySelectorAll('a[href^="#"].scrollto'))
 
 const Navigation = () => {
 
-    // document.querySelectorAll('.button-outline').forEach(anchor => {
-    //     anchor.addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         lenis.scrollTo(this.getAttribute('href'))
-    //     });
-    // })
+    document.querySelectorAll('a[href^="#"].scrollto').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          lenis.scrollTo(this.getAttribute('href'))
+          console.log(this.getAttribute('href'))
+        });
+    })
 
     const [isActive, setIsActive] = useState(false);
 
@@ -65,7 +60,7 @@ const Navigation = () => {
                     </div>
                 </div>
             </a>
-            <a href="#form" className="button-outline button--atlas-outline js-end">
+            <a className="button-outline button--atlas-outline js-end scrollto" href="#form">
                 <span>Say Hi!</span>
                 <div className="marqueebutton-outline" aria-hidden="true">
                     <div className="marquee__inner-outline">

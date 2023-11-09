@@ -1,6 +1,13 @@
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 
 export default function Works(props){
+
+    useEffect(() => {
+        const someFunc = () => {
+          console.log("component did mount")
+        }
+        someFunc()
+      }, [])
 
     return <>
         <div className="works-bg">

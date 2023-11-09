@@ -8,7 +8,7 @@ export default function SingleBaloon(){
     return <>
         <StrictMode>
             <Leva collapsed />
-            <Canvas>
+            <Canvas style={{position: 'absolute', zIndex: 800, width: '100vw', left: '-2.5vw', top: '-5vh'}}>
                 <Baloon></Baloon>
             </Canvas>
         </StrictMode>
