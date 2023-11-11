@@ -37,12 +37,16 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 
-document.querySelectorAll('a[href^="#"].scrollto').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    lenis.scrollTo(this.getAttribute('href'))
-  });
-})
+window.setTimeout(
+  document.onreadystatechange = function () {
+    document.querySelectorAll('a[href^="#"].scrollto').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        lenis.scrollTo(this.getAttribute('href'))
+      });
+    })
+  }
+  , 200)
 
 function App () {
 

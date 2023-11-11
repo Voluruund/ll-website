@@ -72,7 +72,7 @@ const Home = () => {
                     <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
                 </div>
             </section>
-            <section className="main-img-wp">
+            <section className="main-img-wp" id='work'>
                 <div className="two-img-wp">
                     <div className='top-align'>
                         <img src={'./img/faccia.jpg'} alt="faccia" className='img-home' loading='lazy'/>

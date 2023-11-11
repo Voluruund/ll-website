@@ -4,15 +4,16 @@ import Footer from '../common-comp/footer'
 import { useEffect } from "react";
 
 const About = () => {
-  
+    
+    const lenis = window.lenis
+
     useEffect(() => {
-        document.getElementById('top')?.scrollIntoView();
-        console.log(document.getElementById('top'))
+        lenis.scrollTo('top')
     })
 
     const parallax = useParallax({
         easing: 'easeInOut',
-        // shouldAlwaysCompleteAnimation: true,
+        shouldAlwaysCompleteAnimation: true,
         speed: 4,
         scale: [1, .9]
     });

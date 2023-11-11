@@ -35,7 +35,7 @@ export default function Navigation(){
                     <li><Link to="/" className='nav-item d-500' onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
                     <li><Link to="/about" className='nav-item d-600' onClick={() => window.scrollTo(0, 0)}>about</Link></li>
                     <li><a className='nav-item d-700' onClick={handleWorks}>works</a></li>
-                    <li><Link to="/contact" className='nav-item d-800' onClick={() => window.scrollTo(0, 0)}>contact</Link></li>
+                    <li><a to="/contact" className='nav-item d-800 scrollto' href="#form">contact</a></li>
                 </ul>
             </div>
         </section>

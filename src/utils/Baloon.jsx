@@ -2,10 +2,12 @@ import { useGLTF } from "@react-three/drei";
 import { useControls } from "leva";
 import { Perf } from "r3f-perf";
 import { OrbitControls, Clone, Float, AccumulativeShadows, RandomizedLight, Lightformer, Environment } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 
 export default function Baloon(){
 
     const model = useGLTF('./models/balloon-laura.gltf')
+    const { viewport } = useThree()
 
     const { baloonScale } = useControls('baloon', {
         baloonScale:{
