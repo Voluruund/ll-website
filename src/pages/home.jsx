@@ -16,6 +16,8 @@ var isInViewport = function(elem) {
 var findMe
 var numP
 var pBtn
+var imgList
+var showMore
 
 const Home = () => {
 
@@ -25,6 +27,9 @@ const Home = () => {
                 findMe = document.querySelectorAll('.parag-cv');
                 numP = document.getElementById('01')
                 pBtn = document.getElementById('btnP')
+                imgList = document.querySelectorAll('.img-home')
+                showMore = document.getElementById("view-more");
+                console.log(showMore)
             }
             window.addEventListener('scroll', function(e) {
                 findMe.forEach(element => {
@@ -35,10 +40,57 @@ const Home = () => {
                     }
                 });
             }, false)
-        }, 200)
+
+            showMore.setAttribute('listener', 'false')
+
+            imgList.forEach(element => {
+                if(showMore.getAttribute('listener') !== 'true'){
+                    element.addEventListener('mouseover', function(e){
+                            window.addEventListener('mousemove', function(e){
+                                let left = (e.pageX + 30)+"px";
+                                let top = (e.pageY - 30)+"px"
+                                showMore.setAttribute('listener', 'true')
+                                showMore.style.visibility = 'visible'
+                                showMore.style.left = left;
+                                showMore.style.top = top;
+                            });
+                    }, false)
+                }
+            })
+
+            imgList.forEach(element => {
+                element.addEventListener('mouseout', function(e){
+                    window.addEventListener('mousemove', function(e){
+                        showMore.style.visibility = 'hidden'
+                    });
+                }, false)
+            })
+    }, 800)
 
     return (
         <>
+
+            <div className='view-more' id='view-more'>
+                <a className="button-outline button--atlas-outline" id="footer-cta">
+                    <span id='hide-btn-default'>View more</span>
+                    <div className="marqueebutton-outline" aria-hidden="true">
+                        <div className="marquee__inner-outline btn-hover-reset">
+                            <span>View more</span>
+                            <span>View more</span>
+                            <span>View more</span>
+                            <span>View more</span>
+                            <span>View more</span>
+
+                            <span>View more</span>
+                            <span>View more</span>
+                            <span>View more</span>
+                            <span>View more</span>
+                            <span>View more</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
             <section className='f-home-section'>
                 <MultBaloons />
                 <div className="main-title-wp">
@@ -73,14 +125,11 @@ const Home = () => {
                 </div>
             </section>
             <section className="main-img-wp" id='work'>
-                <div className="two-img-wp">
-                    <div className='top-align'>
-                        <img src={'./img/faccia.jpg'} alt="faccia" className='img-home' loading='lazy'/>
-                    </div>
-                    <div className='bot-align'>
-                        <img src='./img/faccia.jpg' alt="faccia" className='img-home' loading='lazy'/>
-                    </div>
-                </div>
+                <img src={'./img/faccia.jpg'} alt="faccia" className='img-home' loading='lazy'/>
+                <img src='./img/faccia.jpg' alt="faccia" className='img-home' loading='lazy'/>
+                <img src={'./img/imgProvaDue.png'} alt="faccia" className='img-home' loading='lazy'/>
+                <img src='./img/imgProvaUno.png' alt="faccia" className='img-home' loading='lazy'/>
+                <img src={'./img/imgProvaTre.png'} alt="faccia" className='img-home' loading='lazy'/>
             </section>
             <div className="r-4 z-100 mobile-hidden">
                 <div className="text-wrapper a-50">
