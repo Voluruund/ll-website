@@ -2,6 +2,8 @@ import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
 import {Link} from "react-router-dom";
 import MultBaloons from '../common-comp/MultBaloons';
+import { useState } from 'react';
+import Works from '../common-comp/Works';
 
 var isInViewport = function(elem) {
     var distance = elem.getBoundingClientRect();
@@ -20,6 +22,16 @@ var imgList
 var showMore
 
 const Home = () => {
+
+    const [isActive, setIsActive] = useState(false);
+
+    const handleWorks = event => {
+        let lenis = window.lenis
+        lenis.scrollTo('top')
+        window.setTimeout(function() {
+            setIsActive(current => !current)
+        }, 1000)
+    };
 
     window.setTimeout(
         document.onreadystatechange = function () {
@@ -91,8 +103,8 @@ const Home = () => {
                 </a>
             </div>
 
-            <section className='f-home-section'>
-                <MultBaloons />
+            <section className='f-home-section' id='top'>
+                {/* <MultBaloons /> */}
                 <div className="main-title-wp">
                     <div><p className='main-title-h'>Web Designer</p></div>
                     <div><p className='main-title-h'><span className='cursive-title-h'>and</span> Graphic Designer</p></div>
@@ -102,7 +114,7 @@ const Home = () => {
                     <img src={'./img/laura-lavorini-logo.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
                 </div>
             </section>
-            <section className="main-p-wp">
+            <section className="main-p-wp mobile-hidden">
                 <div className="text-anim-wp mobile-hidden">
                     <p className='p-num d-100' id='01'>(01)</p>
                     <p className="parag-cv d-100">I’m Florence-based web graphic designer  </p>
@@ -124,12 +136,45 @@ const Home = () => {
                     <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
                 </div>
             </section>
+            <section className="main-p-wp desk-hidden">
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-100">I’m Florence-based web </p>
+                </div>
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-200">graphic designer with 7</p>
+                </div>
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-300">years of experience in the</p>
+                </div>
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-400">design field. Since 2020 I </p>
+                </div>
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-500">had the opportunity to be</p>
+                </div>
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-600">a web design teacher at </p>
+                </div>
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-700">Nemo Academy of Digital</p>
+                </div>
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-800">Arts. Passionate about </p>
+                </div>
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-900">typography, design and </p>
+                </div>
+                <div className="text-anim-wp desk-hidden">
+                    <p className="parag-cv d-1000">art in every way and form.</p>
+                </div>
+            </section>
+            {isActive ? <Works /> : null}
             <section className="main-img-wp" id='work'>
-                <img src={'./img/faccia.jpg'} alt="faccia" className='img-home' loading='lazy'/>
-                <img src='./img/faccia.jpg' alt="faccia" className='img-home' loading='lazy'/>
-                <img src={'./img/imgProvaDue.png'} alt="faccia" className='img-home' loading='lazy'/>
-                <img src='./img/imgProvaUno.png' alt="faccia" className='img-home' loading='lazy'/>
-                <img src={'./img/imgProvaTre.png'} alt="faccia" className='img-home' loading='lazy'/>
+                <img src={'./img/faccia.jpg'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                <img src='./img/faccia.jpg' alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                <img src={'./img/imgProvaDue.png'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                <img src='./img/imgProvaUno.png' alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                <img src={'./img/imgProvaTre.png'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
             </section>
             <div className="r-4 z-100 mobile-hidden">
                 <div className="text-wrapper a-50">
@@ -234,7 +279,7 @@ const Home = () => {
                 </div>
             </div>
             <Form></Form>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </>
     )
 }

@@ -345,6 +345,12 @@ input::placeholder {
 .d-800{
   animation-delay: 800ms !important;
 }
+.d-900{
+  animation-delay: 900ms !important;
+}
+.d-1000{
+  animation-delay: 1000ms !important;
+}
 
 .fl-bot{
   display: flex;
@@ -1352,7 +1358,7 @@ hr{
     height: 60vh;
   }
   .desk-hidden{
-    display: block;
+    display: block !important;
   }
   .about-wp, .p-data-wp{
     display: block;
@@ -1457,5 +1463,38 @@ hr{
   }
   .social, .data-footer-wp{
     border-top: solid 2px var(--default-lilac);
+  }
+
+  /* responsive home */
+  .main-img-wp{
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 10vh;
+    width: 90vw;
+    height: fit-content;
+  }
+
+  .main-p-wp{
+    width: fit-content;
+    margin: auto;
+  }
+
+  .main-img-wp .img-home{
+    display: block;
+    position: initial;
+    width: 100% !important;
+  }
+
+  .parag-cv-wp{
+    width: 90vw;
+  }
+
+  .parag-cv, .main-p-wp .text-anim-wp:first-of-type .parag-cv{
+    font-size: 1.625rem !important;
+    width: 100%;
+  }
+
+  .main-p-wp .text-anim-wp{
+    width: 100%;
   }
 }

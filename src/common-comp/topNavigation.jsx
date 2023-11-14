@@ -1,17 +1,6 @@
-// import Lenis from "@studio-freight/lenis";
-// import { useState } from "react";
-// import Works from '../common-comp/Works';
-
 const Navigation = () => {
 
-    // const [isActive, setIsActive] = useState(false);
-
-    // const handleWorks = event => {
-    //   setIsActive(current => !current);
-    // };
-
     return( <>
-        {/* {isActive ? <Works /> : null} */}
         <section className='cta-wp'>
             <a className="button-outline button--atlas-outline scrollto" id="footer-cta" href="#work">
                 <span>Works</span>

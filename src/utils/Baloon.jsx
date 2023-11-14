@@ -1,12 +1,13 @@
 import { useGLTF } from "@react-three/drei";
 import { useControls } from "leva";
 import { Perf } from "r3f-perf";
-import { OrbitControls, Clone, Float, AccumulativeShadows, RandomizedLight, Lightformer, Environment } from "@react-three/drei";
+import { Clone, Float} from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
+import Lights from "./Lights";
 
 export default function Baloon(){
 
-    const model = useGLTF('./models/balloon-laura.gltf')
+    const model = useGLTF('./models/baloon.glb')
     const { viewport } = useThree()
 
     const { baloonScale } = useControls('baloon', {
@@ -53,29 +54,8 @@ export default function Baloon(){
 
         { perfVisible && <Perf position="top-left" /> }
 
-        {/* <OrbitControls makeDefault /> */}
+       <Lights />
 
-        <directionalLight intensity={15} position={[3,3,2]}></directionalLight>
-        <directionalLight intensity={15} position={[-3,-3,2]}></directionalLight>
-        {/* <pointLight position={[-2,-1,2]} intensity={10} castShadow /> */}
-        <pointLight position={[2,1,4]} intensity={10}/>
-        <spotLight position={[0, 10, 0]} angle={0.3} penumbra={1} intensity={20} shadow-bias={-0.001}/>
-        <ambientLight intensity={10}/>
-
-        <AccumulativeShadows temporal frames={100} scale={10}>
-            <RandomizedLight amount={8} position={[5, 5, -10]} />
-        </AccumulativeShadows>
-
-        <Environment>
-            <color args={ [ '#666666' ] } attach="background" />
-            <Lightformer
-                position-z={ - 5 }
-                scale={ 4 }
-                color="#888888"
-                intensity={ 5 }
-                form={'ring'}
-            />
-        </Environment>
         <Float
             speed={3} // Animation speed, defaults to 1
             rotationIntensity={2} // XYZ rotation intensity, defaults to 1
