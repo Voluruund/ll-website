@@ -1316,6 +1316,12 @@ hr{
 
 /* ========================================== responsive styles*/
 
+@media screen and (max-width: 1400px) {
+  #view-more{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 700px) {
   /* responsive general styles */
   ::-webkit-input-placeholder {
@@ -1489,12 +1495,71 @@ hr{
     width: 90vw;
   }
 
-  .parag-cv, .main-p-wp .text-anim-wp:first-of-type .parag-cv{
+  .parag-cv, .main-p-wp .text-anim-wp:first-of-type .parag-cv, .p-num{
     font-size: 1.625rem !important;
     width: 100%;
   }
 
   .main-p-wp .text-anim-wp{
+    width: 100%;
+  }
+
+  .p-num{
+    margin: 0 0 12vh 0;
+  }
+
+  .circular-btn-wp-mobile{
+    display: grid !important;
+    grid-template-columns: 15vw auto 45vw;
+    align-items: center;
+    margin-top: 5vh;
+  }
+
+  #learn-more-p{
+    width: fit-content;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .circular-btn{
+    width: 12vw;
+    position: initial;
+    transform: translate(0);
+  }
+
+  .row{
+    width: 90%;
+    height: 2px;
+    background-color: var(--default-lilac);
+    margin: 0 auto;
+  }
+
+  .main-title-wp{
+    width: 100%;
+    margin: 5vh 0 0 0;
+    position: relative;
+    height: 77vh;
+  }
+
+  .main-title-h, .cursive-title-h{
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  .cursive-title-h{
+    width: 100%;
+    display: inline-block;
+  }
+
+  .main-logo-wp{
+    bottom: 5vh;
+  }
+
+  .subt-wp{
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
   }
 }

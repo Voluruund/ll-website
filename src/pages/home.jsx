@@ -108,7 +108,7 @@ const Home = () => {
                 <div className="main-title-wp">
                     <div><p className='main-title-h'>Web Designer</p></div>
                     <div><p className='main-title-h'><span className='cursive-title-h'>and</span> Graphic Designer</p></div>
-                    <div><p className='subtitle-h'>Scroll down</p></div>
+                    <div className='subt-wp'><p className='subtitle-h'>Scroll down</p></div>
                 </div>
                 <div className='text-anim-wp main-logo-wp'>
                     <img src={'./img/laura-lavorini-logo.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
@@ -137,6 +137,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="main-p-wp desk-hidden">
+                <p className='p-num' id='01'>(01)</p>
                 <div className="text-anim-wp desk-hidden">
                     <p className="parag-cv d-100">I’m Florence-based web </p>
                 </div>
@@ -166,6 +167,11 @@ const Home = () => {
                 </div>
                 <div className="text-anim-wp desk-hidden">
                     <p className="parag-cv d-1000">art in every way and form.</p>
+                </div>
+                <div className="desk-hidden circular-btn-wp-mobile">
+                    <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
+                    <p id='learn-more-p'>learn more</p>
+                    <div className='row'></div>
                 </div>
             </section>
             {isActive ? <Works /> : null}
@@ -279,7 +285,7 @@ const Home = () => {
                 </div>
             </div>
             <Form></Form>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </>
     )
 }

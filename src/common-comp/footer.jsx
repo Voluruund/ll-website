@@ -3,7 +3,7 @@ import SingleBaloon from './SingleBaloon'
 function Footer(){
     return(
         <footer className='footer-wp' id='footer'>
-            <SingleBaloon />
+            {/* <SingleBaloon /> */}
             <div className='p-abs-100'>
                 <img src={'./img/copy-footer.svg'} alt="footer" className='img-footer'/>
                 <div className="data-footer-wp mt-20">
