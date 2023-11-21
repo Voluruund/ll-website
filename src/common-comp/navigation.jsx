@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import { useState } from "react";
+import { StrictMode, useState } from "react";
 import Works from "./Works";
 
 export default function Navigation(){
@@ -29,16 +29,18 @@ export default function Navigation(){
 
     return <>
      {isActive ? <Works /> : null}
-        <section className="navigation">
-            <div className="menu-toggle">
-                <ul>
-                    <li><Link to="/" className='nav-item d-500' onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
-                    <li><Link to="/about" className='nav-item d-600' onClick={() => window.scrollTo(0, 0)}>about</Link></li>
-                    <li><a className='nav-item d-700' onClick={handleWorks}>works</a></li>
-                    <li><a to="/contact" className='nav-item d-800 scrollto' href="#form">contact</a></li>
-                </ul>
-            </div>
-        </section>
+        <StrictMode>
+            <section className="navigation">
+                <div className="menu-toggle">
+                    <ul>
+                        <li><Link to="/" className='nav-item d-500'>Home</Link></li>
+                        <li><Link to="/about" className='nav-item d-600'>about</Link></li>
+                        <li><a className='nav-item d-700' onClick={handleWorks}>works</a></li>
+                        <li><a to="/contact" className='nav-item d-800 scrollto' href="#form">contact</a></li>
+                    </ul>
+                </div>
+            </section>
+        </StrictMode>
     </>
        
 }

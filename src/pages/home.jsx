@@ -2,7 +2,7 @@ import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
 import {Link} from "react-router-dom";
 import MultBaloons from '../common-comp/MultBaloons';
-import { useState } from 'react';
+import { StrictMode, Suspense, useState } from 'react';
 import Works from '../common-comp/Works';
 
 var isInViewport = function(elem) {
@@ -41,11 +41,11 @@ const Home = () => {
                 pBtn = document.getElementById('btnP')
                 imgList = document.querySelectorAll('.img-home')
                 showMore = document.getElementById("view-more");
-                console.log(showMore)
             }
             window.addEventListener('scroll', function(e) {
                 findMe.forEach(element => {
                     if (isInViewport(element)) {
+                        console.log(pBtn)
                         pBtn.classList.add("btnP-anim")
                         numP.classList.add("text-anim")
                         element.classList.add("text-anim");
@@ -81,211 +81,214 @@ const Home = () => {
 
     return (
         <>
+            <StrictMode>
+                <div className='view-more' id='view-more'>
+                    <a className="button-outline button--atlas-outline" id="footer-cta">
+                        <span id='hide-btn-default'>View more</span>
+                        <div className="marqueebutton-outline" aria-hidden="true">
+                            <div className="marquee__inner-outline btn-hover-reset">
+                                <span>View more</span>
+                                <span>View more</span>
+                                <span>View more</span>
+                                <span>View more</span>
+                                <span>View more</span>
 
-            <div className='view-more' id='view-more'>
-                <a className="button-outline button--atlas-outline" id="footer-cta">
-                    <span id='hide-btn-default'>View more</span>
-                    <div className="marqueebutton-outline" aria-hidden="true">
-                        <div className="marquee__inner-outline btn-hover-reset">
-                            <span>View more</span>
-                            <span>View more</span>
-                            <span>View more</span>
-                            <span>View more</span>
-                            <span>View more</span>
-
-                            <span>View more</span>
-                            <span>View more</span>
-                            <span>View more</span>
-                            <span>View more</span>
-                            <span>View more</span>
+                                <span>View more</span>
+                                <span>View more</span>
+                                <span>View more</span>
+                                <span>View more</span>
+                                <span>View more</span>
+                            </div>
                         </div>
+                    </a>
+                </div>
+
+                <section className='f-home-section' id='top'>
+                    <Suspense fallback={null}>
+                        <MultBaloons />
+                    </Suspense>
+                    <div className="main-title-wp">
+                        <div><p className='main-title-h'>Web Designer</p></div>
+                        <div><p className='main-title-h'><span className='cursive-title-h'>and</span> Graphic Designer</p></div>
+                        <div className='subt-wp'><p className='subtitle-h'>Scroll down</p></div>
                     </div>
-                </a>
-            </div>
+                    <div className='text-anim-wp main-logo-wp'>
+                        <img src={'./img/laura-lavorini-logo.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
+                    </div>
+                </section>
+                <section className="main-p-wp mobile-hidden">
+                    <div className="text-anim-wp mobile-hidden">
+                        <p className='p-num d-100' id='01'>(01)</p>
+                        <p className="parag-cv d-100">I’m Florence-based web graphic designer  </p>
+                    </div>
+                    <div className="text-anim-wp mobile-hidden">
+                        <p className="parag-cv d-200">with 7 years of experience in the design field. Since</p>
+                    </div>
+                    <div className="text-anim-wp mobile-hidden">
+                        <p className="parag-cv d-300">2020 I had the opportunity to be a web design </p>
+                    </div>
+                    <div className="text-anim-wp mobile-hidden">
+                        <p className="parag-cv d-400">teacher at Nemo Academy of Digital Arts. </p>
+                    </div>
+                    <div className="text-anim-wp mobile-hidden">
+                        <p className="parag-cv d-500">Passionate about typography, design and art in </p>
+                    </div>
+                    <div className="text-anim-wp mobile-hidden">
+                        <p className="parag-cv d-600">every way and form.</p>
+                        <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
+                    </div>
+                </section>
+                <section className="main-p-wp desk-hidden">
+                    <p className='p-num' id='01'>(01)</p>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-100">I’m Florence-based web </p>
+                    </div>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-200">graphic designer with 7</p>
+                    </div>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-300">years of experience in the</p>
+                    </div>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-400">design field. Since 2020 I </p>
+                    </div>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-500">had the opportunity to be</p>
+                    </div>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-600">a web design teacher at </p>
+                    </div>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-700">Nemo Academy of Digital</p>
+                    </div>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-800">Arts. Passionate about </p>
+                    </div>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-900">typography, design and </p>
+                    </div>
+                    <div className="text-anim-wp desk-hidden">
+                        <p className="parag-cv d-1000">art in every way and form.</p>
+                    </div>
+                    <div className="desk-hidden circular-btn-wp-mobile">
+                        <Link to="/about"  className='circular-btn-mob'><span className="material-symbols-outlined">arrow_forward</span></Link>
+                        <p id='learn-more-p'>learn more</p>
+                        <div className='row'></div>
+                    </div>
+                </section>
+                {isActive ? <Works /> : null}
+                <section className="main-img-wp" id='work'>
+                    <img src={'./img/faccia.jpg'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                    <img src='./img/faccia.jpg' alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                    <img src={'./img/imgProvaDue.png'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                    <img src='./img/imgProvaUno.png' alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                    <img src={'./img/imgProvaTre.png'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                </section>
+                <div className="r-4 z-100 mobile-hidden">
+                    <div className="text-wrapper a-50">
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
 
-            <section className='f-home-section' id='top'>
-                {/* <MultBaloons /> */}
-                <div className="main-title-wp">
-                    <div><p className='main-title-h'>Web Designer</p></div>
-                    <div><p className='main-title-h'><span className='cursive-title-h'>and</span> Graphic Designer</p></div>
-                    <div className='subt-wp'><p className='subtitle-h'>Scroll down</p></div>
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
+                    </div>
                 </div>
-                <div className='text-anim-wp main-logo-wp'>
-                    <img src={'./img/laura-lavorini-logo.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
-                </div>
-            </section>
-            <section className="main-p-wp mobile-hidden">
-                <div className="text-anim-wp mobile-hidden">
-                    <p className='p-num d-100' id='01'>(01)</p>
-                    <p className="parag-cv d-100">I’m Florence-based web graphic designer  </p>
-                </div>
-                <div className="text-anim-wp mobile-hidden">
-                    <p className="parag-cv d-200">with 7 years of experience in the design field. Since</p>
-                </div>
-                <div className="text-anim-wp mobile-hidden">
-                    <p className="parag-cv d-300">2020 I had the opportunity to be a web design </p>
-                </div>
-                <div className="text-anim-wp mobile-hidden">
-                    <p className="parag-cv d-400">teacher at Nemo Academy of Digital Arts. </p>
-                </div>
-                <div className="text-anim-wp mobile-hidden">
-                    <p className="parag-cv d-500">Passionate about typography, design and art in </p>
-                </div>
-                <div className="text-anim-wp mobile-hidden">
-                    <p className="parag-cv d-600">every way and form.</p>
-                    <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
-                </div>
-            </section>
-            <section className="main-p-wp desk-hidden">
-                <p className='p-num' id='01'>(01)</p>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-100">I’m Florence-based web </p>
-                </div>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-200">graphic designer with 7</p>
-                </div>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-300">years of experience in the</p>
-                </div>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-400">design field. Since 2020 I </p>
-                </div>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-500">had the opportunity to be</p>
-                </div>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-600">a web design teacher at </p>
-                </div>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-700">Nemo Academy of Digital</p>
-                </div>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-800">Arts. Passionate about </p>
-                </div>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-900">typography, design and </p>
-                </div>
-                <div className="text-anim-wp desk-hidden">
-                    <p className="parag-cv d-1000">art in every way and form.</p>
-                </div>
-                <div className="desk-hidden circular-btn-wp-mobile">
-                    <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
-                    <p id='learn-more-p'>learn more</p>
-                    <div className='row'></div>
-                </div>
-            </section>
-            {isActive ? <Works /> : null}
-            <section className="main-img-wp" id='work'>
-                <img src={'./img/faccia.jpg'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
-                <img src='./img/faccia.jpg' alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
-                <img src={'./img/imgProvaDue.png'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
-                <img src='./img/imgProvaUno.png' alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
-                <img src={'./img/imgProvaTre.png'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
-            </section>
-            <div className="r-4 z-100 mobile-hidden">
-                <div className="text-wrapper a-50">
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                <div className="mobile-hidden">
+                    <div className="text-wrapper rev-anim a-35">
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
 
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
+                    </div>
                 </div>
-            </div>
-            <div className="mobile-hidden">
-                <div className="text-wrapper rev-anim a-35">
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                <div className="r-7 z-100 mobile-hidden">
+                    <div className="text-wrapper">
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
 
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
+                    </div>
                 </div>
-            </div>
-            <div className="r-7 z-100 mobile-hidden">
-                <div className="text-wrapper">
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                <div className="r-m4 z-80 mobile-hidden">
+                    <div className="text-wrapper rev-anim a-50">
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
 
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
+                    </div>
                 </div>
-            </div>
-            <div className="r-m4 z-80 mobile-hidden">
-                <div className="text-wrapper rev-anim a-50">
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                <div className='mb-150'>
+                    <div className="text-wrapper mobile-hidden a-40">
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
 
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
+                    </div>
                 </div>
-            </div>
-            <div className='mb-150'>
-                <div className="text-wrapper mobile-hidden a-40">
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                <div className="r-5 desk-hidden">
+                    <div className="text-wrapper mtb-200">
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
 
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
+                        <h1><span className="circle"></span>Graphic Design</h1>
+                        <h1><span className="circle"></span>Web Design</h1>
+                        <h1><span className="circle"></span>Illustration</h1>
+                        <h1><span className="circle"></span>Logo Design</h1>
+                        <h1><span className="circle"></span>Branding</h1>
+                        <h1><span className="circle"></span>UX Design</h1>
+                    </div>
                 </div>
-            </div>
-            <div className="r-5 desk-hidden">
-                <div className="text-wrapper mtb-200">
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
-
-                    <h1><span className="circle"></span>Graphic Design</h1>
-                    <h1><span className="circle"></span>Web Design</h1>
-                    <h1><span className="circle"></span>Illustration</h1>
-                    <h1><span className="circle"></span>Logo Design</h1>
-                    <h1><span className="circle"></span>Branding</h1>
-                    <h1><span className="circle"></span>UX Design</h1>
-                </div>
-            </div>
-            <Form></Form>
-            <Footer></Footer>
+                <Form></Form>
+                <Footer></Footer>
+            </StrictMode>
         </>
     )
 }

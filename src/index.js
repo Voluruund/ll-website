@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,7 +13,6 @@ import Home from './pages/Home.jsx';
 
 import Navigation from './common-comp/navigation';
 import Navigationtop from './common-comp/topNavigation';
-import ScrollToTop from './utils/scrollTop';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
 import {React, useEffect, useState} from "react";
@@ -49,13 +48,12 @@ window.setTimeout(
   , 200)
 
 function App () {
-
+  raf()
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <>
       <ParallaxProvider>
         <Router>
-          <ScrollToTop></ScrollToTop>
           <Navigation/>
           <Navigationtop></Navigationtop>
           <Routes>
@@ -70,7 +68,6 @@ function App () {
   )
 }
 
-requestAnimationFrame(raf);
 App()
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

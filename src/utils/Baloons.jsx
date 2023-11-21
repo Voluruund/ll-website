@@ -1,12 +1,13 @@
 import { useGLTF } from "@react-three/drei";
 import { useControls } from "leva";
-import { Perf } from "r3f-perf";
 import { Clone, Float} from "@react-three/drei";
 import Lights from "./Lights";
+import { StrictMode } from "react";
 
 export default function Baloons(){
 
-    const model = useGLTF('./models/baloon.glb')
+    const {nodes, materials} = useGLTF('./models/baloon.glb')
+    // const model = useGLTF('./models/untitled.glb')
 
     const { baloonScale } = useControls('baloons', {
         baloonScale:{
@@ -37,84 +38,27 @@ export default function Baloons(){
 
     const { baloonPositionZ } = useControls('baloons', {
         baloonPositionZ:{
-            value: 1.56,
+            value: 1,
             step: 0.01,
             min: 0,
             max: 5
         }
     })
 
-    const { perfVisible } = useControls('debug', {
-        perfVisible: false
-    })
-    
     return <>
-
-        { perfVisible && <Perf position="top-left" /> }
-
-        <Lights />
-
-        <Float
-            speed={3} // Animation speed, defaults to 1
-            rotationIntensity={2} // XYZ rotation intensity, defaults to 1
-            // floatIntensity={1.5} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-            floatingRange={[-.15, .15]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
-        >
-            <Clone object={model.scene} scale={baloonScale} rotation-x={1.5} position={[baloonPositionX,baloonPositionY,baloonPositionZ]}/>
-        </Float>
-
-        <Float
-            speed={3} // Animation speed, defaults to 1
-            rotationIntensity={.8} // XYZ rotation intensity, defaults to 1
-            // floatIntensity={1.5} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-            floatingRange={[-.15, .15]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
-        >
-             <Clone object={model.scene} scale={baloonScale} rotation-x={1.5} position={[-6,2,-3]} className='prova'/>
-        </Float>
-
-        <Float
-            speed={3} // Animation speed, defaults to 1
-            rotationIntensity={1} // XYZ rotation intensity, defaults to 1
-            // floatIntensity={1.5} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-            floatingRange={[-.15, .15]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
-        >
-            <Clone object={model.scene} scale={baloonScale} rotation-x={1.5} position={[8,2, -5]} className='prova'/>
-        </Float>
-
-        <Float
-            speed={2} // Animation speed, defaults to 1
-            rotationIntensity={.4} // XYZ rotation intensity, defaults to 1
-            // floatIntensity={1.5} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-            floatingRange={[-.15, .15]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
-        >
-            <Clone object={model.scene} scale={baloonScale} rotation-x={1.5} position={[-16, 10, -12]} className='prova'/>
-        </Float>
-
-        <Float
-            speed={2} // Animation speed, defaults to 1
-            rotationIntensity={.5} // XYZ rotation intensity, defaults to 1
-            // floatIntensity={1.5} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-            floatingRange={[-.15, .15]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
-        >
-            <Clone object={model.scene} scale={baloonScale} rotation-x={1.5} position={[10,-4, -9]} className='prova'/>
-        </Float>
-
-        <Float
-            speed={3} // Animation speed, defaults to 1
-            rotationIntensity={.5} // XYZ rotation intensity, defaults to 1
-            // floatIntensity={1.5} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-            floatingRange={[-.15, .15]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
-        >
-            <Clone object={model.scene} scale={baloonScale} rotation-x={1.5} position={[-18, -6, -12]} className='prova'/>
-        </Float>
-
-        <Float
-            speed={3} // Animation speed, defaults to 1
-            rotationIntensity={.7} // XYZ rotation intensity, defaults to 1
-            // floatIntensity={1.5} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-            floatingRange={[-.10, .10]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
-        >
-            <Clone object={model.scene} scale={baloonScale} rotation-x={1.5} position={[11,7, -8]} className='prova'/>
-        </Float>
+        <StrictMode>
+            <Lights />
+            <Float
+                speed={3}
+                rotationIntensity={2}
+                floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
+            >
+                <group dispose={null}>
+                    <mesh castShadow receiveShadow material={materials['Material.001']} dispose={null}>
+                        <Clone object={nodes.Scene} scale={baloonScale} rotation-x={1.5} position={[baloonPositionX,baloonPositionY,baloonPositionZ]} dispose={null}/>
+                    </mesh>
+                </group>
+            </Float>
+        </StrictMode>
     </>
 }

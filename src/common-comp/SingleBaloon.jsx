@@ -3,17 +3,25 @@ import { Leva } from "leva"
 import { StrictMode } from "react"
 import Baloon from "../utils/Baloon"
 import { Suspense } from "react"
+import { PerformanceMonitor, Stats } from "@react-three/drei"
+import { useState } from "react"
 
 
 export default function SingleBaloon(){
+
+    const [dpr, setDpr] = useState(.7)
+
     return <>
         <StrictMode>
             <Leva collapsed />
-            <Canvas style={{position: 'absolute', zIndex: 800, width: '100vw', left: '-2.5vw', top: '-5vh'}}>
-                <Suspense>
-                    <Baloon></Baloon>
-                </Suspense>
-            </Canvas>
+            <Suspense fallback={null}>
+                <Canvas style={{position: 'absolute', zIndex: 800, width: '100vw', left: '-2.5vw', top: '-5vh'}} dpr={dpr}>
+                    <PerformanceMonitor onDecline={() => setDpr(.5)} flipflops={1}/>
+                    <Suspense fallback={null}>
+                        <Baloon></Baloon>
+                    </Suspense>
+                </Canvas>
+            </Suspense>
         </StrictMode>
     </>
 }
