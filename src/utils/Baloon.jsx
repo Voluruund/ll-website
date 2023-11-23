@@ -70,7 +70,7 @@ export default function Baloon(){
         <StrictMode>
             <Lights />
             <Float dispose={null}
-                speed={3}
+                speed={2}
                 rotationIntensity={1.4}
                 floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
             >
