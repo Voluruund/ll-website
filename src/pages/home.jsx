@@ -45,7 +45,6 @@ const Home = () => {
             window.addEventListener('scroll', function(e) {
                 findMe.forEach(element => {
                     if (isInViewport(element)) {
-                        console.log(pBtn)
                         pBtn.classList.add("btnP-anim")
                         numP.classList.add("text-anim")
                         element.classList.add("text-anim");
@@ -55,28 +54,30 @@ const Home = () => {
 
             showMore.setAttribute('listener', 'false')
 
-            imgList.forEach(element => {
-                if(showMore.getAttribute('listener') !== 'true'){
-                    element.addEventListener('mouseover', function(e){
-                            window.addEventListener('mousemove', function(e){
-                                let left = (e.pageX + 30)+"px";
-                                let top = (e.pageY - 30)+"px"
-                                showMore.setAttribute('listener', 'true')
-                                showMore.style.visibility = 'visible'
-                                showMore.style.left = left;
-                                showMore.style.top = top;
-                            });
+            if(window.innerWidth > 1024){
+                imgList.forEach(element => {
+                    if(showMore.getAttribute('listener') !== 'true'){
+                        element.addEventListener('mouseover', function(e){
+                                window.addEventListener('mousemove', function(e){
+                                    let left = (e.pageX + 30)+"px";
+                                    let top = (e.pageY - 30)+"px"
+                                    showMore.setAttribute('listener', 'true')
+                                    showMore.style.visibility = 'visible'
+                                    showMore.style.left = left;
+                                    showMore.style.top = top;
+                                });
+                        }, false)
+                    }
+                })
+    
+                imgList.forEach(element => {
+                    element.addEventListener('mouseout', function(e){
+                        window.addEventListener('mousemove', function(e){
+                            showMore.style.visibility = 'hidden'
+                        });
                     }, false)
-                }
-            })
-
-            imgList.forEach(element => {
-                element.addEventListener('mouseout', function(e){
-                    window.addEventListener('mousemove', function(e){
-                        showMore.style.visibility = 'hidden'
-                    });
-                }, false)
-            })
+                })
+            }
     }, 800)
 
     return (

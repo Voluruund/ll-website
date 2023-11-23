@@ -9,7 +9,7 @@ import { useState } from "react"
 
 export default function SingleBaloon(){
 
-    const [dpr, setDpr] = useState(.7)
+    const [dpr, setDpr] = useState(1)
 
     return <>
         <StrictMode>

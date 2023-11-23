@@ -4,13 +4,12 @@ import { Perf } from "r3f-perf";
 import { Clone, Float} from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import Lights from "./Lights";
-import { BoxGeometry } from "three";
 import { StrictMode } from "react";
 
 export default function Baloon(){
 
-    const {nodes, materials} = useGLTF('./models/baloon.glb')
-    // const model = useGLTF('./models/untitled.glb')
+    const {nodes, materials} = useGLTF('./models/balloon-laura-low.gltf')
+    // const {nodes, materials} = useGLTF('./models/baloon.glb')
 
     console.log(nodes)
     console.log(materials)
@@ -56,7 +55,14 @@ export default function Baloon(){
         perfVisible: false
     })
     
-    useGLTF.preload("./models/untitled.glb");
+    var model
+
+    if(window.innerWidth < 1000){
+        model = nodes.Sphere002.geometry
+    }else{
+        model = nodes.Sphere003.geometry
+    }
+
 
     return <>
 
@@ -65,16 +71,23 @@ export default function Baloon(){
             <Lights />
             <Float dispose={null}
                 speed={3}
-                rotationIntensity={2}
+                rotationIntensity={1.4}
                 floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
             >
-                <group dispose={null}>
-                    <mesh castShadow receiveShadow material={materials['Material.001']} dispose={null}>
-                        <primitive object={nodes.Scene} scale={baloonScale} rotation-x={1.5} position={[baloonPositionX,baloonPositionY,baloonPositionZ]} dispose={null}/>
-                    </mesh>
+                <group dispose={null} scale={baloonScale} rotation-x={1.5} position={[baloonPositionX,baloonPositionY,baloonPositionZ]}>
+                    <mesh
+                        castShadow
+                        receiveShadow
+                        geometry={model}
+                        material={materials["Material.001"]}
+                        position={[0, 0, 1.229]}
+                        scale={[0.887, 3.162, 0.887]}
+                    />
                 </group>
-                {/* <primitive object={model.scene} scale={baloonScale} rotation-x={1.5} position={[baloonPositionX,baloonPositionY,baloonPositionZ]}/> */}
             </Float>
         </StrictMode>
     </>
 }
+
+
+useGLTF.preload("/balloon-laura-low.gltf");

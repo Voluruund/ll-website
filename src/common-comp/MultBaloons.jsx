@@ -8,7 +8,7 @@ import { PerformanceMonitor } from "@react-three/drei"
 
 export default function MultBaloons(){
 
-    const [dpr, setDpr] = useState(.7)
+    const [dpr, setDpr] = useState(1)
 
     return <>
         <StrictMode>

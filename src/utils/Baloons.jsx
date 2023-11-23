@@ -6,7 +6,8 @@ import { StrictMode } from "react";
 
 export default function Baloons(){
 
-    const {nodes, materials} = useGLTF('./models/baloon.glb')
+    const {nodes, materials} = useGLTF('./models/balloon-laura-low.gltf')
+    // const {nodes, materials} = useGLTF('./models/baloon.glb')
     // const model = useGLTF('./models/untitled.glb')
 
     const { baloonScale } = useControls('baloons', {
@@ -45,6 +46,14 @@ export default function Baloons(){
         }
     })
 
+    var model
+
+    if(window.innerWidth < 1000){
+        model = nodes.Sphere002.geometry
+    }else{
+        model = nodes.Sphere003.geometry
+    }
+
     return <>
         <StrictMode>
             <Lights />
@@ -53,12 +62,19 @@ export default function Baloons(){
                 rotationIntensity={2}
                 floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
             >
-                <group dispose={null}>
-                    <mesh castShadow receiveShadow material={materials['Material.001']} dispose={null}>
-                        <Clone object={nodes.Scene} scale={baloonScale} rotation-x={1.5} position={[baloonPositionX,baloonPositionY,baloonPositionZ]} dispose={null}/>
-                    </mesh>
+                <group dispose={null} scale={baloonScale} rotation-x={1.5} position={[baloonPositionX,baloonPositionY,baloonPositionZ]}>
+                    <mesh
+                        castShadow
+                        receiveShadow
+                        geometry={model}
+                        material={materials["Material.001"]}
+                        position={[0, 0, 1.229]}
+                        scale={[0.887, 3.162, 0.887]}
+                    />
                 </group>
             </Float>
         </StrictMode>
     </>
 }
+
+useGLTF.preload("/balloon-laura-low.gltf");
