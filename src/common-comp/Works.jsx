@@ -1,74 +1,47 @@
-import { useRef, useEffect, StrictMode } from "react"
+import { StrictMode } from "react"
+import { useState } from "react"
+import Orchestra from "../pages/work-pages/Orchestra"
 
 export default function Works(props){
 
-    useEffect(() => {
-        const someFunc = () => {
-          console.log("component did mount")
+    //numero totale delle pagine dei lavori
+    const pageCount = 10;
+    const [currentIndex, setCurrentIndex] = useState(1);
+
+    const handlePrevClick = () => {
+        if (currentIndex > 1) {
+          setCurrentIndex(currentIndex - 1);
+        }else{
+            setCurrentIndex(pageCount);
         }
-        someFunc()
-      }, [])
+        window.lenis.scrollTo(0,0)
+      };
+      
+    const handleNextClick = () => {
+        if (currentIndex <= pageCount) {
+            setCurrentIndex(currentIndex + 1);
+        }else{
+            setCurrentIndex(1);
+        }
+        window.lenis.scrollTo(0,0)
+    };
 
     return <>
         <StrictMode>
             <div className="works-bg">
-                <div className="works-desc-wp">
-                    <div></div>
-                    <p className="work-subtitle">Close</p>
-                </div>
-                <div className="works-desc-wp mt-70">
-                    <div>
-                        <p className="work-p">Florence Pops Orchestra</p>
-                        <p className="work-subtitle mt-20">UX Design / Web Design</p>
-                        <p className="work-subtitle mt-70">2023</p>
-                    </div>
-                    <div>
-                        <p className="work-p">Florence Pops Orchestra is a Florentine orchestra who plays animation movies soundtrack all around the world, with the passion and the dedication of the director Carlo Chiarotti. The website is</p>
-                    </div>
-                </div>
-                <div className="work-cta-wp">
-                    <a className="button-outline button--atlas-outline" id="footer-cta">
-                        <span>Visit Website</span>
-                        <div className="marqueebutton-outline" aria-hidden="true">
-                            <div className="marquee__inner-outline">
-                                <span>Visit Website</span>
-                                <span>Visit Website</span>
-                                <span>Visit Website</span>
-                                <span>Visit Website</span>
-                                <span>Visit Website</span>
-
-                                <span>Visit Website</span>
-                                <span>Visit Website</span>
-                                <span>Visit Website</span>
-                                <span>Visit Website</span>
-                                <span>Visit Website</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div className="works-grid">
-                    <div className="grid-item tl-first-row">
-                        <img src="./img/prova.jpg" alt="prova" />
-                    </div>
-                    <div className="grid-item tr-first-row">
-                        <img src="./img/prova.jpg" alt="prova" />
-                    </div>
-                    <div className="grid-item second-row">
-                        <img src="./img/longimg.jpg" alt="prova" />
-                    </div>
-                    <div className="grid-item tl-third-row">
-                        <img src="./img/prova.jpg" alt="prova" />   
-                    </div>
-                    <div className="grid-item tr-third-row">
-                        <img src="./img/prova.jpg" alt="prova" />
-                    </div>
-                    <div className="grid-item fourth-row">
-                        <img src="./img/longimg.jpg" alt="prova" />
-                    </div>
-                </div>
-                <div className="works-desc-wp">
-                    <p className="cta-page-switch">Previous</p>
-                    <p className="cta-page-switch">Next</p>
+               {currentIndex === 1 ? <Orchestra /> : null}
+               {currentIndex === 2 ? <Orchestra /> : null}
+               {currentIndex === 3 ? <Orchestra /> : null}
+               {currentIndex === 4 ? <Orchestra /> : null}
+               {currentIndex === 5 ? <Orchestra /> : null}
+               {currentIndex === 6 ? <Orchestra /> : null}
+               {currentIndex === 7 ? <Orchestra /> : null}
+               {currentIndex === 8 ? <Orchestra /> : null}
+               {currentIndex === 9 ? <Orchestra /> : null}
+               {currentIndex === 10 ? <Orchestra /> : null}
+               <div className="works-desc-wp">
+                    <p className="cta-page-switch" onClick={handlePrevClick}>Previous</p>
+                    <p className="cta-page-switch" onClick={handleNextClick}>Next</p>
                 </div>
             </div>
         </StrictMode>

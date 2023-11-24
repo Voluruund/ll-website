@@ -906,6 +906,7 @@ hr{
   margin-top: 8vh !important;
   font-size: 65px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .cta-page-switch:nth-of-type(2){
