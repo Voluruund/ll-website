@@ -1,9 +1,5 @@
-export default function Orchestra(){
+export default function Cavallini(){
     return <>
-         {/* <div className="works-desc-wp">
-            <div></div>
-            <p className="work-subtitle">Close</p>
-        </div> */}
         <div className="works-desc-wp mt-70">
             <div>
                 <p className="work-p">Florence Pops Orchestra</p>
@@ -34,25 +30,28 @@ export default function Orchestra(){
                 </div>
             </a>
         </div>
-        <div className="works-grid">
+        <div className="works-grid" id="cavallini">
+            <div className="grid-item top-extra-row">
+                <img src="./img/cavallini/91.png" alt="prova" />
+            </div>
             <div className="grid-item tl-first-row">
-                <img src="./img/prova.jpg" alt="prova" />
+                <img src="./img/cavallini/90.png" alt="prova" />
             </div>
             <div className="grid-item tr-first-row">
-                <img src="./img/prova.jpg" alt="prova" />
+                <img src="./img/cavallini/89.png" alt="prova" />
             </div>
             <div className="grid-item second-row">
-                <img src="./img/longimg.jpg" alt="prova" />
+                <img src="./img/cavallini/92.png" alt="prova" />
             </div>
             <div className="grid-item tl-third-row">
-                <img src="./img/prova.jpg" alt="prova" />   
+                <img src="./img/cavallini/86.png" alt="prova" />   
             </div>
             <div className="grid-item tr-third-row">
-                <img src="./img/prova.jpg" alt="prova" />
+                <img src="./img/cavallini/88.png" alt="prova" />
             </div>
             <div className="grid-item fourth-row">
-                <img src="./img/longimg.jpg" alt="prova" />
+                <img src="./img/cavallini/87.png" alt="prova" />
             </div>
         </div>
-    </>
+   </>
 }

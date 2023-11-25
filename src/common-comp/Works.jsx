@@ -1,11 +1,14 @@
 import { StrictMode } from "react"
 import { useState } from "react"
 import Orchestra from "../pages/work-pages/Orchestra"
+import Footer from "./footer";
+import Form from "./form";
+import Cavallini from "../pages/work-pages/Cavallini";
 
 export default function Works(props){
 
     //numero totale delle pagine dei lavori
-    const pageCount = 10;
+    const pageCount = 2;
     const [currentIndex, setCurrentIndex] = useState(1);
 
     const handlePrevClick = () => {
@@ -18,7 +21,7 @@ export default function Works(props){
       };
       
     const handleNextClick = () => {
-        if (currentIndex <= pageCount) {
+        if (currentIndex < pageCount) {
             setCurrentIndex(currentIndex + 1);
         }else{
             setCurrentIndex(1);
@@ -28,22 +31,16 @@ export default function Works(props){
 
     return <>
         <StrictMode>
-            <div className="works-bg">
-               {currentIndex === 1 ? <Orchestra /> : null}
-               {currentIndex === 2 ? <Orchestra /> : null}
-               {currentIndex === 3 ? <Orchestra /> : null}
-               {currentIndex === 4 ? <Orchestra /> : null}
-               {currentIndex === 5 ? <Orchestra /> : null}
-               {currentIndex === 6 ? <Orchestra /> : null}
-               {currentIndex === 7 ? <Orchestra /> : null}
-               {currentIndex === 8 ? <Orchestra /> : null}
-               {currentIndex === 9 ? <Orchestra /> : null}
-               {currentIndex === 10 ? <Orchestra /> : null}
-               <div className="works-desc-wp">
-                    <p className="cta-page-switch" onClick={handlePrevClick}>Previous</p>
-                    <p className="cta-page-switch" onClick={handleNextClick}>Next</p>
-                </div>
+            {/* <div className="works-bg"> */}
+            {currentIndex === 1 ? <Orchestra /> : null}
+            {currentIndex === 2 ? <Cavallini /> : null}
+            <div className="works-desc-wp">
+                <p className="cta-page-switch" onClick={handlePrevClick}>Previous</p>
+                <p className="cta-page-switch"><a onClick={handleNextClick}>Next</a></p>
             </div>
+            {/* </div> */}
+            <Form />
+            <Footer />
         </StrictMode>
     </>
 }

@@ -17,6 +17,7 @@ import Navigationtop from './common-comp/topNavigation';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import {React, useEffect, useState} from "react";
 import Lenis from '@studio-freight/lenis'
+import Works from './common-comp/Works.jsx';
 
 const lenis = new Lenis({
   duration: 2,
@@ -61,6 +62,7 @@ function App () {
               <Route exact path="/" element={<Home />}></Route>
               <Route exact path="/home" element={<Home />}></Route>
               <Route exact path="/about" element={<About />}></Route>
+              <Route exact path="/works" element={<Works />}></Route>
           </Routes>
         </Router>
       </ParallaxProvider>
