@@ -5,6 +5,8 @@ import MultBaloons from '../common-comp/MultBaloons';
 import { StrictMode, Suspense, useState } from 'react';
 import Works from '../common-comp/Works';
 
+import Demo from '../utils/demo'
+
 var isInViewport = function(elem) {
     var distance = elem.getBoundingClientRect();
     return (
@@ -178,12 +180,12 @@ const Home = () => {
                     </div>
                 </section>
                 {isActive ? <Works /> : null}
-                <section className="main-img-wp" id='work'>
-                    <img src={'./img/faccia.jpg'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
-                    <img src='./img/faccia.jpg' alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
-                    <img src={'./img/imgProvaDue.png'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
-                    <img src='./img/imgProvaUno.png' alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
-                    <img src={'./img/imgProvaTre.png'} alt="faccia" className='img-home' loading='lazy' onClick={handleWorks}/>
+                <section className="main-img-wp demo-1__gallery" id='work'>
+                    <img src={'./img/faccia.jpg'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
+                    <img src='./img/faccia.jpg' alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
+                    <img src={'./img/imgProvaDue.png'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
+                    <img src='./img/imgProvaUno.png' alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
+                    <img src={'./img/imgProvaTre.png'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
                 </section>
                 <div className="r-4 z-100 mobile-hidden">
                     <div className="text-wrapper a-50">
@@ -293,5 +295,8 @@ const Home = () => {
         </>
     )
 }
+
+
+new Demo()
 
 export default Home;
