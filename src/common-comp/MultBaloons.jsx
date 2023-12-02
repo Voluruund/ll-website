@@ -5,7 +5,6 @@ import { Suspense } from "react"
 import { useState } from "react"
 import { PerformanceMonitor } from "@react-three/drei"
 
-
 export default function MultBaloons(){
 
     const [dpr, setDpr] = useState(1)

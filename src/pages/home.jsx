@@ -7,6 +7,8 @@ import Works from '../common-comp/Works';
 
 import Demo from '../utils/demo'
 
+import Distortion from '../utils/Distortion';
+
 var isInViewport = function(elem) {
     var distance = elem.getBoundingClientRect();
     return (
@@ -85,6 +87,7 @@ const Home = () => {
     return (
         <>
             <StrictMode>
+                <Distortion />
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
                         <span id='hide-btn-default'>View more</span>
@@ -297,6 +300,6 @@ const Home = () => {
 }
 
 
-new Demo()
+// new Demo()
 
 export default Home;
