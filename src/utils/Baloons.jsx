@@ -1,6 +1,6 @@
 import { useGLTF } from "@react-three/drei";
 import { useControls } from "leva";
-import { Clone, Float} from "@react-three/drei";
+import { Float} from "@react-three/drei";
 import Lights from "./Lights";
 import { StrictMode } from "react";
 

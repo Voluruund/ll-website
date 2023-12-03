@@ -5,8 +5,6 @@ import MultBaloons from '../common-comp/MultBaloons';
 import { StrictMode, Suspense, useState } from 'react';
 import Works from '../common-comp/Works';
 
-import Demo from '../utils/demo'
-
 import Distortion from '../utils/Distortion';
 
 var isInViewport = function(elem) {
