@@ -6,6 +6,22 @@ import { StrictMode } from "react";
 import { Physics } from "@react-three/rapier";
 import { RigidBody } from "@react-three/rapier";
 import { CuboidCollider } from "@react-three/rapier";
+import { OrbitControls } from "@react-three/drei";
+import { useFrame } from "react-ogl";
+import { useRef } from "react";
+import * as THREE from "three"
+
+// function Pointer({ vec = new THREE.Vector3() }) {
+//     const ref = useRef()
+//     useFrame(({ mouse, viewport }) => {
+//       ref.current?.setNextKinematicTranslation(vec.set((mouse.x * viewport.width) / 2, (mouse.y * viewport.height) / 2, 0))
+//     })
+//     return (
+//       <RigidBody position={[0, 0, 0]} type="kinematicPosition" colliders={false} ref={ref}>
+//         <CuboidCollider args={[1]} />
+//       </RigidBody>
+//     )
+// }
 
 export default function Baloons(){
 
@@ -57,9 +73,16 @@ export default function Baloons(){
         model = nodes.Sphere003.geometry
     }
 
+    // const ref = useRef()
+
+    // useFrame(({ mouse, viewport }) => {
+    //     ref.current?.setNextKinematicTranslation(ref.set((mouse.x * viewport.width) / 2, (mouse.y * viewport.height) / 2, 0))
+    // })
+
     return <>
         <StrictMode>
-            <Lights />
+            <Lights />  
+            <OrbitControls makeDefault />
             {/* <Float
                 speed={3}
                 rotationIntensity={2}
@@ -76,13 +99,13 @@ export default function Baloons(){
                     />
                 </group>
             </Float> */}
-            <Physics debug>
-                <RigidBody colliders="cuboid">
-                    <Float
+            <Physics debug  gravity={ [ 0,  9.08, 0 ]}>
+                <RigidBody colliders="cuboid" >
+                    {/* <Float
                         speed={2}
                         rotationIntensity={1}
                         floatingRange={[-.05, .05]} // defaults to [-0.1,0.1]
-                    >
+                    > */}
                         <mesh
                             castShadow
                             receiveShadow
@@ -92,15 +115,15 @@ export default function Baloons(){
                             scale={[0.687, 2.502, 0.687]}
                             rotation-x={1.5}
                         />
-                    </Float>
+                    {/* </Float> */}
                 </RigidBody>
 
                 <RigidBody colliders="cuboid">
-                    <Float
+                    {/* <Float
                         speed={2}
                         rotationIntensity={1}
                         floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
-                    >
+                    > */}
                         <mesh
                             castShadow
                             receiveShadow
@@ -110,15 +133,15 @@ export default function Baloons(){
                             scale={[0.687, 2.502, 0.687]}
                             rotation-x={1.5}
                         />
-                    </Float>
+                    {/* </Float> */}
                 </RigidBody>
 
                 <RigidBody colliders="cuboid">
-                    <Float
+                    {/* <Float
                         speed={2}
                         rotationIntensity={1}
                         floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
-                    >
+                    > */}
                         <mesh
                             castShadow
                             receiveShadow
@@ -128,15 +151,15 @@ export default function Baloons(){
                             scale={[0.387, 1.262, 0.387]}
                             rotation-x={1.5}
                         />
-                    </Float>
+                    {/* </Float> */}
                 </RigidBody>
 
                 <RigidBody colliders="cuboid">
-                    <Float
+                    {/* <Float
                         speed={2}
                         rotationIntensity={1}
                         floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
-                    >
+                    > */}
                         <mesh
                             castShadow
                             receiveShadow
@@ -146,15 +169,15 @@ export default function Baloons(){
                             scale={[0.387, 1.262, 0.387]}
                             rotation-x={1.5}
                         />
-                    </Float>
+                    {/* </Float> */}
                 </RigidBody>
 
                 <RigidBody colliders="cuboid">
-                    <Float
+                    {/* <Float
                         speed={2}
                         rotationIntensity={1}
                         floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
-                    >
+                    > */}
                         <mesh
                             castShadow
                             receiveShadow
@@ -164,15 +187,15 @@ export default function Baloons(){
                             scale={[0.387, 1.262, 0.387]}
                             rotation-x={1.5}
                         />
-                    </Float>
+                    {/* </Float> */}
                 </RigidBody>
                 
-                <RigidBody colliders="hull">
-                    <Float
+                <RigidBody colliders="cuboid">
+                    {/* <Float
                         speed={2}
                         rotationIntensity={1}
                         floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
-                    >
+                    > */}
                         <mesh
                             castShadow
                             receiveShadow
@@ -182,15 +205,15 @@ export default function Baloons(){
                             scale={[0.787, 3.262, 0.787]}
                             rotation-x={1.5}
                         />
-                    </Float>
+                    {/* </Float> */}
                 </RigidBody>
 
                 <RigidBody colliders="cuboid">
-                    <Float
+                    {/* <Float
                         speed={2}
                         rotationIntensity={1}
                         floatingRange={[-.15, .15]} // defaults to [-0.1,0.1]
-                    >
+                    > */}
                         <mesh
                             castShadow
                             receiveShadow
@@ -200,20 +223,54 @@ export default function Baloons(){
                             scale={[0.487, 2.362, 0.487]}
                             rotation-x={1.5}
                         />
-                    </Float>
+                    {/* </Float> */}
                 </RigidBody>
 
                 <RigidBody type="fixed">
-                    {/* <CuboidCollider args={ [ 5, 2, 0.5 ] } position={ [ 0, 1, 5.5 ] } />
-                    <CuboidCollider args={ [ 5, 2, 0.5 ] } position={ [ 0, 1, - 5.5 ] } />
-                    <CuboidCollider args={ [ .5, 2, 5 ] } position={ [ 5.5, 1, 0 ] }/>
-                    <CuboidCollider args={ [ 0.5, 2, 5 ] } position={ [ - 5.5, 1, 0 ] } /> */}
                     <mesh
                         rotation-x={Math.PI * .5}
-                        position={[0, -4, 1]}
+                        position={[0, -4.5, 1]}
                     >
                         <planeGeometry attach="geometry" args={[20, 20]} />
-                        <meshPhongMaterial attach="material" color="green" />
+                    </mesh>
+                    <mesh
+                        rotation-x={Math.PI * .5}
+                        position={[0, 4.5, 1]}
+                    >
+                        <planeGeometry attach="geometry" args={[20, 20]} />
+                    </mesh>
+                    {/* sinistra */}
+                    <mesh
+                        rotation-y={Math.PI * .5}
+                        position={[-12, 0, -2]}
+                    >
+                        <planeGeometry attach="geometry" args={[20, 11]} />
+                    </mesh>
+                    {/* destra */}
+                    <mesh
+                        rotation-y={Math.PI * .5}
+                        position={[12, 0, -2]}
+                    >
+                        <planeGeometry attach="geometry" args={[20, 11]} />
+                        
+                    </mesh>
+
+                    {/* dietro */}
+                    <mesh
+                        rotation-x={Math.PI}
+                        position={[0, 0, 0]}
+                    >
+                        <planeGeometry attach="geometry" args={[30, 15]} />
+                        <meshPhongMaterial color={'green'}/>
+                    </mesh>
+
+                    {/* davanti */}
+                    <mesh
+                        rotation-x={Math.PI}
+                        position={[0, 0, 2.3]}
+                    >
+                        <planeGeometry attach="geometry" args={[30, 15]} />
+                        <meshPhongMaterial color={'green'}/>
                     </mesh>
                 </RigidBody>
 
