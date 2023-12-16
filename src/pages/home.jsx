@@ -2,8 +2,8 @@ import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
 import {Link} from "react-router-dom";
 import MultBaloons from '../common-comp/MultBaloons';
-import { StrictMode, Suspense, useState } from 'react';
-import Works from '../common-comp/Works';
+import { StrictMode, Suspense } from 'react';
+import { useEffect } from 'react';
 
 import Distortion from '../utils/Distortion';
 
@@ -25,15 +25,11 @@ var showMore
 
 const Home = () => {
 
-    const [isActive, setIsActive] = useState(false);
+    const lenis = window.lenis
 
-    const handleWorks = event => {
-        let lenis = window.lenis
+    useEffect(() => {
         lenis.scrollTo('top')
-        window.setTimeout(function() {
-            setIsActive(current => !current)
-        }, 1000)
-    };
+    })
 
     window.setTimeout(
         document.onreadystatechange = function () {
@@ -180,13 +176,12 @@ const Home = () => {
                         <div className='row'></div>
                     </div>
                 </section>
-                {isActive ? <Works /> : null}
                 <section className="main-img-wp demo-1__gallery" id='work'>
-                    <img src={'./img/faccia.jpg'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
-                    <img src='./img/faccia.jpg' alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
-                    <img src={'./img/imgProvaDue.png'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
-                    <img src='./img/imgProvaUno.png' alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
-                    <img src={'./img/imgProvaTre.png'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy' onClick={handleWorks}/>
+                    <img src={'./img/faccia.jpg'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy'/>
+                    <img src='./img/faccia.jpg' alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy'/>
+                    <img src={'./img/imgProvaDue.png'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy'/>
+                    <img src='./img/imgProvaUno.png' alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy'/>
+                    <img src={'./img/imgProvaTre.png'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy'/>
                 </section>
                 <div className="r-4 z-100 mobile-hidden">
                     <div className="text-wrapper a-50">

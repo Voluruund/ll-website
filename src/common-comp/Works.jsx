@@ -4,8 +4,15 @@ import Orchestra from "../pages/work-pages/Orchestra"
 import Footer from "./footer";
 import Form from "./form";
 import Cavallini from "../pages/work-pages/Cavallini";
+import { useEffect } from "react";
 
 export default function Works({stato}){
+
+    const lenis = window.lenis
+
+    useEffect(() => {
+        lenis.scrollTo('top')
+    })
 
     //numero totale delle pagine dei lavori
     const pageCount = 2;
