@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import MultBaloons from '../common-comp/MultBaloons';
 import { StrictMode, Suspense } from 'react';
 import { useEffect } from 'react';
+import Loader from '../common-comp/Loader';
 
 import Distortion from '../utils/Distortion';
 
@@ -81,6 +82,7 @@ const Home = () => {
     return (
         <>
             <StrictMode>
+                <Loader></Loader>
                 <Distortion />
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">

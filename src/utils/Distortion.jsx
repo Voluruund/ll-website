@@ -49,7 +49,7 @@ export default function Disotrtion() {
 
     return (
         <Suspense>
-            <Canvas style={{opacity: '.1', top: '0', left: '0', position: 'fixed', width: '100vw', height: '100vh'}} dpr={dpr}>
+            <Canvas style={{opacity: '.15', top: '0', left: '0', position: 'fixed', width: '100vw', height: '100vh'}} dpr={dpr}>
             <PerformanceMonitor onDecline={() => setDpr(.5)} flipflops={1}/>
             <ambientLight intensity={1} />
             <mesh position={[0, 0, 1]}>
