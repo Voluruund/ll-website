@@ -36,7 +36,7 @@ export default function Baloons(){
             <Lights />  
             {/* <OrbitControls makeDefault/> */}
 
-            <Physics gravity={ [ 0,  0, 0 ]} >
+            <Physics gravity={ [ 0,  0, 0 ]}>
                 <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={first}>
                     <Float
                         speed={2}

@@ -5,6 +5,7 @@ import MultBaloons from '../common-comp/MultBaloons';
 import { StrictMode, Suspense } from 'react';
 import { useEffect } from 'react';
 import Loader from '../common-comp/Loader';
+import { useState } from 'react';
 
 import Distortion from '../utils/Distortion';
 
@@ -79,10 +80,12 @@ const Home = () => {
             }
     }, 800)
 
+    const [loaded, setLoaded] = useState(0);
+
     return (
         <>
             <StrictMode>
-                <Loader></Loader>
+                {loaded === 0 ? <Loader /> : null}
                 <Distortion />
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">

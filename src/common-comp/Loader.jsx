@@ -1,9 +1,9 @@
-import Distortion from "../utils/Distortion";
-
 var i = 0;
+
 function move() {
   if (i == 0) {
     i = 1;
+    document.body.style.height = '100vh'
     var elem = document.getElementById("myBar");
     var width = 0;
     var id = setInterval(frame, 10);
@@ -18,7 +18,7 @@ function move() {
         setTimeout(() => {
             let wrapper = document.getElementById("wrapper")
             wrapper.classList.add("js")
-            document.body.style.height = 'fit-content'
+            document.body.style.height = 'auto'
         }, 1200)
       } else {
         width++;

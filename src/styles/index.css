@@ -229,7 +229,7 @@ body,html {
   margin: 0;
   width: 100vw;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
   color: var(--default-lilac);
   font-family: var(--clash-display-variable), BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -238,7 +238,6 @@ body,html {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--default-bg-color);
   overscroll-behavior: none;
-  height: 100vh;
 }
 
 .js-end{
@@ -593,7 +592,7 @@ img{
 
 #myProgress {
   width: 90%;
-  background-color: #ddd;
+  background-color: transparent;
   position: absolute;
   bottom: 30%;
   left: 50%;
@@ -604,9 +603,9 @@ img{
   width: 0%;
   height: 3px;
   background-color: var(--default-lilac);
-  text-align: center;
+  text-align: right;
   line-height: 50px;
-  color: white;
+  color: var(--default-lilac);
 }
 
 .appearAnim{
@@ -623,7 +622,7 @@ img{
   width: 100%;
   height: 100%;
   transition: top .8s ease;
-  background-color: var(--default-black);
+  background-color: var(--default-bg-color);
 }
 
 .loadingAnim{
@@ -1225,7 +1224,8 @@ hr{
 }
 
 .main-img-wp img:hover{
-  border-radius: 50% !important;
+  /* border-radius: 50% !important; */
+  border-radius: 17em !important;
 }
 
 .main-img-wp img:nth-of-type(1){
