@@ -633,9 +633,10 @@ img{
   display: block;
 }
 
-.js{
+.js, .js *{
   display: none !important;
 }
+
 
 /* ====================================================== */
 

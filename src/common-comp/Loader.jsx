@@ -1,7 +1,7 @@
 var i = 0;
 
 function move() {
-  if (i == 0) {
+  if (i === 0) {
     i = 1;
     document.body.style.height = '100vh'
     var elem = document.getElementById("myBar");
@@ -33,6 +33,22 @@ export default function Loader(){
 
     window.onload = function(){
         setTimeout(move, 1000)
+        // Loader logic from navigation.jsx
+        let menu_option = "'menu'"
+        let menu_other_option = "'x'"
+        let menuToggle = document.querySelector('.menu-toggle')
+        let menuToggle_after = window.getComputedStyle(menuToggle, '::before');
+        menuToggle.onclick = function (){
+            menuToggle.classList.toggle('active')
+            console.log('clicked')
+            setTimeout(function(){
+                if(menuToggle_after.content === '"menu"'){
+                    menuToggle.style.setProperty('--menu-content', menu_other_option)
+                }else{
+                    menuToggle.style.setProperty('--menu-content', menu_option)
+                }
+            }, 500)
+        }
     };
 
     return <>

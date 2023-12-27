@@ -1,34 +1,27 @@
 import {Link} from "react-router-dom";
-import { StrictMode, useState } from "react";
-import Works from "./Works";
+import { StrictMode } from "react";
 
 export default function Navigation(){
 
-    const [isActive, setIsActive] = useState(false);
-
-    const handleWorks = event => {
-      setIsActive(current => !current);
-    };
-
-    window.onload = function(){
-        let menu_option = "'menu'"
-        let menu_other_option = "'x'"
-        let menuToggle = document.querySelector('.menu-toggle')
-        let menuToggle_after = window.getComputedStyle(menuToggle, '::before');
-        menuToggle.onclick = function (){
-            menuToggle.classList.toggle('active')
-            setTimeout(function(){
-                if(menuToggle_after.content === '"menu"'){
-                    menuToggle.style.setProperty('--menu-content', menu_other_option)
-                }else{
-                    menuToggle.style.setProperty('--menu-content', menu_option)
-                }
-            }, 500)
-        }
-    }
+    // window.onload = function(){
+        // let menu_option = "'menu'"
+        // let menu_other_option = "'x'"
+        // let menuToggle = document.querySelector('.menu-toggle')
+        // let menuToggle_after = window.getComputedStyle(menuToggle, '::before');
+        // menuToggle.onclick = function (){
+        //     menuToggle.classList.toggle('active')
+        //     console.log('clicked')
+        //     setTimeout(function(){
+        //         if(menuToggle_after.content === '"menu"'){
+        //             menuToggle.style.setProperty('--menu-content', menu_other_option)
+        //         }else{
+        //             menuToggle.style.setProperty('--menu-content', menu_option)
+        //         }
+        //     }, 500)
+        // }
+    // }
 
     return <>
-     {isActive ? <Works /> : null}
         <StrictMode>
             <section className="navigation">
                 <div className="menu-toggle">
