@@ -52,7 +52,7 @@ export default function Baloons(){
                             scale={[0.687, 2.502, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                first.current.applyImpulse({ x: generateImpulseX() * 2, y: generateImpulseY() * 2, z: 0 }, true)
+                                first.current.applyImpulse({ x: generateImpulseX() * 5, y: generateImpulseY() * 5, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -73,7 +73,7 @@ export default function Baloons(){
                             scale={[0.687, 2.502, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                second.current.applyImpulse({ x: generateImpulseX() * 2, y: generateImpulseY() * 2, z: 0 }, true)
+                                second.current.applyImpulse({ x: generateImpulseX() * 5, y: generateImpulseY() * 5, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -157,7 +157,7 @@ export default function Baloons(){
                             scale={[0.787, 3.262, 0.787]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                sixth.current.applyImpulse({ x: generateImpulseX() * 3, y: generateImpulseY() * 3, z: 0 }, true)
+                                sixth.current.applyImpulse({ x: generateImpulseX() * 6, y: generateImpulseY() * 6, z: 0 }, true)
                             }}
                         />
                     </Float>

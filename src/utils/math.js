@@ -4,12 +4,12 @@ export function lerp (p1, p2, t) {
 
 export function generateImpulseX(){
     let random = Math.random()
-    let impulse = random >= .5 ?  30 :  (-30)
+    let impulse = random >= .5 ?  6 :  (-6)
     return impulse
 }
 
 export function generateImpulseY(){
     let random = Math.random()
-    let impulse = random >= .5 ?  20 :  (-30)
+    let impulse = random >= .5 ?  4 :  (-6)
     return impulse
 }

@@ -4,11 +4,13 @@ function move() {
   if (i === 0) {
     i = 1;
     document.body.style.height = '100vh'
+    document.getElementById('tvEffect').style.zIndex = 999999999
     var elem = document.getElementById("myBar");
     var width = 0;
     var id = setInterval(frame, 10);
     function frame() {
       if (width >= 100) {
+        document.getElementById('tvEffect').style.zIndex = 0
         clearInterval(id);
         i = 0;
         let bgs = document.querySelectorAll(".animate")
