@@ -161,7 +161,8 @@
 } */
 
 :root{
-  --default-lilac: #CCB5E2;
+  /* --default-lilac: #CCB5E2; */
+  --default-lilac: #B59BCE;
   --default-bg-color: #F6F6F4;
   --default-black: #121212;
   --default-brd-rad: 10px;
@@ -375,11 +376,11 @@ input::placeholder {
   transition-delay: 1000ms !important;
 }
 
-.fl-bot{
+/* .fl-bot{
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-}
+} */
 
 img{
   border-radius: var(--default-brd-rad) !important;
@@ -594,7 +595,7 @@ img{
   width: 90%;
   background-color: transparent;
   position: absolute;
-  bottom: 30%;
+  bottom: 10vh;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -610,7 +611,7 @@ img{
 
 .appearAnim{
   width: 100%;
-  height: 10%;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -621,12 +622,13 @@ img{
   left: 0;
   width: 100%;
   height: 100%;
-  transition: top .8s ease;
-  background-color: var(--default-bg-color);
+  transition: top 1.2s cubic-bezier(.57,.06,.07,.97);
+  background-color: #333;
 }
 
 .loadingAnim{
-  top: 10vh !important;
+  /* top: 10vh !important; */
+  top: 100vh !important;
 }
 
 .no-js{
@@ -744,13 +746,13 @@ img{
   flex-wrap: wrap;
 }
 
-.serious-cta{
+/* .serious-cta{
   font-family: var(--clash-display-variable);
   font-size: 20px;
   margin: 0 0 0 20px;
   text-transform: uppercase;
   font-weight: 500;
-}
+} */
 
 hr{
   display: block;
@@ -798,7 +800,7 @@ hr{
 
 .navigation{
   position: fixed;
-  bottom: 4vh;
+  bottom: 2.5vh;
   left: 50vw;
   transform: translateX(-50%);
   display: flex;
@@ -822,6 +824,25 @@ hr{
   flex-direction: column-reverse;
   transition: all .5s, width .5s, height .5s;
   transition-timing-function: cubic-bezier(.98,.3,.3,.9);
+}
+
+.menu-toggle::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 250ms;
+  z-index: -1;
+  border-radius: 10px;
+  background-color: var(--default-black);
+}
+
+.menu-toggle:hover::after{
+  transform: scale(1.2);
 }
 
 .menu-toggle::before{
@@ -998,12 +1019,12 @@ hr{
 }
 
 .work-cta-wp, .works-desc-wp,.works-grid{
-  width: 86vw;
+  width: 95vw;
   margin: auto;
 }
 
 .work-cta-wp{
-  padding: 5vh 0 20vh 0;
+  padding: 20vh 0 10vh 0;
 }
 
 .works-desc-wp{

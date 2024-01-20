@@ -29,9 +29,9 @@ const About = () => {
                                 <div className='personal-img def-border-radius'>
                                     <img src={'./img/Laura-Lavorini.png'} alt="Laura" className="img-sizes" ref={parallax.ref}/>
                                 </div>
-                            <div className="fl-bot">
+                            {/* <div className="fl-bot">
                                     <p className="serious-cta">Serious photo</p>
-                            </div>
+                            </div> */}
                             </div>
                         </div>
                         <div className="p-data-wp mt-50">
