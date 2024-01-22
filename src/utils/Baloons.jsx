@@ -12,7 +12,7 @@ import { generateImpulseY } from "./math";
 
 export default function Baloons(){
 
-    const {nodes, materials} = useGLTF('./models/balloon-laura-low.gltf')
+    const {nodes, materials} = useGLTF('./models/balloon-laura-low-new.gltf')
 
     const first = useRef()
     const second = useRef()
@@ -34,13 +34,13 @@ export default function Baloons(){
         <StrictMode>
             
             <Lights />  
-            {/* <OrbitControls makeDefault/> */}
+            <OrbitControls makeDefault/>
 
             <Physics gravity={ [ 0,  0, 0 ]}>
                 <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={first}>
                     <Float
                         speed={2}
-                        rotationIntensity={.5}
+                        rotationIntensity={1.2}
                         floatingRange={[-.05, .05]} // defaults to [-0.1,0.1]
                     >
                         <mesh
@@ -49,10 +49,12 @@ export default function Baloons(){
                             geometry={model}
                             material={materials["Material.001"]}
                             position={[5, -0.6, 1.229]}
-                            scale={[0.687, 2.502, 0.687]}
+                            // scale y 2.502
+                            // old scale .502
+                            scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                first.current.applyImpulse({ x: generateImpulseX() * 5, y: generateImpulseY() * 5, z: 0 }, true)
+                                first.current.applyImpulse({ x: generateImpulseX() * 20, y: generateImpulseY() * 20, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -70,10 +72,11 @@ export default function Baloons(){
                             geometry={model}
                             material={materials["Material.001"]}
                             position={[3, 3, 1.229]}
-                            scale={[0.687, 2.502, 0.687]}
+                            // 2.502
+                            scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                second.current.applyImpulse({ x: generateImpulseX() * 5, y: generateImpulseY() * 5, z: 0 }, true)
+                                second.current.applyImpulse({ x: generateImpulseX() * 1, y: generateImpulseY() * 1, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -91,7 +94,8 @@ export default function Baloons(){
                             geometry={model}
                             material={materials["Material.001"]}
                             position={[1.5, -2.6, 1.229]}
-                            scale={[0.387, 1.262, 0.387]}
+                            // 1.262
+                            scale={[0.387, 1.32, 0.387]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 third.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
@@ -112,7 +116,8 @@ export default function Baloons(){
                             geometry={model}
                             material={materials["Material.001"]}
                             position={[8, 2.2, 1.229]}
-                            scale={[0.387, 1.262, 0.387]}
+                            // 1.262
+                            scale={[0.387, 1.32, 0.387]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 fourth.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
@@ -133,7 +138,8 @@ export default function Baloons(){
                             geometry={model}
                             material={materials["Material.001"]}
                             position={[-7, -3, 1.229]}
-                            scale={[0.387, 1.262, 0.387]}
+                            // 1.262
+                            scale={[0.387, 1.32, 0.387]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 fifth.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
@@ -154,10 +160,11 @@ export default function Baloons(){
                             geometry={model}
                             material={materials["Material.001"]}
                             position={[-7, 2, 1.229]}
-                            scale={[0.787, 3.262, 0.787]}
+                            // 3.262
+                            scale={[0.787, 1.32, 0.787]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                sixth.current.applyImpulse({ x: generateImpulseX() * 6, y: generateImpulseY() * 6, z: 0 }, true)
+                                sixth.current.applyImpulse({ x: generateImpulseX() * 1, y: generateImpulseY() * 1, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -175,7 +182,8 @@ export default function Baloons(){
                             geometry={model}
                             material={materials["Material.001"]}
                             position={[-3.5, 0, 1.229]}
-                            scale={[0.487, 2.362, 0.487]}
+                            // 2.362
+                            scale={[0.487, 1.32, 0.487]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 seventh.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)

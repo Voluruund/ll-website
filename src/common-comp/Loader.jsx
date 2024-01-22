@@ -10,7 +10,7 @@ function move() {
     var id = setInterval(frame, 10);
     function frame() {
       if (width >= 100) {
-        document.getElementById('tvEffect').style.zIndex = 0
+        // document.getElementById('tvEffect').style.zIndex = 0
         clearInterval(id);
         i = 0;
         let bgs = document.querySelectorAll(".animate")
