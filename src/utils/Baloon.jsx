@@ -13,7 +13,7 @@ import { OrbitControls } from "@react-three/drei";
 
 export default function Baloon(){
 
-    const {nodes, materials} = useGLTF('./models/balloon-laura-low.gltf')
+    const {nodes, materials} = useGLTF('./models/balloon-laura-low-new.gltf')
 
     const first = useRef()
 
@@ -55,7 +55,8 @@ export default function Baloon(){
                             geometry={model}
                             material={materials["Material.001"]}
                             position={[0, 0, 1.229]}
-                            scale={[0.687, 2.502, 0.687]}
+                            //2.502
+                            scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 first.current.applyImpulse({ x: generateImpulseX() * 2, y: generateImpulseY() * 2, z: 0 }, true)

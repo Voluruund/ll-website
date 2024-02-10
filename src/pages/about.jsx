@@ -4,6 +4,27 @@ import Footer from '../common-comp/footer'
 import { StrictMode, useEffect } from "react";
 
 const About = () => {
+
+    if(window.innerWidth > 960){
+        window.addEventListener("scroll", function(){
+            var scrollingDiv = document.getElementById("scrollingDiv")
+            var image = document.getElementById("imgScroll")
+            var scrollTop = window.scrollY
+            var divTop = scrollingDiv.offsetTop
+            var divHeight = scrollingDiv.offsetHeight
+            var imageHeight = image.offsetHeight
+            // && scrollTop < divTop + divHeight
+            console.log("scrolltop " + scrollTop + " - " + (divHeight - divTop))
+
+            if(scrollTop + 40 > divTop && scrollTop + 40 < divTop + divHeight - imageHeight){
+                image.style.top = scrollTop - divTop + 40 + "px"
+            }else if (scrollTop + 40 <= divTop){
+                image.style.top = "0"
+            }else{
+                image.style.top = divHeight - image.offsetHeight + "px"
+            }
+        })
+    }
     
     const lenis = window.lenis
 
@@ -25,8 +46,8 @@ const About = () => {
                     <section className="about-wp">
                         <div className="title-about-wp mt-20">
                             <h1 className="about-title">about <br /><span>me</span></h1>
-                            <div className="personal-img-wp">
-                                <div className='personal-img def-border-radius'>
+                            <div className="personal-img-wp" id="scrollingDiv">
+                                <div className='personal-img def-border-radius' id="imgScroll">
                                     <img src={'./img/Laura-Lavorini.png'} alt="Laura" className="img-sizes" ref={parallax.ref}/>
                                 </div>
                             {/* <div className="fl-bot">

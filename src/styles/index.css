@@ -744,6 +744,9 @@ img{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 80%;
+  position: relative;
+  overflow: hidden;
 }
 
 /* .serious-cta{
@@ -767,7 +770,10 @@ hr{
   width: 17vw;
   height: 45vh;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
+  position: absolute;
+  /* top: 0; */
+  left: 0;
 }
 
 .img-sizes{
