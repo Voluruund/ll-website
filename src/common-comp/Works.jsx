@@ -5,6 +5,7 @@ import Footer from "./footer";
 import Form from "./form";
 import Cavallini from "../pages/work-pages/Cavallini";
 import { useEffect } from "react";
+import Branchetti from "../pages/work-pages/Branchetti";
 
 export default function Works({stato}){
 
@@ -15,7 +16,7 @@ export default function Works({stato}){
     })
 
     //numero totale delle pagine dei lavori
-    const pageCount = 2;
+    const pageCount = 3;
     const [currentIndex, setCurrentIndex] = useState(1);
     console.log(stato)
 
@@ -40,8 +41,9 @@ export default function Works({stato}){
     return <>
         <StrictMode>
             {/* <div className="works-bg"> */}
-            {currentIndex === 1 ? <Orchestra /> : null}
+            {currentIndex === 3 ? <Orchestra /> : null}
             {currentIndex === 2 ? <Cavallini /> : null}
+            {currentIndex === 1 ? <Branchetti /> : null}
             <div className="works-desc-wp">
                 <p className="cta-page-switch"><button onClick={handlePrevClick}>Previous</button></p>
                 <p className="cta-page-switch"><button onClick={handleNextClick}>Next</button></p>

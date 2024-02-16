@@ -37,7 +37,8 @@ export default function Baloons(){
             {/* <OrbitControls makeDefault/> */}
 
             <Physics gravity={ [ 0,  0, 0 ]}>
-                <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={first}>
+                
+                {/* <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={first}>
                     <Float
                         speed={2}
                         rotationIntensity={1.2}
@@ -58,7 +59,7 @@ export default function Baloons(){
                             }}
                         />
                     </Float>
-                </RigidBody>
+                </RigidBody> */}
 
                 <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={second}>
                     <Float
@@ -95,7 +96,7 @@ export default function Baloons(){
                             material={materials["Material.001"]}
                             position={[1.5, -2.6, 1.229]}
                             // 1.262
-                            scale={[0.387, 1.32, 0.387]}
+                            scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 third.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
@@ -115,9 +116,9 @@ export default function Baloons(){
                             receiveShadow
                             geometry={model}
                             material={materials["Material.001"]}
-                            position={[8, 2.2, 1.229]}
+                            position={[7, .4, 1.229]}
                             // 1.262
-                            scale={[0.387, 1.32, 0.387]}
+                            scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 fourth.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
@@ -139,7 +140,7 @@ export default function Baloons(){
                             material={materials["Material.001"]}
                             position={[-7, -3, 1.229]}
                             // 1.262
-                            scale={[0.387, 1.32, 0.387]}
+                            scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 fifth.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
@@ -183,7 +184,7 @@ export default function Baloons(){
                             material={materials["Material.001"]}
                             position={[-3.5, 0, 1.229]}
                             // 2.362
-                            scale={[0.487, 1.32, 0.487]}
+                            scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 seventh.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)

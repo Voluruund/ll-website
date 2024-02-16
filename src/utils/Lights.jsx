@@ -18,7 +18,7 @@ export default function Lights(){
                 <color args={ [ '#666666' ] } attach="background" />
                 <Lightformer
                     position-z={ -3 }
-                    scale={ 10 }
+                    scale={ 8 }
                     color="#888888"
                     intensity={ 20 }
                     form={'ring'}

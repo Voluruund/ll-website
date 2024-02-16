@@ -121,6 +121,9 @@ const Home = () => {
                         <img src={'./img/laura-lavorini-logo.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
                     </div>
                 </section>
+
+
+                {/* da rifare */}
                 <section className="main-p-wp mobile-hidden">
                     <div className="text-anim-wp mobile-hidden">
                         <p className='p-num d-100' id='01'>(01)</p>
@@ -181,6 +184,10 @@ const Home = () => {
                         <div className='row'></div>
                     </div>
                 </section>
+
+
+
+
                 <section className="main-img-wp demo-1__gallery" id='work'>
                     <img src={'./img/faccia.jpg'} alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy'/>
                     <img src='./img/faccia.jpg' alt="faccia" className='img-home demo-1__gallery__figure' loading='lazy'/>

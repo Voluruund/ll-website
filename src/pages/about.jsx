@@ -14,7 +14,7 @@ const About = () => {
             var divHeight = scrollingDiv.offsetHeight
             var imageHeight = image.offsetHeight
             // && scrollTop < divTop + divHeight
-            console.log("scrolltop " + scrollTop + " - " + (divHeight - divTop))
+            // console.log("scrolltop " + scrollTop + " - " + (divHeight - divTop))
 
             if(scrollTop + 40 > divTop && scrollTop + 40 < divTop + divHeight - imageHeight){
                 image.style.top = scrollTop - divTop + 40 + "px"

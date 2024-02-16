@@ -35,7 +35,7 @@ export default function Orchestra(){
             </a>
         </div>
         <div className="works-grid">
-            <div className="grid-item tl-first-row">
+            {/* <div className="grid-item tl-first-row">
                 <img src="./img/prova.jpg" alt="prova" />
             </div>
             <div className="grid-item tr-first-row">
@@ -52,7 +52,7 @@ export default function Orchestra(){
             </div>
             <div className="grid-item fourth-row">
                 <img src="./img/longimg.jpg" alt="prova" />
-            </div>
+            </div> */}
         </div>
     </>
 }

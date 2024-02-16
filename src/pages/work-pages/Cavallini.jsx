@@ -31,7 +31,7 @@ export default function Cavallini(){
             </a>
         </div>
         <div className="works-grid" id="cavallini">
-            <div className="grid-item top-extra-row">
+            {/* <div className="grid-item top-extra-row">
                 <img src="./img/cavallini/91.png" alt="prova" />
             </div>
             <div className="grid-item tl-first-row">
@@ -51,7 +51,7 @@ export default function Cavallini(){
             </div>
             <div className="grid-item fourth-row">
                 <img src="./img/cavallini/87.png" alt="prova" />
-            </div>
+            </div> */}
         </div>
    </>
 }
