@@ -1511,7 +1511,7 @@ hr{
   background-color: var(--default-lilac);
   display: inline-block;
   top: 50%;
-  left: 45%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -1531,7 +1531,7 @@ hr{
 
 @keyframes btn-rotation {
   from{
-    left: 45%;
+    left: 50%;
     transform: translate(-50%, -50%) rotate(0deg);
   }to{
     left: 70%;

@@ -45,11 +45,13 @@ const Home = () => {
             window.addEventListener('scroll', function(e) {
                 findMe.forEach(element => {
                     if (isInViewport(element)) {
-                        pBtn.classList.add("btnP-anim")
                         numP.classList.add("text-anim")
                         element.classList.add("text-anim");
                     }
                 });
+                if(isInViewport(pBtn)){
+                    pBtn.classList.add("btnP-anim")
+                }
             }, false)
 
             showMore.setAttribute('listener', 'false')
@@ -85,7 +87,7 @@ const Home = () => {
     return (
         <>
             <StrictMode>
-                {/* {loaded === 0 ? <Loader /> : null} */}
+                {loaded === 0 ? <Loader /> : null}
                 {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
@@ -110,7 +112,7 @@ const Home = () => {
 
                 <section className='f-home-section' id='top'>
                     <Suspense fallback={null}>
-                        {/* <MultBaloons /> */}
+                        <MultBaloons />
                     </Suspense>
                     <div className="main-title-wp">
                         <div><p className='main-title-h'>Web Designer</p></div>
