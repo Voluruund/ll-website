@@ -1313,7 +1313,8 @@ hr{
   height: 90vh;
   width: 95vw;
   margin: auto;
-  margin-bottom: 30vh;
+  /* margin-bottom: 30vh; */
+  margin-bottom: 10vh;
   position: relative;
 }
 
@@ -1363,8 +1364,65 @@ hr{
 }
 
 .main-p-wp{
-  width: 85vw;
-  margin: 60vh auto;
+  /* width: 85vw; */
+  width: 100vw;
+  /* margin: 60vh auto; */
+  margin: 0 auto 70vh auto;
+}
+
+.w-60{
+  width: 60vw;
+}
+
+.w-60 .parag-cv{
+  font-size: 3.2rem !important;
+}
+
+.main-p-wp .grid-2{
+  margin-top: 15vh;
+}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  min-height: 70vh;
+  align-items: flex-end;
+}
+
+.grid-2 > div{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.first-col-g2{
+  align-self: end;
+}
+
+.second-col-g2 p{
+  width: 50%;
+  margin: auto;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.per-hobbies{
+  margin-top: 18%;
+}
+
+.per-hobbies p, .more-info p{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 2.2;
+}
+
+.more-info{
+  position: relative;
+  margin-top: 10%;
+}
+
+.img-home-l{
+  width: 42%;
 }
 
 .main-p-wp .text-anim-wp{
@@ -1476,7 +1534,7 @@ hr{
     left: 45%;
     transform: translate(-50%, -50%) rotate(0deg);
   }to{
-    left: 60%;
+    left: 70%;
     transform: translate(-50%, -50%) rotate(720deg);
   }
 }

@@ -85,7 +85,7 @@ const Home = () => {
     return (
         <>
             <StrictMode>
-                {loaded === 0 ? <Loader /> : null}
+                {/* {loaded === 0 ? <Loader /> : null} */}
                 {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
@@ -110,7 +110,7 @@ const Home = () => {
 
                 <section className='f-home-section' id='top'>
                     <Suspense fallback={null}>
-                        <MultBaloons />
+                        {/* <MultBaloons /> */}
                     </Suspense>
                     <div className="main-title-wp">
                         <div><p className='main-title-h'>Web Designer</p></div>
@@ -122,9 +122,47 @@ const Home = () => {
                     </div>
                 </section>
 
+                <section className="main-p-wp mobile-hidden">
+                    <div className="w-60">
+                        <div>
+                            <div className="text-anim-wp mobile-hidden">
+                                <p className='p-num d-100' id='01'>(01)</p>
+                                <p className="parag-cv d-100">I’m a designer based in </p>
+                            </div>
+                            <div className="text-anim-wp mobile-hidden">
+                                <p className="parag-cv d-200"><span className='cursive-title-h'>Florence</span>. Specialized in Graphic design </p>
+                            </div>
+                            <div className="text-anim-wp mobile-hidden">
+                                <p className="parag-cv d-300">and Digital branding, with 8+ years of</p>
+                            </div>
+                            <div className="text-anim-wp mobile-hidden">
+                                <p className="parag-cv d-400">experience in <span className='cursive-title-h'>design </span>field.</p>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+
+                    <div className="grid-2">
+                        <div className='first-col-g2'>
+                            <img src={'./img/laura-home.png'} alt="Laura" className="img-home-l"/>
+                        </div>
+                        <div className='second-col-g2'>
+                            <p>Thanks to the years spent to study art and the experience of all these years as a freelancer, I gained a great experience in creative process. In the last 4 years I had the chance to teach Web Graphic Design at Nemo Academy in Florence. </p>
+                            <div className="per-hobbies">
+                                <p>Swimmer</p>
+                                <p>Music lover</p>
+                                <p>Film/TV series devourer</p>
+                            </div>
+                            <div className="more-info">
+                                <p>more about me</p>
+                                <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* da rifare */}
-                <section className="main-p-wp mobile-hidden">
+                {/* <section className="main-p-wp mobile-hidden">
                     <div className="text-anim-wp mobile-hidden">
                         <p className='p-num d-100' id='01'>(01)</p>
                         <p className="parag-cv d-100">I’m Florence-based web graphic designer  </p>
@@ -183,7 +221,7 @@ const Home = () => {
                         <p id='learn-more-p'>learn more</p>
                         <div className='row'></div>
                     </div>
-                </section>
+                </section> */}
 
 
 
