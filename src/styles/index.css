@@ -1372,21 +1372,19 @@ hr{
 
 .w-60{
   width: 60vw;
+  height: 30vh;
 }
 
 .w-60 .parag-cv{
   font-size: 3.2rem !important;
 }
 
-.main-p-wp .grid-2{
-  margin-top: 15vh;
-}
 
 .grid-2{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   width: 100%;
-  min-height: 70vh;
+  height: 65vh;
   align-items: flex-end;
 }
 
@@ -1407,7 +1405,7 @@ hr{
 }
 
 .per-hobbies{
-  margin-top: 18%;
+  margin-top: 12vh;
 }
 
 .per-hobbies p, .more-info p{
@@ -1418,7 +1416,7 @@ hr{
 
 .more-info{
   position: relative;
-  margin-top: 10%;
+  margin: 7vh 0 0 0;
 }
 
 .img-home-l{
