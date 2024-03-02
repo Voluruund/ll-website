@@ -41,9 +41,9 @@ export default function Works({stato}){
     return <>
         <StrictMode>
             {/* <div className="works-bg"> */}
-            {currentIndex === 3 ? <Orchestra /> : null}
+            {currentIndex === 1 ? <Orchestra /> : null}
             {currentIndex === 2 ? <Cavallini /> : null}
-            {currentIndex === 1 ? <Branchetti /> : null}
+            {currentIndex === 3 ? <Branchetti /> : null}
             <div className="works-desc-wp">
                 <p className="cta-page-switch"><button onClick={handlePrevClick}>Previous</button></p>
                 <p className="cta-page-switch"><button onClick={handleNextClick}>Next</button></p>
