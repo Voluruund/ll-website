@@ -1085,6 +1085,15 @@ hr{
   margin: auto;
 }
 
+#branchetti{
+  grid-template-areas: 
+              "frleft frright"
+              "second second"
+              "third third"
+              "forleft forright"
+              "fifth fifth";
+}
+
 #branchetti .row:first-of-type{
   background-color: black;
   display: grid;
@@ -1202,13 +1211,90 @@ hr{
   border-radius: 0 !important;
 }
 
-#branchetti{
+#vanni{
   grid-template-areas: 
-              "frleft frright"
-              "second second"
-              "third third"
-              "forleft forright"
-              "fifth fifth";
+            "first first"
+            "sl sr"
+            "third third"
+            "fourth fourth"
+            "fl fr";
+}
+
+#vanni img{
+  width: 100%;
+}
+
+#vanni .row:nth-child(1){
+  background-color: black;
+  grid-area: first;
+  display: grid;
+  place-items: center;
+}
+
+#vanni .row:nth-child(1) > img{
+  width: 50%;
+  border-radius: 0 !important;
+}
+
+#vanni .row:nth-child(7) > img{
+  width: 33%;
+  border-radius: 0 !important;
+}
+
+#vanni .row:nth-child(2) > img,
+#vanni .row:nth-child(3) > img{
+  width: 70%;
+  border-radius: 0 !important;
+}
+
+#vanni .row:nth-child(2){
+  display: grid;
+  place-items: center;
+  background-color: #e2e2e2;
+  grid-area: sl;
+}
+
+#vanni .row:nth-child(3){
+  display: grid;
+  place-items: center;
+  background-image: url(../vanni/sr.png);
+  grid-area: sr;
+}
+
+#vanni .row:nth-child(4){
+  background-image: url(../vanni/vanni-third.png);
+  grid-area: third;
+}
+
+#vanni .row:nth-child(5){
+  background-color: #000;
+  grid-area: fourth;
+  display: grid;
+  place-items: center;
+}
+
+#vanni .row:nth-child(5) .inner-row{
+  width: 50%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+#vanni .row:nth-child(5) .inner-row img{
+  border-radius: 0 !important;
+}
+
+#vanni .row:nth-child(6){
+  background-image: url(../vanni/vanni-fifth.png);
+  grid-area: fl;
+}
+
+#vanni .row:nth-child(7){
+  display: grid;
+  place-items: center;
+  background-color: #e2e2e2;
+  grid-area: fr;
 }
 
 #cavallini{
@@ -1219,48 +1305,6 @@ hr{
             "tlthird trthird"
             "fourth fourth";
 }
-
-/* .tl-first-row,.tr-first-row,.second-row,.fourth-row,.tl-third-row,.tr-third-row, .top-extra-row{
-  width: 100%;
-  height: 80vh;
-}
-
-.tl-first-row img,.tr-first-row img,.second-row img,.fourth-row img,.tl-third-row img,.tr-third-row img, .top-extra-row img{
-  width: 100%;
-  max-height: 100%;
-  margin: auto;
-} */
-
-/* .top-extra-row{
-  grid-area: topArea;
-}
-
-.tl-first-row{
-  grid-area: tlfirst;
-}
-
-.tr-first-row{
-  grid-area: trfirst;
-}
-
-.second-row{
-  grid-area: second;
-}
-
-.tl-third-row{
-  grid-area: tlthird;
-}
-
-.tr-third-row{
-  grid-area: trthird;
-}
-
-.fourth-row{
-  grid-area: fourth;
-} */
-
-/* ========= */
-
 /* ========================================================= */
 
 /* =================================================== 404 styles */
