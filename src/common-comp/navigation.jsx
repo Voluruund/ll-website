@@ -1,6 +1,8 @@
 import {Link} from "react-router-dom";
 import { StrictMode } from "react";
 
+var navigation
+
 export default function Navigation(){
 
     // window.onload = function(){
@@ -20,10 +22,20 @@ export default function Navigation(){
         //     }, 500)
         // }
     // }
+    
+    // document.onreadystatechange = function (){
+    //     if (document.readyState === "complete") {
+    //         navigation = document.getElementById('btNav')
+    //         window.addEventListener('scroll', function(e) {
+    //             navigation.classList.add("navigation-anim")
+    //             console.log(navigation)
+    //         }, false)
+    //     }
+    // }
 
     return <>
         <StrictMode>
-            <section className="navigation">
+            <section className="navigation" id="btNav">
                 <div className="menu-toggle">
                     <ul>
                         <li><Link to="/" className='nav-item d-500'>Home</Link></li>

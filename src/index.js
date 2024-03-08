@@ -50,6 +50,25 @@ window.setTimeout(
   }
   , 200)
 
+  window.onload = function(){
+    // Loader logic from navigation.jsx
+    let menu_option = "'menu'"
+    let menu_other_option = "'x'"
+    let menuToggle = document.querySelector('.menu-toggle')
+    let menuToggle_after = window.getComputedStyle(menuToggle, '::before');
+    menuToggle.onclick = function (){
+        menuToggle.classList.toggle('active')
+        console.log('clicked')
+        setTimeout(function(){
+            if(menuToggle_after.content === '"menu"'){
+                menuToggle.style.setProperty('--menu-content', menu_other_option)
+            }else{
+                menuToggle.style.setProperty('--menu-content', menu_option)
+            }
+        }, 500)
+    }
+};
+
 function App () {
   raf()
   const root = ReactDOM.createRoot(document.getElementById('root'));

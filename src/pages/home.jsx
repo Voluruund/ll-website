@@ -24,6 +24,7 @@ var numP
 var pBtn
 var imgList
 var showMore
+var navigation
 
 const Home = () => {
 
@@ -36,6 +37,7 @@ const Home = () => {
     window.setTimeout(
         document.onreadystatechange = function () {
             if (document.readyState === "complete") {
+                navigation = document.getElementById('btNav')
                 findMe = document.querySelectorAll('.parag-cv');
                 numP = document.getElementById('01')
                 pBtn = document.getElementById('btnP')
@@ -43,6 +45,7 @@ const Home = () => {
                 showMore = document.getElementById("view-more");
             }
             window.addEventListener('scroll', function(e) {
+                navigation.classList.add("navigation-anim")
                 findMe.forEach(element => {
                     if (isInViewport(element)) {
                         numP.classList.add("text-anim")
