@@ -30,9 +30,9 @@ const Home = () => {
 
     const lenis = window.lenis
 
-    // useEffect(() => {
-    //     lenis.scrollTo('top')
-    // })
+    useEffect(() => {
+        lenis.scrollTo('top')
+    })
 
     window.setTimeout(
         document.onreadystatechange = function () {
@@ -206,74 +206,9 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* da rifare */}
-                {/* <section className="main-p-wp mobile-hidden">
-                    <div className="text-anim-wp mobile-hidden">
-                        <p className='p-num d-100' id='01'>(01)</p>
-                        <p className="parag-cv d-100">I’m Florence-based web graphic designer  </p>
-                    </div>
-                    <div className="text-anim-wp mobile-hidden">
-                        <p className="parag-cv d-200">with 7 years of experience in the design field. Since</p>
-                    </div>
-                    <div className="text-anim-wp mobile-hidden">
-                        <p className="parag-cv d-300">2020 I had the opportunity to be a web design </p>
-                    </div>
-                    <div className="text-anim-wp mobile-hidden">
-                        <p className="parag-cv d-400">teacher at Nemo Academy of Digital Arts. </p>
-                    </div>
-                    <div className="text-anim-wp mobile-hidden">
-                        <p className="parag-cv d-500">Passionate about typography, design and art in </p>
-                    </div>
-                    <div className="text-anim-wp mobile-hidden">
-                        <p className="parag-cv d-600">every way and form.</p>
-                        <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
-                    </div>
-                </section>
-                <section className="main-p-wp desk-hidden">
-                    <p className='p-num' id='01'>(01)</p>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-100">I’m Florence-based web </p>
-                    </div>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-200">graphic designer with 7</p>
-                    </div>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-300">years of experience in the</p>
-                    </div>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-400">design field. Since 2020 I </p>
-                    </div>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-500">had the opportunity to be</p>
-                    </div>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-600">a web design teacher at </p>
-                    </div>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-700">Nemo Academy of Digital</p>
-                    </div>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-800">Arts. Passionate about </p>
-                    </div>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-900">typography, design and </p>
-                    </div>
-                    <div className="text-anim-wp desk-hidden">
-                        <p className="parag-cv d-1000">art in every way and form.</p>
-                    </div>
-                    <div className="desk-hidden circular-btn-wp-mobile">
-                        <Link to="/about"  className='circular-btn-mob'><span className="material-symbols-outlined">arrow_forward</span></Link>
-                        <p id='learn-more-p'>learn more</p>
-                        <div className='row'></div>
-                    </div>
-                </section> */}
-
-
-
-
                 <section className="main-img-wp demo-1__gallery" id='work'>
                     <div>
-                        <img src={isHovered ? './img/faccia.jpg' : './img/gallery-london.png'} alt="gallery-london" className='img-home demo-1__gallery__figure' loading='lazy' 
+                        <img src={isHovered ? './img/monica-logo-home.png' : './img/gallery-london.png'} alt="gallery-london" className='img-home demo-1__gallery__figure' loading='lazy' 
                             onMouseEnter={handleMouseEnter} 
                             onMouseLeave={handleMouseLeave}
                         />
@@ -289,6 +224,7 @@ const Home = () => {
                             onMouseEnter={handleMouseEnter2} 
                             onMouseLeave={handleMouseLeave2}
                         />
+                        {/* <img src='./img/monica-logo-home.png' alt="gallery-london" className='img-home demo-1__gallery__figure' loading='lazy' /> */}
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(02)</p> MONICA BRANCHETTI</p>
                             <p>WEB & GRAPHIC DESIGN</p>
