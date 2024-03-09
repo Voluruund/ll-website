@@ -70,6 +70,20 @@ window.setTimeout(
 };
 
 function App () {
+
+  var navigation
+
+  document.onreadystatechange = function () {
+    // console.log("fuori")
+    if (document.readyState === "complete") {
+        navigation = document.getElementById('btNav')
+        // console.log("dentro")
+        window.addEventListener('scroll', function(e) {
+          navigation.classList.add("navigation-anim")
+        })
+    }
+  }
+
   raf()
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
