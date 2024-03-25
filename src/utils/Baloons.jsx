@@ -77,7 +77,7 @@ export default function Baloons(){
                             scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                second.current.applyImpulse({ x: generateImpulseX() * 1, y: generateImpulseY() * 1, z: 0 }, true)
+                                second.current.applyImpulse({ x: generateImpulseX() * 3, y: generateImpulseY() * 3, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -99,7 +99,7 @@ export default function Baloons(){
                             scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                third.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
+                                third.current.applyImpulse({ x: generateImpulseX() * 3, y: generateImpulseY() * 3, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -121,7 +121,7 @@ export default function Baloons(){
                             scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                fourth.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
+                                fourth.current.applyImpulse({ x: generateImpulseX() * 3, y: generateImpulseY() * 3, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -143,7 +143,7 @@ export default function Baloons(){
                             scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                fifth.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
+                                fifth.current.applyImpulse({ x: generateImpulseX() * 3, y: generateImpulseY() * 3, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -187,7 +187,7 @@ export default function Baloons(){
                             scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
-                                seventh.current.applyImpulse({ x: generateImpulseX(), y: generateImpulseY(), z: 0 }, true)
+                                seventh.current.applyImpulse({ x: generateImpulseX() * 3, y: generateImpulseY() * 3, z: 0 }, true)
                             }}
                         />
                     </Float>
@@ -195,8 +195,8 @@ export default function Baloons(){
 
                 <RigidBody type="fixed" linearDamping={4} angularDamping={1}>
                     {/* 3 -2      2.3 .5 */}
-                    <CuboidCollider args={ [ 10, 5, .5 ] } position={ [ 0, 0, 2.3] } />
-                    <CuboidCollider args={ [ 10, 5, .5 ] } position={ [ 0, 0, -1 ] } />
+                    <CuboidCollider args={ [ 10, 5, .5 ] } position={ [ 0, 0, 2.1] } />
+                    <CuboidCollider args={ [ 10, 5, .5 ] } position={ [ 0, 0, 0 ] } />
                     <CuboidCollider args={ [ 0.5, 5, 3.5 ] } position={ [ 10, 0, 0 ] } />
                     <CuboidCollider args={ [ 0.5, 5, 3.5 ] } position={ [ - 10, 0, 0 ] } />
                 </RigidBody>

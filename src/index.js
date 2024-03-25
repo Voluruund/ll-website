@@ -50,7 +50,40 @@ window.setTimeout(
   }
   , 200)
 
+  window.onload = function(){
+    // Loader logic from navigation.jsx
+    let menu_option = "'menu'"
+    let menu_other_option = "'x'"
+    let menuToggle = document.querySelector('.menu-toggle')
+    let menuToggle_after = window.getComputedStyle(menuToggle, '::before');
+    menuToggle.onclick = function (){
+        menuToggle.classList.toggle('active')
+        console.log('clicked')
+        setTimeout(function(){
+            if(menuToggle_after.content === '"menu"'){
+                menuToggle.style.setProperty('--menu-content', menu_other_option)
+            }else{
+                menuToggle.style.setProperty('--menu-content', menu_option)
+            }
+        }, 500)
+    }
+};
+
 function App () {
+
+  var navigation
+
+  document.onreadystatechange = function () {
+    // console.log("fuori")
+    if (document.readyState === "complete") {
+        navigation = document.getElementById('btNav')
+        // console.log("dentro")
+        window.addEventListener('scroll', function(e) {
+          navigation.classList.add("navigation-anim")
+        })
+    }
+  }
+
   raf()
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
