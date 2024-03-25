@@ -49,7 +49,7 @@ export default function Distortion() {
 
     return (
         <Suspense>
-            <Canvas style={{opacity: '.15', top: '0', left: '0', position: 'fixed', width: '100vw', height: '100vh'}} dpr={dpr} id='tvEffect'>
+            <Canvas style={{opacity: '.25', top: '0', left: '0', position: 'fixed', width: '100vw', height: '100vh'}} dpr={dpr} id='tvEffect'>
             <PerformanceMonitor onDecline={() => setDpr(.5)} flipflops={1}/>
             <ambientLight intensity={1} />
             <mesh position={[0, 0, 1]}>

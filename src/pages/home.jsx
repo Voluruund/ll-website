@@ -86,7 +86,7 @@ const Home = () => {
         <>
             <StrictMode>
                 {loaded === 0 ? <Loader /> : null}
-                {/* <Distortion /> */}
+                <Distortion />
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
                         <span id='hide-btn-default'>View more</span>
