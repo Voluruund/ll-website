@@ -250,34 +250,34 @@ body,html {
    color: transparent;
    font-family: var(--clash-display-variable);
    padding: 0 10px;
-   font-size: 18px;
+   font-size: 0.9375vw;
 }
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
    color: transparent;
    font-family: var(--clash-display-variable);
    padding: 0 10px;
-   font-size: 18px;
+   font-size:  0.9375vw;
 }
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
    color: transparent;
    font-family: var(--clash-display-variable);
    padding: 0 10px;
-   font-size: 18px;
+   font-size:  0.9375vw;
 }
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
    color: transparent;
    font-family: var(--clash-display-variable);
    padding: 0 10px;
-   font-size: 18px;
+   font-size:  0.9375vw;
 }
 input::placeholder {
    color: transparent;
    font-family: var(--clash-display-variable);
    padding: 0 10px;
-   font-size: 18px;
+   font-size:  0.9375vw;
 }
 
 .def-border-radius{
@@ -402,7 +402,7 @@ img{
   z-index: 1;
   font-family: var(--clash-display-variable);
   font-weight: 400;
-  font-size: 50px;
+  font-size: 2.604vw;
   margin: 30px 0;
   text-transform: uppercase;
   color: white;
@@ -469,7 +469,7 @@ img{
   transform: translateY(3em) rotate(3deg);
   animation: appear .7s ease-in-out forwards;
   overflow: hidden;
-  font-size: 40px;
+  font-size: 2.083vw;
   font-weight: 500;
 }
 
@@ -492,7 +492,7 @@ img{
 	margin: 0;
 	font-family: var(--clash-display-variable) !important;
   font-weight: 500;
-	font-size: 18px;
+	font-size:  0.9375vw;
 	position: relative;
 	display: inline-block;
   text-transform:uppercase !important;
@@ -660,7 +660,7 @@ img{
 
 .about-title{
   margin: 2vh auto 0 auto;
-  font-size: 11em;
+  font-size: 8.958vw;
   font-weight: 500;
   width: 90%;
   line-height: 100px;
@@ -688,26 +688,26 @@ img{
 
 .title-cv{
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 1.041vw;
 }
 
 .parag-testimonial{
   width: 90%;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 1.5625vw;
   margin: 0;
 }
 
 .parag-cv{
   width: 90%;
-  font-size: 40px;
+  font-size: 2.083vw;
 }
 
 .work-pos-wp{
   font-family: var(--clash-display-variable);
   margin-top: 60px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.041vw;
   width: 90%;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -716,7 +716,7 @@ img{
 }
 
 .cv-job{
-  font-size: 20px;
+  font-size: 1.041vw;
   margin: 0;
   font-weight: 500;
 }
@@ -738,7 +738,7 @@ img{
 
 .parag-cv-wp ul li{
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.041vw;
 }
 
 .personal-img-wp{
@@ -754,7 +754,7 @@ img{
 
 /* .serious-cta{
   font-family: var(--clash-display-variable);
-  font-size: 20px;
+  font-size: 1.041vw;
   margin: 0 0 0 20px;
   text-transform: uppercase;
   font-weight: 500;
@@ -867,7 +867,7 @@ hr{
 .menu-toggle::before{
   color: var(--default-lilac);
   content: var(--menu-content);
-  font-size: 20px;
+  font-size: 1.041vw;
   text-transform: uppercase;
   font-family: var(--cabinet-medium);
   transition: all .5s;
@@ -920,7 +920,7 @@ hr{
 }
 
 .nav-item{
-  font-size: 20px;
+  font-size: 1.041vw;
   text-transform: uppercase;
   color: transparent;
   text-decoration: none;
@@ -978,7 +978,7 @@ hr{
 .data-footer-wp p a{
   text-decoration: none;
   color: var(--default-lilac);
-  font-size: 20px;
+  font-size: 1.041vw;
   font-family: var(--clash-display-variable);
   font-weight: 500;
   text-transform: uppercase;
@@ -1026,7 +1026,7 @@ hr{
 
 .cta-page-switch button{
   border: none;
-  font-size: 65px;
+  font-size: 3.3854vw;
   font-weight: 500;
   background-color: transparent;
   text-decoration: none;
@@ -1057,12 +1057,12 @@ hr{
 }
 
 .work-subtitle{
-  font-size: 14px;
+  font-size: 0.7291vw;
   font-weight: 500;
 }
 
 .work-p{
-  font-size: 40px;
+  font-size: 2.083vw;
   font-weight: 500;
 }
 
@@ -1333,7 +1333,7 @@ hr{
 }
 
 .txt-wp-404 p{
-  font-size: 30em;
+  font-size: 25vw;
   font-family: var(--secondary-font);
   text-align: center;
   margin: 0;
@@ -1407,17 +1407,17 @@ hr{
 }
 
 .main-title-h{
-  font-size: 4.375em;
+  font-size: 3.6458vw;
   font-weight: 500;
 }
 
 .cursive-title-h{
-  font-size: 50px;
+  font-size: 2.604vw;
   font-family: var(--secondary-font);
 }
 
 .subtitle-h{
-  font-size: 1,25em;
+  font-size: 1.1vw;
   font-weight: 500;
 }
 
@@ -1445,7 +1445,7 @@ hr{
 }
 
 .mp-wp .parag-cv{
-  font-size: 3.2rem !important;
+  font-size:2.7083vw !important;
 }
 
 
@@ -1469,7 +1469,7 @@ hr{
 .second-col-g2 p{
   width: 50%;
   margin: auto;
-  font-size: 1.4rem;
+  font-size: 1.1666vw;
   line-height: 1.5;
 }
 
@@ -1479,7 +1479,7 @@ hr{
 
 .per-hobbies p, .more-info p{
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1vw;
   line-height: 2.2;
 }
 
@@ -1616,7 +1616,7 @@ hr{
   padding: 0;
   height: inherit;
   width: 10%;
-  font-size: 1.25em;
+  font-size: 1.1666vw;
 }
 
 .circular-btn, .circular-btn-mob{
@@ -1639,7 +1639,7 @@ hr{
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 300;
-  font-size: 1.7em;
+  font-size: 1.4062vw;
 }
 
 .btnP-anim{
@@ -1658,7 +1658,7 @@ hr{
 }
 
 .main-p-wp .parag-cv{
-  font-size: 3.825em;
+  font-size:3.1562vw;
   transform: translateY(3em) rotate(3deg);
   width: 100%;
 }
@@ -1697,7 +1697,7 @@ hr{
 }
 
 .form-title {
-  font-size: 55px;
+  font-size: 2.8645vw;
   font-weight: 500;
   font-family: var(--clash-display-variable);
   text-align: center;
@@ -1712,7 +1712,7 @@ hr{
 
 .title-form {
   margin: 0;
-  font-size: 20px;
+  font-size: 1.041vw;
   font-weight: 500;
   font-family: var(--clash-display-variable);
 }
@@ -1753,7 +1753,7 @@ hr{
   padding-left: 35px;
   height: 21px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 1.1458vw;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1871,7 +1871,7 @@ hr{
     margin: auto;
   }
   .about-title{
-    font-size: 120px;
+    font-size: 6.25vw;
     line-height: 80px;
   }
   .personal-img-wp{
@@ -1886,7 +1886,7 @@ hr{
     margin: 10px 0;
   }
   .parag-cv, .parag-testimonial{
-    font-size: 28px;
+    font-size: 1.4583vw;
     width: 100%;
   }
   .title-cv{
@@ -1919,7 +1919,7 @@ hr{
     border-top: 2px solid var(--default-lilac);
   }
   .text-wrapper > h1{
-    font-size: 30px;
+    font-size: 1.5625vw;
   }
   .circle{
     width: 20px;
@@ -1937,13 +1937,13 @@ hr{
     margin-bottom: 5px;
   }
   .nav-item, .menu-toggle::before{
-      font-size: 16px;
+      font-size: 0.8333vw;
   } 
 
   /* responsive form */
 
   .form-title{
-    font-size: 30px;
+    font-size: 1.5625vw;
   }
   .form-grid{
     grid-template-columns: 100%;
@@ -1955,7 +1955,7 @@ hr{
     flex-wrap: nowrap;
   }
   .title-form{
-    font-size: 17px;
+    font-size:0.8854vw;
   }
 
   /* responsive footer */
@@ -1993,7 +1993,7 @@ hr{
   }
 
   .parag-cv, .main-p-wp .text-anim-wp:first-of-type .parag-cv, .p-num{
-    font-size: 1.625rem !important;
+    font-size: 1.3593vw !important;
     width: 100%;
   }
 
@@ -2014,7 +2014,7 @@ hr{
 
   #learn-more-p{
     width: fit-content;
-    font-size: 1.3rem;
+    font-size: 1.072vw;
     margin: 0;
     font-weight: 500;
   }
@@ -2040,7 +2040,7 @@ hr{
   }
 
   .main-title-h, .cursive-title-h{
-    font-size: 2rem;
+    font-size: 1.6666vw;
     line-height: 1.5;
   }
 

@@ -6,6 +6,7 @@ import { StrictMode, Suspense } from 'react';
 import { useEffect } from 'react';
 import Loader from '../common-comp/Loader';
 import { useState } from 'react';
+import Image from '../common-comp/Image'
 
 import Distortion from '../utils/Distortion';
 
@@ -86,48 +87,11 @@ const Home = () => {
     }, 800)
 
     const [loaded, setLoaded] = useState(0);
-
-    const [isHovered, setIsHovered] = useState(0);
-    const handleMouseEnter = () => {setIsHovered(1);};
-    const handleMouseLeave = () => {setIsHovered(0);};
-
-    const [isHovered2, setIsHovered2] = useState(0);
-    const handleMouseEnter2 = () => {setIsHovered2(1);};
-    const handleMouseLeave2 = () => {setIsHovered2(0);};
-
-    const [isHovered3, setIsHovered3] = useState(0);
-    const handleMouseEnter3 = () => {setIsHovered3(1);};
-    const handleMouseLeave3 = () => {setIsHovered3(0);};
-
-    const [isHovered4, setIsHovered4] = useState(0);
-    const handleMouseEnter4 = () => {setIsHovered4(1);};
-    const handleMouseLeave4 = () => {setIsHovered4(0);};
-
-    const [isHovered5, setIsHovered5] = useState(0);
-    const handleMouseEnter5 = () => {setIsHovered5(1);};
-    const handleMouseLeave5 = () => {setIsHovered5(0);};
-
-    const [isHovered6, setIsHovered6] = useState(0);
-    const handleMouseEnter6 = () => {setIsHovered6(1);};
-    const handleMouseLeave6 = () => {setIsHovered6(0);};
-
-    const [isHovered7, setIsHovered7] = useState(0);
-    const handleMouseEnter7 = () => {setIsHovered7(1);};
-    const handleMouseLeave7 = () => {setIsHovered7(0);};
-
-    const [isHovered8, setIsHovered8] = useState(0);
-    const handleMouseEnter8 = () => {setIsHovered8(1);};
-    const handleMouseLeave8 = () => {setIsHovered8(0);};
-
-    const [isHovered9, setIsHovered9] = useState(0);
-    const handleMouseEnter9 = () => {setIsHovered9(1);};
-    const handleMouseLeave9 = () => {setIsHovered9(0);};
-
     return (
         <>
             <StrictMode>
                 {loaded === 0 ? <Loader /> : null}
-                <Distortion />
+                {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
                         <span id='hide-btn-default'>View more</span>
@@ -208,10 +172,7 @@ const Home = () => {
 
                 <section className="main-img-wp demo-1__gallery" id='work'>
                     <div>
-                        <img src={isHovered ? './img/monica-logo-home.png' : './img/gallery-london.png'} alt="gallery-london" className='img-home demo-1__gallery__figure' loading='lazy' 
-                            onMouseEnter={handleMouseEnter} 
-                            onMouseLeave={handleMouseLeave}
-                        />
+                        <Image url="./img/gallery-london.png" nextUrl="./img/monica-logo-home.png"></Image>
                         <div className="info-work">
                             <p><p className='p-num'>(01)</p> DYS44 ART GALLERY LONDON</p>
                             <p>WEB DESIGN</p>
@@ -220,11 +181,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <img src={isHovered2 ? './img/faccia.jpg' : './img/monica-logo-home.png'} alt="gallery-london" className='img-home demo-1__gallery__figure' loading='lazy' 
-                            onMouseEnter={handleMouseEnter2} 
-                            onMouseLeave={handleMouseLeave2}
-                        />
-                        {/* <img src='./img/monica-logo-home.png' alt="gallery-london" className='img-home demo-1__gallery__figure' loading='lazy' /> */}
+                        <Image url="./img/monica-logo-home.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(02)</p> MONICA BRANCHETTI</p>
                             <p>WEB & GRAPHIC DESIGN</p>
@@ -233,10 +190,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <img src={isHovered3 ? './img/faccia.jpg' : './img/cavallini-logo-home.png'} alt="cavallini-logo" className='img-home demo-1__gallery__figure' loading='lazy' 
-                            onMouseEnter={handleMouseEnter3} 
-                            onMouseLeave={handleMouseLeave3}
-                        />
+                        <Image url="./img/cavallini-logo-home.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(03)</p> Valentina Cavallini</p>
                             <p>Branding</p>
@@ -245,10 +199,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <img src={isHovered4 ? './img/faccia.jpg' : './img/guia-nerli.png'} alt="guia-logo" className='img-home demo-1__gallery__figure' loading='lazy' 
-                            onMouseEnter={handleMouseEnter4} 
-                            onMouseLeave={handleMouseLeave4}
-                        />
+                        <Image url="./img/guia-nerli.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(04)</p> Guia Nerli</p>
                             <p>Branding</p>
@@ -257,10 +208,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <img src={isHovered5 ? './img/faccia.jpg' : './img/somatici-home.png'} alt="somatici" className='img-home demo-1__gallery__figure' loading='lazy' 
-                            onMouseEnter={handleMouseEnter5} 
-                            onMouseLeave={handleMouseLeave5}
-                        />
+                        <Image url="./img/somatici-home.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(05)</p> Percorsi somatici</p>
                             <p>Web Design</p>
@@ -269,10 +217,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <img src={isHovered6 ? './img/faccia.jpg' : './img/domizia-home.png'} alt="domizia" className='img-home demo-1__gallery__figure' loading='lazy' 
-                            onMouseEnter={handleMouseEnter6} 
-                            onMouseLeave={handleMouseLeave6}
-                        />
+                        <Image url="./img/domizia-home.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(06)</p> Domizia Vanni</p>
                             <p>Web Design</p>
@@ -281,10 +226,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <img src={isHovered7 ? './img/faccia.jpg' : './img/bigne-home.png'} alt="bignè" className='img-home demo-1__gallery__figure' loading='lazy' 
-                            onMouseEnter={handleMouseEnter7} 
-                            onMouseLeave={handleMouseLeave7}
-                        />
+                        <Image url="./img/bigne-home.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(07)</p> Studio Bignè</p>
                             <p>Branding</p>
@@ -293,10 +235,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <img src={isHovered8 ? './img/faccia.jpg' : './img/pegaso-home.png'} alt="pegaso" className='img-home demo-1__gallery__figure' loading='lazy' 
-                            onMouseEnter={handleMouseEnter8} 
-                            onMouseLeave={handleMouseLeave8}
-                        />
+                        <Image url="./img/pegaso-home.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(08)</p> Pasticceria Pegaso</p>
                             <p>Web Design</p>
@@ -305,10 +244,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <img src={isHovered9 ? './img/faccia.jpg' : './img/personal-work-home.png'} alt="personal work" className='img-home demo-1__gallery__figure' loading='lazy' 
-                            onMouseEnter={handleMouseEnter9} 
-                            onMouseLeave={handleMouseLeave9}
-                        />
+                        <Image url="./img/personal-work-home.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(09)</p> Personal project</p>
                             <p>Illustration</p>
