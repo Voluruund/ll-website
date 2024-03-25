@@ -1,14 +1,8 @@
-import React, { useEffect, useParams, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
 
 
 const Image = (props) => {
-    
-//   const [imageUrl, setImageUrl] = useState(props.url);
-//   console.log(imageUrl)
-//   useEffect(() => {
-//     setImageUrl(props.nextUrl);
-//   }, [])
 
   const imageRef = useRef();
 

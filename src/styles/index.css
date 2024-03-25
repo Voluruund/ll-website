@@ -504,6 +504,7 @@ img{
 	font-family: var(--clash-display-variable) !important;
 	font-weight:500;
   width: fit-content;
+  max-height: 23px;
 }
 
 .button--atlas-outline > span {
