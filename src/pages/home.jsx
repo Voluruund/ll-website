@@ -181,7 +181,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Image url="./img/monica-logo-home.png" nextUrl="./img/faccia.jpg"></Image>
+                        <Image url="./img/monica-logo-home.png" nextUrl="./img/monica.gif"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(02)</p> MONICA BRANCHETTI</p>
                             <p>WEB & GRAPHIC DESIGN</p>
@@ -217,7 +217,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Image url="./img/domizia-home.png" nextUrl="./img/faccia.jpg"></Image>
+                        <Image url="./img/domizia-home.jpg" nextUrl="./img/vanni.gif"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(06)</p> Domizia Vanni</p>
                             <p>Web Design</p>
@@ -226,7 +226,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Image url="./img/bigne-home.png" nextUrl="./img/faccia.jpg"></Image>
+                        <Image url="./img/bigne-home.png" nextUrl="./img/bigne.gif"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(07)</p> Studio Bignè</p>
                             <p>Branding</p>
