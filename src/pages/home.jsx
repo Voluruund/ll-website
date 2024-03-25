@@ -90,7 +90,7 @@ const Home = () => {
     return (
         <>
             <StrictMode>
-                {loaded === 0 ? <Loader /> : null}
+                {/* {loaded === 0 ? <Loader /> : null} */}
                 {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">

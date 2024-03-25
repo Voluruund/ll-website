@@ -14,8 +14,8 @@ export default function Baloons(){
 
     const {nodes, materials} = useGLTF('./models/balloon-laura-low-new.gltf')
 
-    const first = useRef()
-    const second = useRef()
+    // const first = useRef()
+    // const second = useRef()
     const third = useRef()
     const fourth = useRef()
     const fifth = useRef()
@@ -61,7 +61,7 @@ export default function Baloons(){
                     </Float>
                 </RigidBody> */}
 
-                <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={second}>
+                {/* <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={second}>
                     <Float
                         speed={2}
                         rotationIntensity={.5}
@@ -81,7 +81,7 @@ export default function Baloons(){
                             }}
                         />
                     </Float>
-                </RigidBody>
+                </RigidBody> */}
 
                 <RigidBody colliders="hull" ref={third} lockRotations restitution={ .5 }>
                     <Float
@@ -94,7 +94,7 @@ export default function Baloons(){
                             receiveShadow
                             geometry={model}
                             material={materials["Material.001"]}
-                            position={[1.5, -2.6, 1.229]}
+                            position={[0, 0, 1.229]}
                             // 1.262
                             scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
@@ -116,7 +116,7 @@ export default function Baloons(){
                             receiveShadow
                             geometry={model}
                             material={materials["Material.001"]}
-                            position={[7, .4, 1.229]}
+                            position={[7, -1.4, 1.229]}
                             // 1.262
                             scale={[0.687, 1.32, 0.687]}
                             rotation-x={1.5}
@@ -138,9 +138,9 @@ export default function Baloons(){
                             receiveShadow
                             geometry={model}
                             material={materials["Material.001"]}
-                            position={[-7, -3, 1.229]}
+                            position={[5, 2, 1.229]}
                             // 1.262
-                            scale={[0.687, 1.32, 0.687]}
+                            scale={[0.487, 1, 0.487]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 fifth.current.applyImpulse({ x: generateImpulseX() * 3, y: generateImpulseY() * 3, z: 0 }, true)
@@ -160,7 +160,7 @@ export default function Baloons(){
                             receiveShadow
                             geometry={model}
                             material={materials["Material.001"]}
-                            position={[-7, 2, 1.229]}
+                            position={[-7, 1.5, 1.229]}
                             // 3.262
                             scale={[0.787, 1.32, 0.787]}
                             rotation-x={1.5}
@@ -182,9 +182,9 @@ export default function Baloons(){
                             receiveShadow
                             geometry={model}
                             material={materials["Material.001"]}
-                            position={[-3.5, 0, 1.229]}
+                            position={[-4.5, -2, 1.229]}
                             // 2.362
-                            scale={[0.687, 1.32, 0.687]}
+                            scale={[0.487, 1, 0.487]}
                             rotation-x={1.5}
                             onPointerEnter={() => {
                                 seventh.current.applyImpulse({ x: generateImpulseX() * 3, y: generateImpulseY() * 3, z: 0 }, true)
