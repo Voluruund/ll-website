@@ -22,7 +22,7 @@ export default function Baloons(){
     const sixth = useRef()
     const seventh = useRef()
 
-    var model
+    var model 
 
     if(window.innerWidth < 1000){
         model = nodes.Sphere002.geometry

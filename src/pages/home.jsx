@@ -90,7 +90,7 @@ const Home = () => {
     return (
         <>
             <StrictMode>
-                {/* {loaded === 0 ? <Loader /> : null} */}
+                {loaded === 0 ? <Loader /> : null}
                 {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
@@ -169,6 +169,39 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
+
+                <div className='mp-wp desk-hidden'>
+                    <div>
+                        <div className="text-anim-wp">
+                            <p className='p-num d-100' id='01'>(01)</p>
+                            <p className="parag-cv d-100">I’m a designer based in </p>
+                        </div>
+                        <div className="text-anim-wp">
+                            <p className="parag-cv d-200"><span className='cursive-title-h'>Florence</span>. Specialized in Graphic design </p>
+                        </div>
+                        <div className="text-anim-wp">
+                            <p className="parag-cv d-300">and Digital branding, with 8+ years of</p>
+                        </div>
+                        <div className="text-anim-wp">
+                            <p className="parag-cv d-400">experience in <span className='cursive-title-h'>design </span>field.</p>
+                        </div>
+                    </div>
+                    <div className='first-col-g2'>
+                        <img src={'./img/laura-home.png'} alt="Laura" className="img-home-l"/>
+                    </div>
+                    <div className='second-col-g2'>
+                        <p>Thanks to the years spent to study art and the experience of all these years as a freelancer, I gained a great experience in creative process. In the last 4 years I had the chance to teach Web Graphic Design at Nemo Academy in Florence. </p>
+                        <div className="per-hobbies">
+                            <p>Swimmer</p>
+                            <p>Music lover</p>
+                            <p>Film/TV series devourer</p>
+                        </div>
+                        <div className="more-info">
+                            <p>more about me</p>
+                            <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
+                        </div>
+                    </div>
+                </div>
 
                 <section className="main-img-wp demo-1__gallery" id='work'>
                     <div>

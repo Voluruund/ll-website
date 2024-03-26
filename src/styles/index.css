@@ -2133,18 +2133,51 @@ hr{
     line-height: 1.5;
   }
 
+  .mp-wp{
+    height: fit-content;
+  }
+
+  .second-col-g2{
+    margin-top: 6vh;
+  }
+
+  .per-hobbies{
+    margin-top: 6vh !important;
+  }
+
+  .mp-wp .per-hobbies p{
+    width: 95vw;
+  }
+
+  .second-col-g2 p{
+    width: 95%;
+    margin: auto;
+    font-size: 5vw;
+  }
+
   .cursive-title-h{
     width: 100%;
     display: inline-block;
   }
 
+  .first-col-g2{
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .img-home-l{
+    width: 95%;
+    margin: auto;
+  }
+
   .main-logo-wp{
-    bottom: 4vh;
+    bottom: 10vh;
   }
 
   .subt-wp{
     position: absolute;
-    bottom: -15vh;
+    bottom: -10vh;
     left: 0;
     width: 100%;
   }
