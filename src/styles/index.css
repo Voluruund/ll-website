@@ -1872,7 +1872,7 @@ hr{
     margin: auto;
   }
   .about-title{
-    font-size: 6.25vw;
+    font-size: 31.25vw;
     line-height: 80px;
   }
   .personal-img-wp{
@@ -1920,7 +1920,7 @@ hr{
     border-top: 2px solid var(--default-lilac);
   }
   .text-wrapper > h1{
-    font-size: 1.5625vw;
+    font-size: 6.5625vw;
   }
   .circle{
     width: 20px;
@@ -1938,13 +1938,13 @@ hr{
     margin-bottom: 5px;
   }
   .nav-item, .menu-toggle::before{
-      font-size: 0.8333vw;
+      font-size: 3.8333vw;
   } 
 
   /* responsive form */
 
   .form-title{
-    font-size: 1.5625vw;
+    font-size: 9.5625vw;
   }
   .form-grid{
     grid-template-columns: 100%;
@@ -1956,7 +1956,49 @@ hr{
     flex-wrap: nowrap;
   }
   .title-form{
-    font-size:0.8854vw;
+    font-size: 4.6854vw;
+  }
+
+  .piva{
+    width: 100%;
+  }
+
+  .data-footer-wp p a{
+    font-size: 4vw;
+  }
+
+  .social{
+    align-items: center;
+    place-items: initial;
+  }
+
+  .ln{
+    text-align: center;
+  }
+
+  .fb{
+    text-align: right;
+  }
+
+  .main-img-wp > div{
+    display: block;
+    width: 100% !important;
+    position: static;
+  }
+
+  .main-img-wp{
+    height: fit-content;
+    display: grid;
+    gap: 5vh 0;
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle.active{
+    width: 90vw;
+  }
+
+  input.form-item::placeholder{
+    font-size: 3.5vw;
   }
 
   /* responsive footer */
@@ -1993,9 +2035,55 @@ hr{
     width: 90vw;
   }
 
+  .info-work{
+    display: none;
+  }
+
   .parag-cv, .main-p-wp .text-anim-wp:first-of-type .parag-cv, .p-num{
-    font-size: 1.3593vw !important;
+    font-size: 7.3593vw !important;
     width: 100%;
+    margin: 0;
+    display: inline;
+  }
+
+  .title-cv{
+    font-size: 6vw;
+  }
+
+  .cv-job, .parag-testimonial, .parag-cv-wp ul li{
+    font-size: 5.041vw;
+  }
+
+  .personal-img{
+    position: static;
+  }
+
+  .mt-120{
+    margin: 0 !important;
+  }
+
+  .ml-10{
+    margin-left: 0 !important;
+  }
+  
+  /* .mt-20{
+    margin-top: 0 !important;
+  } */
+  
+  .mt-50{
+    margin-top: 0 !important;
+  }
+  
+  .mt-70{
+    margin-top: 0 !important;
+  }
+  
+  .mb-150{
+    margin-bottom: 0 !important;
+  }
+  
+  .mt-120{
+    margin-top: 0 !important;
   }
 
   .main-p-wp .text-anim-wp{
@@ -2041,7 +2129,7 @@ hr{
   }
 
   .main-title-h, .cursive-title-h{
-    font-size: 1.6666vw;
+    font-size: 9.6666vw;
     line-height: 1.5;
   }
 
@@ -2051,13 +2139,17 @@ hr{
   }
 
   .main-logo-wp{
-    bottom: 12vh;
+    bottom: 4vh;
   }
 
   .subt-wp{
     position: absolute;
-    bottom: 0;
+    bottom: -15vh;
     left: 0;
     width: 100%;
+  }
+  
+  .subtitle-h{
+    font-size: 4.6666vw;
   }
 }
