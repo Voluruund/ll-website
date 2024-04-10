@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import Footer from "../common-comp/footer";
-import SingleBaloon from "../common-comp/SingleBaloon";
+// import SingleBaloon from "../common-comp/SingleBaloon";
 
 function pageNotFound(){
     return ( <>
@@ -10,7 +10,7 @@ function pageNotFound(){
                 <div className="txt-wp-404">
                     <p>4</p>
                     <div className="balloon-wp-404">
-                        <SingleBaloon />
+                        {/* <SingleBaloon /> */}
                     </div>
                     <p>4</p>
                 </div>

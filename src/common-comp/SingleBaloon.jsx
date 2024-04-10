@@ -13,7 +13,7 @@ export default function SingleBaloon(){
 
     return <>
         <StrictMode>
-            {/* <Leva collapsed /> */}
+            <Leva collapsed />
             <Suspense fallback={null}>
                 <Canvas style={{position: 'absolute', zIndex: 800, width: '100vw', left: '-2.5vw', top: '-5vh',}} dpr={dpr} orthographic camera={{ zoom: 100, position: [0, 0, 30] }}>
                     <PerformanceMonitor onDecline={() => setDpr(.5)} flipflops={1}/>

@@ -2,6 +2,13 @@ import { StrictMode, Suspense } from 'react';
 import SingleBaloon from './SingleBaloon'
 
 function Footer(){
+
+    var loaded = 0
+
+    if(window.innerWidth < 1000){
+        loaded = 1
+    }
+
     return(
         <StrictMode>
             <footer className='footer-wp' id='footer'>
@@ -17,7 +24,14 @@ function Footer(){
                             <p className='ln'><a href="#">linkedin</a></p>
                             <p className='fb'><a href="#">facebook</a></p>
                         </div>
-                        <p className='privacy'><a href="#">privacy policy</a></p>
+                        {loaded === 0 ? 
+                            <><p className='privacy'><a href="#">privacy policy | developed by Alessio majid</a></p></>
+                            :
+                            <>
+                                <p className='privacy'><a href="#">privacy policy</a></p>
+                                <p className='devby'><a href='#'>developed by Alessio majid</a></p>
+                            </>
+                        }
                     </div>
                 </div>
             </footer>

@@ -17,9 +17,9 @@ export default function Baloon(){
 
     const first = useRef()
 
-    const { perfVisible } = useControls('debug', {
-        perfVisible: false
-    })
+    // const { perfVisible } = useControls('debug', {
+    //     perfVisible: false
+    // })
     
     var model
 
@@ -34,8 +34,8 @@ export default function Baloon(){
     // scale={[0.887, 3.162, 0.887]}
 
     return <>
-
-        { perfVisible && <Perf position="top-left" /> }
+        {/* ATTIVA LEVA PERF */}
+        {/* { perfVisible && <Perf position="top-left" /> } */}
         <StrictMode>
             <Lights />
             {/* <OrbitControls makeDefault/> */}

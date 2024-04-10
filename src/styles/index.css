@@ -595,7 +595,7 @@ img{
 #myProgress {
   width: 90%;
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   top: 75vh;
   left: 50%;
   transform: translateX(-50%);
@@ -997,6 +997,12 @@ hr{
 .privacy{
   grid-area: privacy;
   text-align: right;
+}
+
+.devby{
+  grid-area: devby;
+  text-align: center;
+  padding-bottom: 6vh;
 }
 
 /* ================================================== */
@@ -2021,10 +2027,12 @@ hr{
   .data-footer-wp{
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "piva privacy"
-                         "social social";
+                         "social social"
+                         "devby devby";
   }
   .social, .data-footer-wp{
     border-top: solid 2px var(--default-lilac);
+    border-bottom: solid 2px var(--default-lilac);
   }
 
   /* responsive home */
