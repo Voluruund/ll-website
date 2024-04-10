@@ -1869,8 +1869,19 @@ hr{
   .text-wrapper.mtb-200{
     margin: 100px 0;
   }
+
   .cta-wp{
     display: none;
+  }
+
+  .provaDiv .cta-wp{
+    z-index: 100000;
+    position: relative;
+    width: 95vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 2vh 0;
   }
 
   /* responsive about */
@@ -2045,12 +2056,45 @@ hr{
   } */
 
   .works-grid{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .works-desc-wp{
     display: block;
+  }
+
+  .works-desc-wp div:nth-child(1) > .work-p{
+    font-size: 8vw;
+    margin-top: 12vh;
+  }
+
+  .works-desc-wp div:nth-child(1) > .work-subtitle:nth-child(3){
+    margin: 5vh 0 2vh 0 !important;
+  }
+
+  .work-p{
+    font-size: 5vw;
+    line-height: 1.5;
+  }
+
+  .work-subtitle{
+    font-size: 3vw;
+  }
+
+  .work-cta-wp{
+    padding: 10vh 0;
+  }
+
+  .button-outline{
+    font-size: 3.9375vw;
   }
 
   .works-grid .row{
     width: 100%;
-    height: fit-content;
+    height: 95vw;
+    background-size: cover;
+    background-position: 50%;
   }
 
   .main-p-wp{

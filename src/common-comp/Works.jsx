@@ -7,6 +7,7 @@ import Cavallini from "../pages/work-pages/Cavallini";
 import { useEffect } from "react";
 import Branchetti from "../pages/work-pages/Branchetti";
 import Vanni from "../pages/work-pages/Vanni";
+import Navigation from "./topNavigation";
 
 export default function Works({stato}){
 
@@ -15,6 +16,12 @@ export default function Works({stato}){
     useEffect(() => {
         lenis.scrollTo('top')
     })
+
+    var loaded = 0
+
+    if(window.innerWidth < 1000){
+        loaded = 1
+    }
 
     //numero totale delle pagine dei lavori
     const pageCount = 4;
@@ -41,7 +48,9 @@ export default function Works({stato}){
 
     return <>
         <StrictMode>
-            {/* <div className="works-bg"> */}
+            <div className="provaDiv">
+                {loaded === 1 ? <Navigation></Navigation> : null}
+            </div>
             {currentIndex === 4 ? <Orchestra /> : null}
             {currentIndex === 2 ? <Cavallini /> : null}
             {currentIndex === 3 ? <Branchetti /> : null}
@@ -50,7 +59,6 @@ export default function Works({stato}){
                 <p className="cta-page-switch"><button onClick={handlePrevClick}>Previous</button></p>
                 <p className="cta-page-switch"><button onClick={handleNextClick}>Next</button></p>
             </div>
-            {/* </div> */}
             <Form />
             <Footer />
         </StrictMode>
