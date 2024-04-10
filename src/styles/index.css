@@ -583,7 +583,7 @@ img{
 
 .loader-wp{
   z-index: 999999;
-  height: 100vh;
+  height: 1000vh;
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -595,8 +595,8 @@ img{
 #myProgress {
   width: 90%;
   background-color: transparent;
-  position: absolute;
-  bottom: 25vh;
+  position: fixed;
+  top: 75vh;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1648,12 +1648,27 @@ hr{
   animation-delay: 1s;
 }
 
+.btnP-anim-mob{
+  animation: btn-rotation2 1.3s cubic-bezier(.98,.3,.3,.9) forwards;
+  animation-delay: 1s;
+}
+
 @keyframes btn-rotation {
   from{
     left: 50%;
     transform: translate(-50%, -50%) rotate(0deg);
   }to{
     left: 70%;
+    transform: translate(-50%, -50%) rotate(720deg);
+  }
+}
+
+@keyframes btn-rotation2 {
+  from{
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }to{
+    left: 90%;
     transform: translate(-50%, -50%) rotate(720deg);
   }
 }
@@ -1843,6 +1858,7 @@ hr{
   }
   .mobile-hidden{
     display: none;
+    visibility: hidden;
   }
   .text-wrapper.mtb-200{
     margin: 100px 0;
@@ -2020,6 +2036,15 @@ hr{
     height: fit-content;
   } */
 
+  .works-grid{
+    display: block;
+  }
+
+  .works-grid .row{
+    width: 100%;
+    height: fit-content;
+  }
+
   .main-p-wp{
     width: fit-content;
     margin: auto;
@@ -2109,9 +2134,7 @@ hr{
   }
 
   .circular-btn-mob{
-    width: 12vw;
-    position: initial;
-    transform: translate(0);
+    width: 8vw;
   }
 
   .row{
@@ -2153,6 +2176,44 @@ hr{
     width: 95%;
     margin: auto;
     font-size: 5vw;
+  }
+
+  .circular-btn-mob .material-symbols-outlined{
+    font-size: 4vw;
+  }
+
+  .mob-who-am-i-wp{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 6vh;
+  }
+
+  .mp-wp .cursive-title-h{
+    width: fit-content !important;
+    font-size: 8.5vw !important;
+  }
+
+  .mob-who-am-i-wp > div:nth-child(1){
+    position: relative;
+  }
+
+  .mob-who-am-i-wp > div:nth-child(1) > .parag-cv{
+    position: absolute;
+    right: 5%;
+    top: -.4vh;
+    width: fit-content;
+  }
+
+  .mp-wp .text-anim-wp{
+    margin: .7vh 0;
+  }
+
+  .mp-wp .p-num{
+    font-size: 5vw !important;
+  }
+
+  .mp-wp .parag-cv{
+    font-size: 6.5vw!important;
   }
 
   .cursive-title-h{

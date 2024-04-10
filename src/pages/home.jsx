@@ -23,6 +23,7 @@ var isInViewport = function(elem) {
 var findMe
 var numP
 var pBtn
+var pBtn2
 var imgList
 var showMore
 var navigation
@@ -42,6 +43,7 @@ const Home = () => {
                 findMe = document.querySelectorAll('.parag-cv');
                 numP = document.getElementById('01')
                 pBtn = document.getElementById('btnP')
+                pBtn2 = document.getElementById('btnP2')
                 imgList = document.querySelectorAll('.img-home')
                 showMore = document.getElementById("view-more");
             }
@@ -55,6 +57,7 @@ const Home = () => {
                 });
                 if(isInViewport(pBtn)){
                     pBtn.classList.add("btnP-anim")
+                    pBtn2.classList.add("btnP-anim-mob")
                 }
             }, false)
 
@@ -171,16 +174,19 @@ const Home = () => {
                 </section>
 
                 <div className='mp-wp desk-hidden'>
-                    <div>
+                    <div className='mob-who-am-i-wp'>
                         <div className="text-anim-wp">
                             <p className='p-num d-100' id='01'>(01)</p>
-                            <p className="parag-cv d-100">I’m a designer based in </p>
+                            <p className="parag-cv d-100">I’m a designer</p>
                         </div>
                         <div className="text-anim-wp">
-                            <p className="parag-cv d-200"><span className='cursive-title-h'>Florence</span>. Specialized in Graphic design </p>
+                            <p className="parag-cv d-200">based in <span className='cursive-title-h'>Florence</span>. Specialized</p>
                         </div>
                         <div className="text-anim-wp">
-                            <p className="parag-cv d-300">and Digital branding, with 8+ years of</p>
+                            <p className="parag-cv">in Graphic design and Digital </p>
+                        </div>
+                        <div className="text-anim-wp">
+                            <p className="parag-cv d-300">branding, with 8+ years of</p>
                         </div>
                         <div className="text-anim-wp">
                             <p className="parag-cv d-400">experience in <span className='cursive-title-h'>design </span>field.</p>
@@ -198,7 +204,7 @@ const Home = () => {
                         </div>
                         <div className="more-info">
                             <p>more about me</p>
-                            <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
+                            <Link to="/about"  className='circular-btn-mob' id='btnP2'><span className="material-symbols-outlined">arrow_forward</span></Link>
                         </div>
                     </div>
                 </div>
