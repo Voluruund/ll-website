@@ -12,22 +12,6 @@ export default function BaloonsMobile(){
     return <>
         <StrictMode>
             <Lights />
-            {/* <Float
-                speed={2}
-                rotationIntensity={.5}
-                floatingRange={[-.05, .05]} // defaults to [-0.1,0.1]
-            >
-                <mesh
-                    castShadow
-                    receiveShadow
-                    geometry={model}
-                    material={materials["Material.001"]}
-                    position={[0, 0, 1.229]}
-                    // 1.262
-                    scale={[0.287, .32, 0.287]}
-                    rotation-x={1.5}
-                />
-            </Float> */}
             <Float
                 speed={2}
                 rotationIntensity={.5}
