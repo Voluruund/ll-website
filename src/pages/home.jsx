@@ -46,6 +46,7 @@ const Home = () => {
                 pBtn2 = document.getElementById('btnP2')
                 imgList = document.querySelectorAll('.img-home')
                 showMore = document.getElementById("view-more");
+                showMore.setAttribute('listener', 'false')
             }
             window.addEventListener('scroll', function(e) {
                 navigation.classList.add("navigation-anim")
@@ -60,8 +61,6 @@ const Home = () => {
                     pBtn2.classList.add("btnP-anim-mob")
                 }
             }, false)
-
-            showMore.setAttribute('listener', 'false')
 
             if(window.innerWidth > 1024){
                 imgList.forEach(element => {
@@ -98,7 +97,7 @@ const Home = () => {
     return (
         <>
             <StrictMode>
-                <Loader />
+                {/* <Loader /> */}
                 {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
@@ -123,7 +122,7 @@ const Home = () => {
 
                 <section className='f-home-section' id='top'>
                     <Suspense fallback={null}>
-                        <MultBaloons />
+                        {/* <MultBaloons /> */}
                     </Suspense>
                     <div className="main-title-wp">
                         <div><p className='main-title-h'>Web Designer</p></div>

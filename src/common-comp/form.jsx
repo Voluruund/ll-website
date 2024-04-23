@@ -1,4 +1,5 @@
 import {StrictMode, useState} from 'react';
+import ConfirmButton from './confirmButton';
 
 function Form(){
     const [isSubscribed, setIsSubscribed] = useState(false);
@@ -41,6 +42,7 @@ function Form(){
                     <p className="title-form mobile-hidden">I’ve read and agree with the terms and conditions of the Privacy Policy</p>
                     <p className="title-form desktop-hidden">I accept the terms of the Privacy Policy</p>
                 </div>
+                <ConfirmButton />
             </section>
         </StrictMode>
     )
