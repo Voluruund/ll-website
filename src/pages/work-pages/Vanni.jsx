@@ -1,4 +1,16 @@
+import { Link } from "react-router-dom"
+import { useEffect } from "react"
+
 export default function Vanni(){
+
+    const lenis = window.lenis
+
+    useEffect(() => {
+        lenis.scrollTo('top')
+    })
+
+    window.lenis.scrollTo((0,0), {immediate: true})
+
     return <>
         <div className="works-desc-wp mt-70">
             <div>
@@ -32,30 +44,38 @@ export default function Vanni(){
         </div>
         <div className="works-grid" id="vanni">
             <div className="row">
-                <img src="./img/vanni/first.png" alt="prova" />
+                <img src="/img/vanni/first.png" alt="prova" />
             </div>
             <div className="row">
-                <img src="./img/vanni/sl.png" alt="prova" />
+                <img src="/img/vanni/sl.png" alt="prova" />
             </div>
             <div className="row">
-                <img src="./img/vanni/sr.png" alt="prova" />
+                <img src="/img/vanni/sr.png" alt="prova" />
             </div>
             <div className="row">
 
             </div>
             <div className="row">
                 <div className="inner-row">
-                    <img src="./img/vanni/fofirst.png" alt="prova" />
-                    <img src="./img/vanni/fosecond.png" alt="prova" />
-                    <img src="./img/vanni/fothird.png" alt="prova" />
+                    <img src="/img/vanni/fofirst.png" alt="prova" />
+                    <img src="/img/vanni/fosecond.png" alt="prova" />
+                    <img src="/img/vanni/fothird.png" alt="prova" />
                 </div>
             </div>
             <div className="row">
 
             </div>
             <div className="row">
-                <img src="./img/vanni/fr.png" alt="prova" />
+                <img src="/img/vanni/fr.png" alt="prova" />
             </div>
+        </div>
+        <div className="works-desc-wp">
+            <Link to="/works">
+                <p className="cta-page-switch"><button>Previous</button></p>
+            </Link>
+            <Link to="/works/branchetti">
+                <p className="cta-page-switch"><button>Next</button></p>
+            </Link>
         </div>
     </>
 }

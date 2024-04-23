@@ -89,11 +89,16 @@ const Home = () => {
             }
     }, 800)
 
-    const [loaded, setLoaded] = useState(0);
+    var mobile = 0
+
+    if(window.innerWidth < 768){
+        mobile = 1
+    }
+
     return (
         <>
             <StrictMode>
-                {loaded === 0 ? <Loader /> : null}
+                <Loader />
                 {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
@@ -126,7 +131,11 @@ const Home = () => {
                         <div className='subt-wp'><p className='subtitle-h'>Scroll down</p></div>
                     </div>
                     <div className='text-anim-wp main-logo-wp'>
-                        <img src={'./img/laura-lavorini-logo.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
+                        {mobile === 0 ? 
+                            <img src={'./img/laura-lavorini-logo.svg'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
+                            : 
+                            <img src={'./img/laura-lavorini-mobile.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
+                        } 
                     </div>
                 </section>
 
@@ -218,16 +227,16 @@ const Home = () => {
                             <p className='proj-date'>2022</p>
                         </div>
                     </div>
-
                     <div>
-                        <Image url="./img/monica-logo-home.png" nextUrl="./img/monica.gif"></Image>
-                        <div className="info-work" id='monica'>
-                            <p><p className='p-num'>(02)</p> MONICA BRANCHETTI</p>
-                            <p>WEB & GRAPHIC DESIGN</p>
-                            <p className='proj-date'>2023</p>
-                        </div>
+                        <Link to="/works/branchetti">
+                            <Image url="./img/monica-logo-home.png" nextUrl="./img/monica.gif"></Image>
+                            <div className="info-work" id='monica'>
+                                <p><p className='p-num'>(02)</p> MONICA BRANCHETTI</p>
+                                <p>WEB & GRAPHIC DESIGN</p>
+                                <p className='proj-date'>2023</p>
+                            </div>
+                        </Link>
                     </div>
-
                     <div>
                         <Image url="./img/cavallini-logo-home.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
@@ -256,12 +265,14 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Image url="./img/domizia-home.jpg" nextUrl="./img/vanni.gif"></Image>
-                        <div className="info-work" id='monica'>
-                            <p><p className='p-num'>(06)</p> Domizia Vanni</p>
-                            <p>Web Design</p>
-                            <p className='proj-date'>2023</p>
-                        </div>
+                        <Link to="/works/vanni">
+                            <Image url="./img/domizia-home.jpg" nextUrl="./img/vanni.gif"></Image>
+                            <div className="info-work" id='monica'>
+                                <p><p className='p-num'>(06)</p> Domizia Vanni</p>
+                                <p>Web Design</p>
+                                <p className='proj-date'>2023</p>
+                            </div>
+                        </Link>
                     </div>
 
                     <div>

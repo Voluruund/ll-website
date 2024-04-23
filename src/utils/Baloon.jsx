@@ -13,7 +13,7 @@ import { OrbitControls } from "@react-three/drei";
 
 export default function Baloon(){
 
-    const {nodes, materials} = useGLTF('./models/balloon-laura-low-new.gltf')
+    const {nodes, materials} = useGLTF('/models/balloon-laura-low-new.gltf')
 
     const first = useRef()
 

@@ -12,7 +12,7 @@ import { generateImpulseY } from "./math";
 
 export default function Baloons(){
 
-    const {nodes, materials} = useGLTF('./models/balloon-laura-low-new.gltf')
+    const {nodes, materials} = useGLTF('/models/balloon-laura-low-new.gltf')
 
     // const first = useRef()
     // const second = useRef()

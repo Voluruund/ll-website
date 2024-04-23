@@ -5,7 +5,7 @@ import { StrictMode } from "react";
 
 export default function BaloonMobile(){
 
-    const {nodes, materials} = useGLTF('./models/balloon-laura-low-new.gltf')
+    const {nodes, materials} = useGLTF('/models/balloon-laura-low-new.gltf')
 
     var model = nodes.Sphere002.geometry
 

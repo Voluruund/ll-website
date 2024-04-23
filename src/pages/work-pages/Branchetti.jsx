@@ -1,4 +1,16 @@
+import { Link } from "react-router-dom"
+import { useEffect } from "react"
+
 export default function Branchetti(){
+
+    const lenis = window.lenis
+
+    useEffect(() => {
+        lenis.scrollTo('top')
+    })
+
+    window.lenis.scrollTo((0,0), {immediate: true})
+
     return <>
          {/* <div className="works-desc-wp">
             <div></div>
@@ -36,15 +48,15 @@ export default function Branchetti(){
         </div>
         <div className="works-grid" id="branchetti">
             <div className="row">
-                <img src="./img/branchetti/firstop.png" alt="prova" />
+                <img src="/img/branchetti/firstop.png" alt="prova" />
             </div>
             <div className="row">
-                <img src="./img/branchetti/sectop.png" alt="prova" />
+                <img src="/img/branchetti/sectop.png" alt="prova" />
             </div>
             <div className="row">
                 <div className="inner-row">
-                    <div><img src="./img/branchetti/secondf.png" alt="prova" /></div>
-                    <div><img src="./img/branchetti/seconds.png" alt="prova" /></div>
+                    <div><img src="/img/branchetti/secondf.png" alt="prova" /></div>
+                    <div><img src="/img/branchetti/seconds.png" alt="prova" /></div>
                 </div>
             </div>
             <div className="row">
@@ -55,17 +67,25 @@ export default function Branchetti(){
             </div>
             <div className="row">
             <div className="inner-row">
-                    <div><img src="./img/branchetti/fourthf.png" alt="prova" /></div>
-                    <div><img src="./img/branchetti/fourths.png" alt="prova" /></div>
+                    <div><img src="/img/branchetti/fourthf.png" alt="prova" /></div>
+                    <div><img src="/img/branchetti/fourths.png" alt="prova" /></div>
                 </div>
             </div>
             <div className="row">
                 <div className="inner-row">
-                    <div><img src="./img/branchetti/innerf.png" alt="prova" /></div>
-                    <div><img src="./img/branchetti/inners.png" alt="prova" /></div>
-                    <div><img src="./img/branchetti/innert.png" alt="prova" /></div>
+                    <div><img src="/img/branchetti/innerf.png" alt="prova" /></div>
+                    <div><img src="/img/branchetti/inners.png" alt="prova" /></div>
+                    <div><img src="/img/branchetti/innert.png" alt="prova" /></div>
                 </div>
             </div>
+        </div>
+        <div className="works-desc-wp">
+            <Link to="/works/vanni">
+                <p className="cta-page-switch"><button>Previous</button></p>
+            </Link>
+            <Link to="/works/branchetti">
+                <p className="cta-page-switch"><button>Next</button></p>
+            </Link>
         </div>
     </>
 }

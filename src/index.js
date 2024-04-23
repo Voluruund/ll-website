@@ -19,6 +19,12 @@ import {React, useEffect, useState} from "react";
 import Lenis from '@studio-freight/lenis'
 import Works from './common-comp/Works.jsx';
 
+import Vanni from './pages/work-pages/Vanni.jsx';
+import Orchestra from './pages/work-pages/Orchestra.jsx';
+import Branchetti from './pages/work-pages/Branchetti.jsx';
+import Cavallini from './pages/work-pages/Cavallini.jsx';
+import StudioBigne from './pages/work-pages/StudioBigne.jsx';
+
 // import Distortion from './utils/Distortion.jsx';
 
 const lenis = new Lenis({
@@ -94,10 +100,17 @@ function App () {
           <Navigationtop></Navigationtop>
           <Routes>
               <Route path='*' element={<PageNotFound />}></Route>
-              <Route exact path="/" element={<Home />}></Route>
+              <Route index exact path="/" element={<Home />}></Route>
               <Route exact path="/home" element={<Home />}></Route>
               <Route exact path="/about" element={<About />}></Route>
-              <Route exact path="/works" element={<Works />}></Route>
+              <Route exact path="/works" element={<Works />}>
+                <Route path='/works/vanni' element={<Vanni></Vanni>}></Route>
+                <Route path='/works/Orchestra' element={<Orchestra></Orchestra>}></Route>
+                <Route path='/works/Cavallini' element={<Cavallini></Cavallini>}></Route>
+                <Route path='/works/Orchestra' element={<Orchestra></Orchestra>}></Route>
+                <Route path='/works/Branchetti' element={<Branchetti></Branchetti>}></Route>
+                <Route path='/works/StudioBigne' element={<StudioBigne></StudioBigne>}></Route>
+              </Route>
           </Routes>
         </Router>
       </ParallaxProvider>
