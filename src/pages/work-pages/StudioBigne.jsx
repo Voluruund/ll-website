@@ -1,15 +1,25 @@
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 export default function StudioBigne(){
+
+    const lenis = window.lenis
+
+    useEffect(() => {
+        lenis.scrollTo('top')
+    })
+
+    window.lenis.scrollTo((0,0), {immediate: true})
+
     return <>
             <div className="works-desc-wp mt-70">
             <div>
-                <p className="work-p">Florence Pops Orchestra</p>
-                <p className="work-subtitle mt-20">UX Design / Web Design</p>
+                <p className="work-p">Studio Bignè</p>
+                <p className="work-subtitle mt-20">Branding / Graphic Design</p>
                 <p className="work-subtitle mt-70">2023</p>
             </div>
             <div>
-                <p className="work-p">Florence Pops Orchestra is a Florentine orchestra who plays animation movies soundtrack all around the world, with the passion and the dedication of the director Carlo Chiarotti. The website is</p>
+                <p className="work-p">Studio Bignè is a group of illustrators from Florence, Italy, that started to work together . Everybody have their style but all of them share the passion for art and for italian pastry. For creative people like them I decided to design a colorful graphic and use fonts who recalls editorial style for paragraphs.</p>
             </div>
         </div>
         <div className="work-cta-wp">

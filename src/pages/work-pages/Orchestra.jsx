@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 export default function Orchestra(){
+
+    const lenis = window.lenis
+
+    useEffect(() => {
+        lenis.scrollTo('top')
+    })
+
+    window.lenis.scrollTo((0,0), {immediate: true})
+
     return <>
-         {/* <div className="works-desc-wp">
-            <div></div>
-            <p className="work-subtitle">Close</p>
-        </div> */}
         <div className="works-desc-wp mt-70">
             <div>
                 <p className="work-p">Florence Pops Orchestra</p>

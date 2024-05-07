@@ -24,7 +24,7 @@ export default function BaloonMobile(){
                     material={materials["Material.001"]}
                     position={[0, -0.2, 1.229]}
                     // 1.262
-                    scale={[0.2487, .22, 0.2487]}
+                    scale={[0.4887, .48, 0.4887]}
                     rotation-x={1.5}
                 />
             </Float>

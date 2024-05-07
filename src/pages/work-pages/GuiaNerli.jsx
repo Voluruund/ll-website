@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 export default function GuiaNerli(){
+
+    const lenis = window.lenis
+
+    useEffect(() => {
+        lenis.scrollTo('top')
+    })
+
+    window.lenis.scrollTo((0,0), {immediate: true})
+
     return <>
         <div className="works-desc-wp mt-70">
             <div>

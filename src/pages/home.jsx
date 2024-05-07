@@ -97,7 +97,7 @@ const Home = () => {
     return (
         <>
             <StrictMode>
-                {/* <Loader /> */}
+                <Loader />
                 {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
@@ -122,7 +122,7 @@ const Home = () => {
 
                 <section className='f-home-section' id='top'>
                     <Suspense fallback={null}>
-                        {/* <MultBaloons /> */}
+                        <MultBaloons />
                     </Suspense>
                     <div className="main-title-wp">
                         <div><p className='main-title-h'>Web Designer</p></div>
@@ -219,12 +219,14 @@ const Home = () => {
 
                 <section className="main-img-wp demo-1__gallery" id='work'>
                     <div>
-                        <Image url="./img/gallery-london.png" nextUrl="./img/monica-logo-home.png"></Image>
-                        <div className="info-work">
-                            <p><p className='p-num'>(01)</p> DYS44 ART GALLERY LONDON</p>
-                            <p>WEB DESIGN</p>
-                            <p className='proj-date'>2022</p>
-                        </div>
+                        <Link to="/works/cesarelampronti">
+                            <Image url="./img/gallery-london.png" nextUrl="./img/monica-logo-home.png"></Image>
+                            <div className="info-work">
+                                <p><p className='p-num'>(01)</p> DYS44 ART GALLERY LONDON</p>
+                                <p>WEB DESIGN</p>
+                                <p className='proj-date'>2022</p>
+                            </div>
+                        </Link>
                     </div>
                     <div>
                         <Link to="/works/branchetti">
@@ -237,30 +239,36 @@ const Home = () => {
                         </Link>
                     </div>
                     <div>
-                        <Image url="./img/cavallini-logo-home.png" nextUrl="./img/faccia.jpg"></Image>
-                        <div className="info-work" id='monica'>
-                            <p><p className='p-num'>(03)</p> Valentina Cavallini</p>
-                            <p>Branding</p>
-                            <p className='proj-date'>2023</p>
-                        </div>
+                        <Link to="/works/cavallini">
+                            <Image url="./img/cavallini-logo-home.png" nextUrl="./img/faccia.jpg"></Image>
+                            <div className="info-work" id='monica'>
+                                <p><p className='p-num'>(03)</p> Valentina Cavallini</p>
+                                <p>Branding</p>
+                                <p className='proj-date'>2023</p>
+                            </div>
+                        </Link>
                     </div>
 
                     <div>
-                        <Image url="./img/guia-nerli.png" nextUrl="./img/faccia.jpg"></Image>
-                        <div className="info-work" id='monica'>
-                            <p><p className='p-num'>(04)</p> Guia Nerli</p>
-                            <p>Branding</p>
-                            <p className='proj-date'>2020</p>
-                        </div>
+                        <Link to="/works/guianerli">
+                            <Image url="./img/guia-nerli.png" nextUrl="./img/faccia.jpg"></Image>
+                            <div className="info-work" id='monica'>
+                                <p><p className='p-num'>(04)</p> Guia Nerli</p>
+                                <p>Branding</p>
+                                <p className='proj-date'>2020</p>
+                            </div>
+                        </Link>
                     </div>
 
                     <div>
-                        <Image url="./img/somatici-home.png" nextUrl="./img/faccia.jpg"></Image>
-                        <div className="info-work" id='monica'>
-                            <p><p className='p-num'>(05)</p> Percorsi somatici</p>
-                            <p>Web Design</p>
-                            <p className='proj-date'>2023</p>
-                        </div>
+                        <Link to="/works/percorsisomatici">
+                            <Image url="./img/somatici-home.png" nextUrl="./img/faccia.jpg"></Image>
+                            <div className="info-work" id='monica'>
+                                <p><p className='p-num'>(05)</p> Percorsi somatici</p>
+                                <p>Web Design</p>
+                                <p className='proj-date'>2023</p>
+                            </div>
+                        </Link>
                     </div>
 
                     <div>
@@ -275,21 +283,25 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Image url="./img/bigne-home.png" nextUrl="./img/bigne.gif"></Image>
-                        <div className="info-work" id='monica'>
-                            <p><p className='p-num'>(07)</p> Studio Bignè</p>
-                            <p>Branding</p>
-                            <p className='proj-date'>2023</p>
-                        </div>
+                        <Link to="/works/studiobigne">
+                            <Image url="./img/bigne-home.png" nextUrl="./img/bigne.gif"></Image>
+                            <div className="info-work" id='monica'>
+                                <p><p className='p-num'>(07)</p> Studio Bignè</p>
+                                <p>Branding</p>
+                                <p className='proj-date'>2023</p>
+                            </div>
+                        </Link>
                     </div>
 
                     <div>
-                        <Image url="./img/pegaso-home.png" nextUrl="./img/faccia.jpg"></Image>
-                        <div className="info-work" id='monica'>
-                            <p><p className='p-num'>(08)</p> Pasticceria Pegaso</p>
-                            <p>Web Design</p>
-                            <p className='proj-date'>2023</p>
-                        </div>
+                        <Link to="/works/pegaso">
+                            <Image url="./img/pegaso-home.png" nextUrl="./img/faccia.jpg"></Image>
+                            <div className="info-work" id='monica'>
+                                <p><p className='p-num'>(08)</p> Pasticceria Pegaso</p>
+                                <p>Web Design</p>
+                                <p className='proj-date'>2023</p>
+                            </div>
+                        </Link>
                     </div>
 
                     <div>

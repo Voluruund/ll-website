@@ -33,14 +33,6 @@ export default function Loader(){
     setTimeout(move, 1000)
     return <>
         <section className="loader-wp" id="wrapper">
-            {/* <div className="appearAnim"><div className="animate d-100"></div></div>
-            <div className="appearAnim"><div className="animate d-200"></div></div>
-            <div className="appearAnim"><div className="animate d-300"></div></div>
-            <div className="appearAnim"><div className="animate d-400"></div></div>
-            <div className="appearAnim"><div className="animate d-500"></div></div>
-            <div className="appearAnim"><div className="animate d-600"></div></div>
-            <div className="appearAnim"><div className="animate d-700"></div></div>
-            <div className="appearAnim"><div className="animate d-800"></div></div> */}
             <div className="appearAnim">
                 <div className="animate d-900">
                     <section id="myProgress">
@@ -48,7 +40,6 @@ export default function Loader(){
                     </section>
                 </div>
             </div>
-            {/* <div className="appearAnim"><div className="animate d-1000"></div></div> */}
         </section>
     </>
 }
