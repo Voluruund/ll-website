@@ -80,12 +80,18 @@ export default function Branchetti(){
             </div>
         </div>
         <div className="works-desc-wp">
-            <Link to="/works/vanni">
-                <p className="cta-page-switch"><button>Previous</button></p>
-            </Link>
-            <Link to="/works/branchetti">
-                <p className="cta-page-switch"><button>Next</button></p>
-            </Link>
+            <div>
+                <Link to="/works/vanni">
+                    <p className="cta-page-switch"><button>Previous</button></p>
+                </Link>
+                <img src="/img/previous.svg" alt="previous" />
+            </div>
+            <div>
+                <Link to="/works/Cavallini">
+                    <p className="cta-page-switch"><button>Next</button></p>
+                </Link>
+                <img src="/img/next.svg" alt="next" />
+            </div>
         </div>
     </>
 }

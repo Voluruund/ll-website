@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Orchestra(){
     return <>
          {/* <div className="works-desc-wp">
@@ -53,6 +55,20 @@ export default function Orchestra(){
             <div className="grid-item fourth-row">
                 <img src="./img/longimg.jpg" alt="prova" />
             </div> */}
+        </div>
+        <div className="works-desc-wp">
+            <div>
+                <Link to="/works/GuiaNerli">
+                    <p className="cta-page-switch"><button>Previous</button></p>
+                </Link>
+                <img src="/img/previous.svg" alt="previous" />
+            </div>
+            <div>
+                <Link to="/works/Pegaso">
+                    <p className="cta-page-switch"><button>Next</button></p>
+                </Link>
+                <img src="/img/next.svg" alt="next" />
+            </div>
         </div>
     </>
 }

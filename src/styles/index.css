@@ -1063,6 +1063,19 @@ hr{
   margin: 0;
 }
 
+.works-desc-wp a{
+  width: fit-content;
+}
+
+.works-desc-wp div:last-of-type{
+  justify-self: flex-end;
+  display: grid;
+}
+
+.works-desc-wp div:last-of-type img{
+  justify-self: flex-end;
+}
+
 .work-subtitle{
   font-size: 0.7291vw;
   font-weight: 500;
@@ -1629,6 +1642,11 @@ hr{
   height: inherit;
   width: 10%;
   font-size: 1.1666vw;
+}
+
+.wp-404 a{
+  text-decoration: none;
+  color: var(--default-lilac);
 }
 
 .circular-btn, .circular-btn-mob{

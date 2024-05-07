@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 
-export default function Cavallini(){
+export default function CesareLampronti(){
     return <>
-        <div className="works-desc-wp mt-70">
+            <div className="works-desc-wp mt-70">
             <div>
                 <p className="work-p">Florence Pops Orchestra</p>
                 <p className="work-subtitle mt-20">UX Design / Web Design</p>
@@ -32,22 +32,22 @@ export default function Cavallini(){
                 </div>
             </a>
         </div>
-        <div className="works-grid" id="cavallini">
+        <div className="works-grid" id="cesare">
 
         </div>
         <div className="works-desc-wp">
             <div>
-                <Link to="/works/Branchetti">
+                <Link to="/works/Cavallini">
                     <p className="cta-page-switch"><button>Previous</button></p>
                 </Link>
                 <img src="/img/previous.svg" alt="previous" />
             </div>
             <div>
-                <Link to="/works/CesareLampronti">
+                <Link to="/works/GuiaNerli">
                     <p className="cta-page-switch"><button>Next</button></p>
                 </Link>
                 <img src="/img/next.svg" alt="next" />
             </div>
         </div>
-   </>
+    </>
 }

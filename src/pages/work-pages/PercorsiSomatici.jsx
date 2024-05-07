@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export default function Cavallini(){
+export default function PercorsiSomatici(){
     return <>
         <div className="works-desc-wp mt-70">
             <div>
@@ -32,22 +32,22 @@ export default function Cavallini(){
                 </div>
             </a>
         </div>
-        <div className="works-grid" id="cavallini">
+        <div className="works-grid" id="percorsi">
 
         </div>
         <div className="works-desc-wp">
             <div>
-                <Link to="/works/Branchetti">
+                <Link to="/works/Pegaso">
                     <p className="cta-page-switch"><button>Previous</button></p>
                 </Link>
                 <img src="/img/previous.svg" alt="previous" />
             </div>
             <div>
-                <Link to="/works/CesareLampronti">
+                <Link to="/works/StudioBigne">
                     <p className="cta-page-switch"><button>Next</button></p>
                 </Link>
                 <img src="/img/next.svg" alt="next" />
             </div>
         </div>
-   </>
+    </>
 }

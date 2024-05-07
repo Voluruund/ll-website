@@ -24,6 +24,10 @@ import Orchestra from './pages/work-pages/Orchestra.jsx';
 import Branchetti from './pages/work-pages/Branchetti.jsx';
 import Cavallini from './pages/work-pages/Cavallini.jsx';
 import StudioBigne from './pages/work-pages/StudioBigne.jsx';
+import CesareLampronti from './pages/work-pages/CesareLampronti.jsx';
+import Pegaso from './pages/work-pages/Pegaso.jsx';
+import PercorsiSomatici from './pages/work-pages/PercorsiSomatici.jsx';
+import GuiaNerli from './pages/work-pages/GuiaNerli.jsx';
 
 // import Distortion from './utils/Distortion.jsx';
 
@@ -110,6 +114,10 @@ function App () {
                 <Route path='/works/Orchestra' element={<Orchestra></Orchestra>}></Route>
                 <Route path='/works/Branchetti' element={<Branchetti></Branchetti>}></Route>
                 <Route path='/works/StudioBigne' element={<StudioBigne></StudioBigne>}></Route>
+                <Route path='/works/CesareLampronti' element={<CesareLampronti></CesareLampronti>}></Route>
+                <Route path='/works/Pegaso' element={<Pegaso></Pegaso>}></Route>
+                <Route path='/works/PercorsiSomatici' element={<PercorsiSomatici></PercorsiSomatici>}></Route>
+                <Route path='/works/GuiaNerli' element={<GuiaNerli></GuiaNerli>}></Route>
               </Route>
           </Routes>
         </Router>

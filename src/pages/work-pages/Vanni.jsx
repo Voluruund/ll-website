@@ -70,12 +70,18 @@ export default function Vanni(){
             </div>
         </div>
         <div className="works-desc-wp">
-            <Link to="/works">
-                <p className="cta-page-switch"><button>Previous</button></p>
-            </Link>
-            <Link to="/works/branchetti">
-                <p className="cta-page-switch"><button>Next</button></p>
-            </Link>
+            <div>
+                <Link to="/works/StudioBigne">
+                    <p className="cta-page-switch"><button>Previous</button></p>
+                </Link>
+                <img src="/img/previous.svg" alt="previous" />
+            </div>
+            <div>
+                <Link to="/works/Branchetti">
+                    <p className="cta-page-switch"><button>Next</button></p>
+                </Link>
+                <img src="/img/next.svg" alt="next" />
+            </div>
         </div>
     </>
 }
