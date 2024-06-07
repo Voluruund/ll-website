@@ -2,35 +2,59 @@ import {useParallax } from "react-scroll-parallax";
 import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
 import { StrictMode, useEffect } from "react";
+import Transition from "../common-comp/Transition";
 
 const About = () => {
 
-    if(window.innerWidth > 960){
-        window.addEventListener("scroll", function(){
-            var scrollingDiv = document.getElementById("scrollingDiv")
-            var image = document.getElementById("imgScroll")
-            var scrollTop = window.scrollY
-            var divTop = scrollingDiv.offsetTop
-            var divHeight = scrollingDiv.offsetHeight
-            var imageHeight = image.offsetHeight
-            // && scrollTop < divTop + divHeight
-            // console.log("scrolltop " + scrollTop + " - " + (divHeight - divTop))
+    // if(window.innerWidth > 960){
+    //     window.addEventListener("scroll", function(){        
+    //         var scrollingDiv = document.getElementById("scrollingDiv")
+    //         var image = document.getElementById("imgScroll")
+    //         var scrollTop = window.scrollY
+    //         var divTop = scrollingDiv.offsetTop
+    //         var divHeight = scrollingDiv.offsetHeight
+    //         var imageHeight = image.offsetHeight
+    //         if(scrollTop + 40 > divTop && scrollTop + 40 < divTop + divHeight - imageHeight){
+    //             image.style.top = scrollTop - divTop + 40 + "px"
+    //         }else if (scrollTop + 40 <= divTop){
+    //             image.style.top = "0"
+    //         }else{
+    //             image.style.top = divHeight - image.offsetHeight + "px"
+    //         }
+    //     })
+    // }
 
-            if(scrollTop + 40 > divTop && scrollTop + 40 < divTop + divHeight - imageHeight){
-                image.style.top = scrollTop - divTop + 40 + "px"
-            }else if (scrollTop + 40 <= divTop){
-                image.style.top = "0"
-            }else{
-                image.style.top = divHeight - image.offsetHeight + "px"
-            }
-        })
+    function followImage(){
+        var scrollingDiv = document.getElementById("scrollingDiv")
+        var image = document.getElementById("imgScroll")
+        var scrollTop = window.scrollY
+        var divTop = scrollingDiv.offsetTop
+        var divHeight = scrollingDiv.offsetHeight
+        var imageHeight = image.offsetHeight
+        if(scrollTop + 40 > divTop && scrollTop + 40 < divTop + divHeight - imageHeight){
+            image.style.top = scrollTop - divTop + 40 + "px"
+        }else if (scrollTop + 40 <= divTop){
+            image.style.top = "0"
+        }else{
+            image.style.top = divHeight - image.offsetHeight + "px"
+        }
     }
     
     const lenis = window.lenis
 
     useEffect(() => {
         lenis.scrollTo('top')
+        TransitionIn()
+        window.addEventListener('scroll', followImage);
+
+        //cleanup
+        return () => {
+            window.removeEventListener('scroll', followImage);
+        };
     })
+
+    window.lenis.scrollTo((0,0), {immediate: true})
+
 
     const parallax = useParallax({
         easing: 'easeInOut',
@@ -39,9 +63,15 @@ const About = () => {
         scale: [1, .9]
     });
 
+    function TransitionIn(){
+        var elem = document.getElementById("transIn");
+        elem.classList.add("animateTransition-in")
+    }
+
     return (
         <>  
             <StrictMode>
+                <Transition />
                 <section className="about-page" id="top">
                     <section className="about-wp">
                         <div className="title-about-wp mt-20">
@@ -50,9 +80,6 @@ const About = () => {
                                 <div className='personal-img def-border-radius' id="imgScroll">
                                     <img src={'./img/Laura-Lavorini.png'} alt="Laura" className="img-sizes" ref={parallax.ref}/>
                                 </div>
-                            {/* <div className="fl-bot">
-                                    <p className="serious-cta">Serious photo</p>
-                            </div> */}
                             </div>
                         </div>
                         <div className="p-data-wp mt-50">

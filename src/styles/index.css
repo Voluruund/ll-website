@@ -581,15 +581,46 @@ img{
 
 /* ================================= loader styles */
 
-.loader-wp{
+.loader-wp, .transition-wp, .transition-wp-in{
   z-index: 999999;
   height: 1000vh;
   width: 100vw;
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 0;
   left: 0;
+}
+
+.transition-wp{
+  position: fixed !important;
+  background-color: #111;
+  transition: top 1.2s cubic-bezier(.57,.06,.07,.97);
+  top: 100vh;
+}
+
+.transition-wp-in{
+  top: 0;
+  position: fixed !important;
+  background-color: #111;
+}
+
+.homeTransition .transition-wp-in{
+  display: none;
+}
+
+.animateTransition-in{
+  transition: top 1.2s cubic-bezier(.57,.06,.07,.97);
+  transition-delay: 800ms;
+  top: 100vh !important;
+}
+
+.animateTransition{
+  transition: top 1.2s cubic-bezier(.57,.06,.07,.97);
+  top: 0 !important;
+}
+
+.loader-wp{
+  top: 0;
 }
 
 #myProgress {
@@ -604,7 +635,6 @@ img{
 #myBar {
   width: 0%;
   height: 3px;
-  /* background-color: var(--default-lilac); */
   background-color: transparent;
   text-align: left;
   line-height: -50px;
@@ -1230,6 +1260,25 @@ hr{
   border-radius: 0 !important;
 }
 
+#cavallini{
+  grid-template-areas: 
+              "first first"
+              "sl sr"
+              "third third"
+              "fl fr"
+              "fifth fifth";
+}
+
+#cavallini .row.row:nth-child(4){
+  grid-area: fr;
+  background-color: #AC745D;
+}
+
+#cavallini .row.row:nth-child(5){
+  background-color: #e8decf;
+  grid-area: fifth;
+}
+
 #vanni{
   grid-template-areas: 
             "first first"
@@ -1316,14 +1365,6 @@ hr{
   grid-area: fr;
 }
 
-#cavallini{
-  grid-template-areas:
-            "topArea topArea"
-            "second second" 
-            "tlfirst trfirst"
-            "tlthird trthird"
-            "fourth fourth";
-}
 /* ========================================================= */
 
 /* =================================================== 404 styles */

@@ -1,6 +1,7 @@
 import Form from '../common-comp/form';
 import Footer from '../common-comp/footer'
 import {Link} from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 import MultBaloons from '../common-comp/MultBaloons';
 import { StrictMode, Suspense } from 'react';
 import { useEffect } from 'react';
@@ -9,6 +10,7 @@ import { useState } from 'react';
 import Image from '../common-comp/Image'
 
 import Distortion from '../utils/Distortion';
+import Transition from '../common-comp/Transition';
 
 var isInViewport = function(elem) {
     var distance = elem.getBoundingClientRect();
@@ -94,10 +96,25 @@ const Home = () => {
         mobile = 1
     }
 
+    const history = useNavigate();
+
+    function delayAndGo(e, path) {
+        e.preventDefault();
+        var elem = document.getElementById("transOut");
+        elem.classList.add("animateTransition")
+        setTimeout(() =>{
+            history(path)
+            elem.classList.remove("animateTransition")
+        }, 1500);
+    }
+
     return (
         <>
             <StrictMode>
                 <Loader />
+                <div className="homeTransition">
+                    <Transition />
+                </div>
                 {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
@@ -175,7 +192,7 @@ const Home = () => {
                             </div>
                             <div className="more-info">
                                 <p>more about me</p>
-                                <Link to="/about"  className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
+                                <Link to="/about" onClick={(e) => delayAndGo(e, "/about")} className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
                             </div>
                         </div>
                     </div>
@@ -212,14 +229,14 @@ const Home = () => {
                         </div>
                         <div className="more-info">
                             <p>more about me</p>
-                            <Link to="/about"  className='circular-btn-mob' id='btnP2'><span className="material-symbols-outlined">arrow_forward</span></Link>
+                            <Link to="/about" onClick={(e) => delayAndGo(e, "/about")}  className='circular-btn-mob' id='btnP2'><span className="material-symbols-outlined">arrow_forward</span></Link>
                         </div>
                     </div>
                 </div>
 
                 <section className="main-img-wp demo-1__gallery" id='work'>
                     <div>
-                        <Link to="/works/cesarelampronti">
+                        <Link to="/works/cesarelampronti" onClick={(e) => delayAndGo(e, "/works/cesarelampronti")}>
                             <Image url="./img/gallery-london.png" nextUrl="./img/monica-logo-home.png"></Image>
                             <div className="info-work">
                                 <p><p className='p-num'>(01)</p> DYS44 ART GALLERY LONDON</p>
@@ -229,7 +246,7 @@ const Home = () => {
                         </Link>
                     </div>
                     <div>
-                        <Link to="/works/branchetti">
+                        <Link to="/works/branchetti" onClick={(e) => delayAndGo(e, "/works/branchetti")}>
                             <Image url="./img/monica-logo-home.png" nextUrl="./img/monica.gif"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(02)</p> MONICA BRANCHETTI</p>
@@ -239,7 +256,7 @@ const Home = () => {
                         </Link>
                     </div>
                     <div>
-                        <Link to="/works/cavallini">
+                        <Link to="/works/cavallini" onClick={(e) => delayAndGo(e, "/works/cavallini")}>
                             <Image url="./img/cavallini-logo-home.png" nextUrl="./img/faccia.jpg"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(03)</p> Valentina Cavallini</p>
@@ -250,7 +267,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Link to="/works/guianerli">
+                        <Link to="/works/guianerli" onClick={(e) => delayAndGo(e, "/works/guianerli")}>
                             <Image url="./img/guia-nerli.png" nextUrl="./img/faccia.jpg"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(04)</p> Guia Nerli</p>
@@ -261,7 +278,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Link to="/works/percorsisomatici">
+                        <Link to="/works/percorsisomatici" onClick={(e) => delayAndGo(e, "/works/percorsisomatici")}>
                             <Image url="./img/somatici-home.png" nextUrl="./img/faccia.jpg"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(05)</p> Percorsi somatici</p>
@@ -272,7 +289,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Link to="/works/vanni">
+                        <Link to="/works/vanni" onClick={(e) => delayAndGo(e, "/works/vanni")}>
                             <Image url="./img/domizia-home.jpg" nextUrl="./img/vanni.gif"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(06)</p> Domizia Vanni</p>
@@ -283,7 +300,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Link to="/works/studiobigne">
+                        <Link to="/works/studiobigne" onClick={(e) => delayAndGo(e, "/works/studiobigne")}>
                             <Image url="./img/bigne-home.png" nextUrl="./img/bigne.gif"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(07)</p> Studio Bignè</p>
@@ -294,7 +311,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <Link to="/works/pegaso">
+                        <Link to="/works/pegaso" onClick={(e) => delayAndGo(e, "/works/pegaso")}>
                             <Image url="./img/pegaso-home.png" nextUrl="./img/faccia.jpg"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(08)</p> Pasticceria Pegaso</p>

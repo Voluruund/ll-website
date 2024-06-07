@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useEffect } from "react"
+import Transition from "../../common-comp/Transition"
 
 export default function CesareLampronti(){
 
@@ -7,12 +8,31 @@ export default function CesareLampronti(){
 
     useEffect(() => {
         lenis.scrollTo('top')
+        TransitionIn()
     })
 
     window.lenis.scrollTo((0,0), {immediate: true})
 
+    function TransitionIn(){
+        var elem = document.getElementById("transIn");
+        elem.classList.add("animateTransition-in")
+    }
+
+    const history = useNavigate();
+
+    function delayAndGo(e, path) {
+        e.preventDefault();
+        var elem = document.getElementById("transOut");
+        elem.classList.add("animateTransition")
+        setTimeout(() =>{
+            history(path)
+            elem.classList.remove("animateTransition")
+        }, 1500);
+    }
+
     return <>
-            <div className="works-desc-wp mt-70">
+        <Transition />
+        <div className="works-desc-wp mt-70">
             <div>
                 <p className="work-p">Florence Pops Orchestra</p>
                 <p className="work-subtitle mt-20">UX Design / Web Design</p>
@@ -47,13 +67,13 @@ export default function CesareLampronti(){
         </div>
         <div className="works-desc-wp">
             <div>
-                <Link to="/works/Cavallini">
+                <Link to="/works/Cavallini" onClick={(e) => delayAndGo(e, "/works/cavallini")}>
                     <p className="cta-page-switch"><button>Previous</button></p>
                 </Link>
                 <img src="/img/previous.svg" alt="previous" />
             </div>
             <div>
-                <Link to="/works/GuiaNerli">
+                <Link to="/works/GuiaNerli" onClick={(e) => delayAndGo(e, "/works/guianerli")}>
                     <p className="cta-page-switch"><button>Next</button></p>
                 </Link>
                 <img src="/img/next.svg" alt="next" />

@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate} from "react-router-dom"
 import { useEffect } from "react"
+import Transition from "../../common-comp/Transition"
 
 export default function Vanni(){
 
@@ -7,11 +8,30 @@ export default function Vanni(){
 
     useEffect(() => {
         lenis.scrollTo('top')
+        TransitionIn()
     })
 
     window.lenis.scrollTo((0,0), {immediate: true})
 
+    function TransitionIn(){
+        var elem = document.getElementById("transIn");
+        elem.classList.add("animateTransition-in")
+    }
+
+    const history = useNavigate();
+
+    function delayAndGo(e, path) {
+        e.preventDefault();
+        var elem = document.getElementById("transOut");
+        elem.classList.add("animateTransition")
+        setTimeout(() =>{
+            history(path)
+            elem.classList.remove("animateTransition")
+        }, 1500);
+    }
+
     return <>
+        <Transition/>
         <div className="works-desc-wp mt-70">
             <div>
                 <p className="work-p">Domizia Vanni</p>
@@ -71,13 +91,13 @@ export default function Vanni(){
         </div>
         <div className="works-desc-wp">
             <div>
-                <Link to="/works/StudioBigne">
+                <Link to="/works/StudioBigne" onClick={(e) => delayAndGo(e, "/works/studiobigne")}>
                     <p className="cta-page-switch"><button>Previous</button></p>
                 </Link>
                 <img src="/img/previous.svg" alt="previous" />
             </div>
             <div>
-                <Link to="/works/Branchetti">
+                <Link to="/works/Branchetti" onClick={(e) => delayAndGo(e, "/works/branchetti")}>
                     <p className="cta-page-switch"><button>Next</button></p>
                 </Link>
                 <img src="/img/next.svg" alt="next" />
