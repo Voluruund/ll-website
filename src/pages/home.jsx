@@ -34,60 +34,126 @@ const Home = () => {
 
     const lenis = window.lenis
 
-    useEffect(() => {
-        lenis.scrollTo('top')
-    })
+    function mountGeneric(){
+        navigation.classList.add("navigation-anim")
+        findMe.forEach(element => {
+            if (isInViewport(element)) {
+                numP.classList.add("text-anim")
+                element.classList.add("text-anim");
+            }
+        });
+        if(isInViewport(pBtn)){
+            pBtn.classList.add("btnP-anim")
+            pBtn2.classList.add("btnP-anim-mob")
+        }
+    }
 
+    function mountShowMore(){
+        window.addEventListener('mousemove', function(e){
+            let left = (e.pageX + 30)+"px";
+            let top = (e.pageY - 30)+"px"
+            showMore.setAttribute('listener', 'true')
+            showMore.style.visibility = 'visible'
+            showMore.style.left = left;
+            showMore.style.top = top;
+        });
+    }
+
+    function hideShowMore(){
+        window.addEventListener('mousemove', function(e){
+            showMore.style.visibility = 'hidden'
+        });
+    }
+
+    useEffect(() => {
+
+        lenis.scrollTo('top')
+
+        navigation = document.getElementById('btNav')
+        findMe = document.querySelectorAll('.parag-cv');
+        numP = document.getElementById('01')
+        pBtn = document.getElementById('btnP')
+        pBtn2 = document.getElementById('btnP2')
+        imgList = document.querySelectorAll('.img-home')
+        showMore = document.getElementById("view-more");
+        showMore.setAttribute('listener', 'false')
+
+        window.addEventListener('scroll', mountGeneric)
+
+        if(window.innerWidth > 1024){
+            imgList.forEach(element => {
+                if(showMore.getAttribute('listener') !== 'true'){
+                    element.addEventListener('mouseover', mountShowMore)
+                }
+                element.addEventListener('mouseout', hideShowMore)
+            })
+
+            // imgList.forEach(element => {
+            //     element.addEventListener('mouseout', hideShowMore)
+            // })
+        }
+
+        return () => {
+            window.removeEventListener('scroll', mountGeneric)
+            window.removeEventListener('scroll', mountShowMore)
+            window.removeEventListener('scroll', hideShowMore)
+        }
+
+    }, [])
+
+
+    // TODO 
+    // PROVARE SE FUNZIONA ED IN CASO CANCELLARE
     window.setTimeout(
         document.onreadystatechange = function () {
             if (document.readyState === "complete") {
-                navigation = document.getElementById('btNav')
-                findMe = document.querySelectorAll('.parag-cv');
-                numP = document.getElementById('01')
-                pBtn = document.getElementById('btnP')
-                pBtn2 = document.getElementById('btnP2')
-                imgList = document.querySelectorAll('.img-home')
-                showMore = document.getElementById("view-more");
-                showMore.setAttribute('listener', 'false')
+                // navigation = document.getElementById('btNav')
+                // findMe = document.querySelectorAll('.parag-cv');
+                // numP = document.getElementById('01')
+                // pBtn = document.getElementById('btnP')
+                // pBtn2 = document.getElementById('btnP2')
+                // imgList = document.querySelectorAll('.img-home')
+                // showMore = document.getElementById("view-more");
+                // showMore.setAttribute('listener', 'false')
             }
             window.addEventListener('scroll', function(e) {
-                navigation.classList.add("navigation-anim")
-                findMe.forEach(element => {
-                    if (isInViewport(element)) {
-                        numP.classList.add("text-anim")
-                        element.classList.add("text-anim");
-                    }
-                });
-                if(isInViewport(pBtn)){
-                    pBtn.classList.add("btnP-anim")
-                    pBtn2.classList.add("btnP-anim-mob")
-                }
+                // navigation.classList.add("navigation-anim")
+                // findMe.forEach(element => {
+                //     if (isInViewport(element)) {
+                //         numP.classList.add("text-anim")
+                //         element.classList.add("text-anim");
+                //     }
+                // });
+                // if(isInViewport(pBtn)){
+                //     pBtn.classList.add("btnP-anim")
+                //     pBtn2.classList.add("btnP-anim-mob")
+                // }
             }, false)
 
-            if(window.innerWidth > 1024){
-                imgList.forEach(element => {
-                    if(showMore.getAttribute('listener') !== 'true'){
-                        element.addEventListener('mouseover', function(e){
-                                window.addEventListener('mousemove', function(e){
-                                    let left = (e.pageX + 30)+"px";
-                                    let top = (e.pageY - 30)+"px"
-                                    showMore.setAttribute('listener', 'true')
-                                    showMore.style.visibility = 'visible'
-                                    showMore.style.left = left;
-                                    showMore.style.top = top;
-                                });
-                        }, false)
-                    }
-                })
+            // if(window.innerWidth > 1024){
+            //     imgList.forEach(element => {
+            //         if(showMore.getAttribute('listener') !== 'true'){
+            //             element.addEventListener('mouseover', function(e){
+            //                     window.addEventListener('mousemove', function(e){
+            //                         let left = (e.pageX + 30)+"px";
+            //                         let top = (e.pageY - 30)+"px"
+            //                         showMore.setAttribute('listener', 'true')
+            //                         showMore.style.visibility = 'visible'
+            //                         showMore.style.left = left;
+            //                         showMore.style.top = top;
+            //                     });
+            //             }, false)
+            //         }
+            //     })
     
-                imgList.forEach(element => {
-                    element.addEventListener('mouseout', function(e){
-                        window.addEventListener('mousemove', function(e){
-                            showMore.style.visibility = 'hidden'
-                        });
-                    }, false)
-                })
-            }
+            //     imgList.forEach(element => {
+            //         element.addEventListener('mouseout', function(e){
+            //             window.addEventListener('mousemove', function(e){
+            //                 showMore.style.visibility = 'hidden'
+            //             });
+            //         }, false)
+            //     })
+            // }
     }, 800)
 
     var mobile = 0

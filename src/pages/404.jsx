@@ -1,8 +1,32 @@
 import { StrictMode } from "react";
 import Footer from "../common-comp/footer";
 import SingleBaloon from "../common-comp/SingleBaloon";
+import Transition from "../common-comp/Transition";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-function pageNotFound(){
+const PageNotFound = () => {
+
+    function TransitionIn(){
+        var elem = document.getElementById("transIn");
+        elem.classList.add("animateTransition-in")
+    }
+
+    useEffect(() => {
+        TransitionIn()
+    })
+
+    const history = useNavigate();
+
+    function delayAndGo(e, path) {
+        e.preventDefault();
+        var elem = document.getElementById("transOut");
+        elem.classList.add("animateTransition")
+        setTimeout(() =>{
+            history(path)
+            elem.classList.remove("animateTransition")
+        }, 1500);
+    }
 
     var showMore
 
@@ -35,6 +59,7 @@ function pageNotFound(){
 
     return ( <>
         <StrictMode>
+            <Transition />
             <div className='view-more' id='view-more'>
                     <a className="button-outline button--atlas-outline" id="footer-cta">
                         <span id='hide-btn-default'>View more</span>
@@ -57,7 +82,7 @@ function pageNotFound(){
             </div>
             <div className="logo-wp-404"><img src={"./img/laura-lavorini-logo.png"} alt="logo" /></div>
             <section className="wp-404">
-                <a href="/">
+                <a href="/" onClick={(e) => delayAndGo(e, "/")}>
                     <div className="txt-wp-404" id="wp-404">
                         <p>4</p>
                         <div className="balloon-wp-404">
@@ -89,4 +114,4 @@ function pageNotFound(){
     </>
     )
 }
-export default pageNotFound;
+export default PageNotFound;

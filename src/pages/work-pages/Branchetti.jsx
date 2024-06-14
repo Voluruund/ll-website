@@ -32,10 +32,6 @@ export default function Branchetti(){
 
 
     return <>
-         {/* <div className="works-desc-wp">
-            <div></div>
-            <p className="work-subtitle">Close</p>
-        </div> */}
         <Transition />
         <div className="works-desc-wp mt-70">
             <div>
