@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 var i = 0;
 
 function move() {
@@ -5,6 +7,9 @@ function move() {
     i = 1;
     document.body.style.height = '100vh'
     var elem = document.getElementById("myBar");
+    var titleH = document.querySelectorAll(".main-title-h")
+    var subtH = document.querySelectorAll(".subtitle-h")
+    var logo = document.getElementById("deskLogo")
     var width = 0;
     var id = setInterval(frame, 10);
     function frame() {
@@ -19,6 +24,13 @@ function move() {
             let wrapper = document.getElementById("wrapper")
             wrapper.classList.add("js")
             document.body.style.height = 'auto'
+            titleH.forEach(tit => {
+              tit.classList.add("appearTitle")
+            })
+            subtH.forEach(subt => {
+              subt.classList.add("appearTitle")
+            })
+            logo.classList.add("appearLogo")
         }, 2000)        //prima era 1200
       } else {
         width++;
@@ -30,7 +42,12 @@ function move() {
 }
 
 export default function Loader(){
-    setTimeout(move, 1000)
+    // setTimeout(move, 1000)
+
+    useEffect(() => {
+      move()
+    }, [])
+
     return <>
         <section className="loader-wp" id="wrapper">
             <div className="appearAnim">

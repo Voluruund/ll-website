@@ -6,10 +6,10 @@ import MultBaloons from '../common-comp/MultBaloons';
 import { StrictMode, Suspense } from 'react';
 import { useEffect } from 'react';
 import Loader from '../common-comp/Loader';
-import { useState } from 'react';
+// import { useState } from 'react';
 import Image from '../common-comp/Image'
 
-import Distortion from '../utils/Distortion';
+// import Distortion from '../utils/Distortion';
 import Transition from '../common-comp/Transition';
 
 var isInViewport = function(elem) {
@@ -36,16 +36,19 @@ const Home = () => {
 
     function mountGeneric(){
         navigation.classList.add("navigation-anim")
+        if(isInViewport(pBtn)){
+            pBtn.classList.add("btnP-anim")
+            pBtn2.classList.add("btnP-anim-mob")
+        }
+    }
+
+    function mountTextAnim(){
         findMe.forEach(element => {
             if (isInViewport(element)) {
                 numP.classList.add("text-anim")
                 element.classList.add("text-anim");
             }
         });
-        if(isInViewport(pBtn)){
-            pBtn.classList.add("btnP-anim")
-            pBtn2.classList.add("btnP-anim-mob")
-        }
     }
 
     function mountShowMore(){
@@ -79,6 +82,7 @@ const Home = () => {
         showMore.setAttribute('listener', 'false')
 
         window.addEventListener('scroll', mountGeneric)
+        window.addEventListener('scroll', mountTextAnim)
 
         if(window.innerWidth > 1024){
             imgList.forEach(element => {
@@ -95,11 +99,12 @@ const Home = () => {
 
         return () => {
             window.removeEventListener('scroll', mountGeneric)
-            window.removeEventListener('scroll', mountShowMore)
-            window.removeEventListener('scroll', hideShowMore)
+            window.removeEventListener('mouseover', mountShowMore)
+            window.removeEventListener('mouseout', hideShowMore)
+            window.removeEventListener('scroll', mountTextAnim)
         }
 
-    }, [])
+    }, [lenis])
 
 
     // TODO 
@@ -183,7 +188,7 @@ const Home = () => {
                 </div>
                 {/* <Distortion /> */}
                 <div className='view-more' id='view-more'>
-                    <a className="button-outline button--atlas-outline" id="footer-cta">
+                    <div className="button-outline button--atlas-outline" id="footer-cta">
                         <span id='hide-btn-default'>View more</span>
                         <div className="marqueebutton-outline" aria-hidden="true">
                             <div className="marquee__inner-outline btn-hover-reset">
@@ -200,7 +205,7 @@ const Home = () => {
                                 <span>View more</span>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <section className='f-home-section' id='top'>
@@ -208,13 +213,19 @@ const Home = () => {
                         <MultBaloons />
                     </Suspense>
                     <div className="main-title-wp">
-                        <div><p className='main-title-h'>Web Designer</p></div>
-                        <div><p className='main-title-h'><span className='cursive-title-h'>and</span> Graphic Designer</p></div>
-                        <div className='subt-wp'><p className='subtitle-h'>Scroll down</p></div>
+                        <div className='o-hidden'>
+                            <p className='main-title-h d-100'>Web Designer</p>
+                        </div>
+                        <div className='o-hidden'>
+                            <p className='main-title-h d-150'><span className='cursive-title-h'>and</span> Graphic Designer</p>
+                        </div>
+                        <div className='subt-wp o-hidden'>
+                            <p className='subtitle-h d-200'>Scroll down</p>
+                        </div>
                     </div>
-                    <div className='text-anim-wp main-logo-wp'>
+                    <div className='text-anim-wp main-logo-wp o-hidden'>
                         {mobile === 0 ? 
-                            <img src={'./img/laura-lavorini-logo.svg'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
+                            <img src={'./img/laura-lavorini-logo.svg'} alt="laura lavorini"  className='main-logo d-300' loading='lazy' id='deskLogo'/>
                             : 
                             <img src={'./img/laura-lavorini-mobile.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
                         } 
