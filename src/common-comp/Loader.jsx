@@ -31,7 +31,7 @@ function move() {
               subt.classList.add("appearTitle")
             })
             logo.classList.add("appearLogo")
-        }, 1200)        //prima era 1200
+        }, 2000)        //prima era 1200
       } else {
         width++;
         elem.style.width = width + "%";

@@ -225,7 +225,7 @@ const Home = () => {
                     </div>
                     <div className='text-anim-wp main-logo-wp o-hidden'>
                         {mobile === 0 ? 
-                            <img src={'./img/laura-lavorini-logo.svg'} alt="laura lavorini"  className='main-logo d-300' loading='lazy' id='deskLogo'/>
+                            <img src={'./img/laura-lavorini-logo.svg'} alt="laura lavorini"  className='main-logo d-150' loading='lazy' id='deskLogo'/>
                             : 
                             <img src={'./img/laura-lavorini-mobile.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
                         } 
