@@ -29,12 +29,15 @@ function move() {
             subt.classList.add("appearTitle")
           })
         }, 1500)
-        
+
+        setTimeout(() => {
+          logo.classList.add("appearLogo")
+        }, 1800)
+
         setTimeout(() => {
             let wrapper = document.getElementById("wrapper")
             wrapper.classList.add("js")
             document.body.style.height = 'auto'
-            logo.classList.add("appearLogo")
         }, 2000)        //prima era 1200
       } else {
         width++;
