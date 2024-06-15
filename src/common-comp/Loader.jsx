@@ -20,16 +20,20 @@ function move() {
         bgs.forEach(bg => {
             bg.classList.add("loadingAnim")
         });
+
+        setTimeout(() => {
+          titleH.forEach(tit => {
+            tit.classList.add("appearTitle")
+          })
+          subtH.forEach(subt => {
+            subt.classList.add("appearTitle")
+          })
+        }, 1500)
+        
         setTimeout(() => {
             let wrapper = document.getElementById("wrapper")
             wrapper.classList.add("js")
             document.body.style.height = 'auto'
-            titleH.forEach(tit => {
-              tit.classList.add("appearTitle")
-            })
-            subtH.forEach(subt => {
-              subt.classList.add("appearTitle")
-            })
             logo.classList.add("appearLogo")
         }, 2000)        //prima era 1200
       } else {
