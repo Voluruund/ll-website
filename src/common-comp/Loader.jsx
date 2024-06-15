@@ -49,7 +49,6 @@ function move() {
 }
 
 export default function Loader(){
-    // setTimeout(move, 1000)
 
     useEffect(() => {
       move()

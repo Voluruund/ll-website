@@ -1447,7 +1447,7 @@ hr{
 
 .appearLogo{
   display: inline-block !important;
-  animation: appearLogo .7s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation: appearLogo 1.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 @keyframes appearLogo {
