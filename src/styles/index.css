@@ -455,7 +455,7 @@ img{
 .cta-wp{
   z-index: 100000;
   position: relative;
-  width: 95vw;
+  width: 97vw;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -990,7 +990,7 @@ hr{
 
 .footer-wp{
   padding-top: 20vh;
-  width: 95vw;
+  width: 97vw;
   position: relative;
   margin: auto;
   height: 51vh;
@@ -1012,7 +1012,8 @@ hr{
 .data-footer-wp p a{
   text-decoration: none;
   color: var(--default-lilac);
-  font-size: 1.041vw;
+  /* font-size: 1.041vw; */
+  font-size: .8vw;
   font-family: var(--clash-display-variable);
   font-weight: 500;
   text-transform: uppercase;
@@ -1079,7 +1080,7 @@ hr{
 }
 
 .work-cta-wp, .works-desc-wp,.works-grid{
-  width: 95vw;
+  width: 97vw;
   margin: auto;
 }
 
@@ -1433,7 +1434,7 @@ hr{
 /* =============================== home styles */
 .f-home-section{
   height: 97vh;
-  width: 95vw;
+  width: 97vw;
   margin: auto;
   /* margin-bottom: 30vh; */
   margin-bottom: 10vh;
@@ -1592,7 +1593,7 @@ hr{
 }
 
 .main-img-wp{
-  width: 95vw;
+  width: 97vw;
   margin: 30vh auto;
   height: 510vh;
   position: relative;
@@ -1938,7 +1939,7 @@ hr{
 /* TODO */
 
 .form-wrapper {
-  width: 95vw;
+  width: 97vw;
   margin: auto;
 }
 
@@ -2101,7 +2102,7 @@ hr{
   .provaDiv .cta-wp{
     z-index: 100000;
     position: relative;
-    width: 95vw;
+    width: 97vw;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -2316,7 +2317,7 @@ hr{
 
   .works-grid .row{
     width: 100%;
-    height: 95vw;
+    height: 97vw;
     background-size: cover;
     background-position: 50%;
   }
@@ -2445,7 +2446,7 @@ hr{
   }
 
   .mp-wp .per-hobbies p{
-    width: 95vw;
+    width: 97vw;
   }
 
   .second-col-g2 p{

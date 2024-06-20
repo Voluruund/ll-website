@@ -62,6 +62,9 @@ window.setTimeout(
 
   window.onload = function(){
     // Loader logic from navigation.jsx
+    
+    window.localStorage.clear();
+
     let menu_option = "'menu'"
     let menu_other_option = "'x'"
     let menuToggle = document.querySelector('.menu-toggle')

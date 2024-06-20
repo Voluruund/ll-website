@@ -65,17 +65,17 @@ const PageNotFound = () => {
                         <span id='hide-btn-default'>View more</span>
                         <div className="marqueebutton-outline" aria-hidden="true">
                             <div className="marquee__inner-outline btn-hover-reset">
-                                <span>View more</span>
-                                <span>View more</span>
-                                <span>View more</span>
-                                <span>View more</span>
-                                <span>View more</span>
+                                <span>Back to home</span>
+                                <span>Back to home</span>
+                                <span>Back to home</span>
+                                <span>Back to home</span>
+                                <span>Back to home</span>
 
-                                <span>View more</span>
-                                <span>View more</span>
-                                <span>View more</span>
-                                <span>View more</span>
-                                <span>View more</span>
+                                <span>Back to home</span>
+                                <span>Back to home</span>
+                                <span>Back to home</span>
+                                <span>Back to home</span>
+                                <span>Back to home</span>
                             </div>
                         </div>
                     </a>

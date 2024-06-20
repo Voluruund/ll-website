@@ -227,7 +227,7 @@ const Home = () => {
                         {mobile === 0 ? 
                             <img src={'./img/laura-lavorini-logo.svg'} alt="laura lavorini"  className='main-logo d-100' loading='lazy' id='deskLogo'/>
                             : 
-                            <img src={'./img/laura-lavorini-mobile.png'} alt="laura lavorini"  className='main-logo' loading='lazy'/>
+                            <img src={'./img/laura-lavorini-mobile.png'} alt="laura lavorini"  className='main-logo' loading='lazy' id='deskLogo'/>
                         } 
                     </div>
                 </section>
