@@ -269,7 +269,7 @@ const Home = () => {
                             </div>
                             <div className="more-info">
                                 <p>more about me</p>
-                                <Link to="/about" onClick={(e) => delayAndGo(e, "/about")} className='circular-btn' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
+                                <Link to="/about" onClick={(e) => delayAndGo(e, "/about")} className='circular-btn circ-btn-anim' id='btnP'><span className="material-symbols-outlined">arrow_forward</span></Link>
                             </div>
                         </div>
                     </div>

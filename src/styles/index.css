@@ -762,7 +762,14 @@ img{
 
 .services-grid{
   display: grid;
-  grid-template-columns: repeat(3, 30%);
+  grid-template-columns: 20% 20% 20%;
+  gap: 3%;
+}
+
+.services-grid .cv-job{
+  border: solid 1px var(--default-lilac);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .parag-cv-wp ul{
@@ -1594,9 +1601,17 @@ hr{
 
 .main-img-wp{
   width: 97vw;
-  margin: 30vh auto;
+  margin: 20vh auto;
   height: 510vh;
   position: relative;
+}
+
+.scrollAbout{
+  position: absolute;
+  z-index: 1000000000;
+  max-height: fit-content;
+  margin-top: 43vh;
+  margin-left: 46%;
 }
 
 .info-work{
@@ -1736,6 +1751,11 @@ hr{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.circ-btn-anim:hover{
+  width: 2.65vw !important;
 }
 
 .circular-btn .material-symbols-outlined, .circular-btn-mob .material-symbols-outlined{
