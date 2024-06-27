@@ -16,7 +16,7 @@ function Footer(){
                     <SingleBaloon />
                 </Suspense>
                 <div className='p-abs-100'>
-                    <img src={'/img/copy-footer.png'} alt="footer" className='img-footer'/>
+                    <img src={'/img/copy-footer.svg'} alt="footer" className='img-footer'/>
                     <div className="data-footer-wp mt-20">
                         <p className='piva'><a href='#'>P.IVA 02435900978</a></p>
                         <div className='social'>

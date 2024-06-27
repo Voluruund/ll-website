@@ -1416,7 +1416,7 @@ hr{
 .main-img-wp{
   width: 97vw;
   margin: 20vh auto;
-  height: 510vh;
+  height: 580vh;
   position: relative;
 }
 
@@ -1465,56 +1465,56 @@ hr{
 }
 
 .main-img-wp div:nth-of-type(1){
-  width: 31vw;
+  width: 32vw;
   top: 0;
   left: 0;
 }
 
 .main-img-wp div:nth-of-type(2){
-  width: 30vw;
+  width: 31.6vw;
   top: 25vh;
   right: 0;
 }
 
 .main-img-wp div:nth-of-type(3){
-  width: 30vw;
+  width: 35.7vw;
   top: 115vh;
-  left: 10vw;
+  left: 8.5vw;
 }
 
 .main-img-wp div:nth-of-type(4){
-  width: 24vw;
-  top: 165vh;
-  right: 6vw;
+  width: 31.6vw;
+  top: 175vh;
+  right: 5vw;
 }
 
 .main-img-wp div:nth-of-type(5){
-  width: 21vw;
-  top: 215vh;
+  width: 23.5vw;
+  top: 235vh;
   left: 0;
 }
 
 .main-img-wp div:nth-of-type(6){
-  width: 34vw;
-  top: 265vh;
-  right: 3vw;
+  width: 41vw;
+  top: 275vh;
+  right: 2vw;
 }
 
 .main-img-wp div:nth-of-type(7){
-  width: 26vw;
-  top: 320vh;
-  left: 10vw;
+  width: 33vw;
+  top: 340vh;
+  left: 7.5vw;
 }
 
 .main-img-wp div:nth-of-type(8){
-  width: 26vw;
-  top: 380vh;
+  width: 29vw;
+  top: 420vh;
   right: 0;
 }
 
 .main-img-wp div:nth-of-type(9){
-  width: 30vw;
-  top: 430vh;
+  width: 35.5vw;
+  top: 480vh;
   left: 0;
 }
 
@@ -1591,7 +1591,7 @@ hr{
 
 @keyframes animRow {
   to{
-    width: 50%;
+    width: 38%;
   }
 }
 
