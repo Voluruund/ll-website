@@ -1583,6 +1583,7 @@ hr{
   text-transform: uppercase;
   font-size: 1vw;
   line-height: 2.2;
+  position: relative;
 }
 
 .more-info{
@@ -1756,6 +1757,27 @@ hr{
 
 .circ-btn-anim:hover{
   width: 2.65vw !important;
+}
+
+.rowAnim{
+  width: 1%;
+  height: 2px;
+  background-color: var(--default-lilac);
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  transform: translateY(-50%);
+}
+
+.animateRow{
+  animation: animRow 1.3s cubic-bezier(.98,.3,.3,.9) forwards;
+  animation-delay: 1s;
+}
+
+@keyframes animRow {
+  to{
+    width: 50%;
+  }
 }
 
 .circular-btn .material-symbols-outlined, .circular-btn-mob .material-symbols-outlined{

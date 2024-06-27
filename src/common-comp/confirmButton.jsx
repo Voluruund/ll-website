@@ -11,9 +11,9 @@ function DraggableButton(){
         container.addEventListener("mouseup", dragEnd, false);
         container.addEventListener("click", toggleSwitch, false);
       } else {
-        container.addEventListener("touchstart", dragStart, false);
-        container.addEventListener("touchend", dragEnd, false);
-        container.addEventListener("touchmove", drag, false);
+        container.addEventListener("touchstart", dragStart, {passive: true});
+        container.addEventListener("touchend", dragEnd, {passive: true});
+        container.addEventListener("touchmove", drag, {passive: true});
       
         container.addEventListener("mousedown", dragStart, false);
         dragItem.addEventListener("mousedown", itemDragStart, false);
