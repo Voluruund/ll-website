@@ -1420,14 +1420,6 @@ hr{
   position: relative;
 }
 
-.scrollAbout{
-  position: absolute;
-  z-index: 100;
-  max-height: fit-content;
-  margin-top: 43vh;
-  margin-left: 46%;
-}
-
 .info-work{
   position: relative !important;
   display: grid;

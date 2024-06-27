@@ -13,18 +13,12 @@ const About = () => {
         var divTop = scrollingDiv.offsetTop
         var divHeight = scrollingDiv.offsetHeight
         var imageHeight = image.offsetHeight
-
-        var scrollAbout = document.getElementById("scrollAbout")
-
         if(scrollTop + 40 > divTop && scrollTop + 40 < divTop + divHeight - imageHeight){
             image.style.top = scrollTop - divTop + 40 + "px"
-            scrollAbout.style.top = scrollTop - divTop + 40 + "px"
         }else if (scrollTop + 40 <= divTop){
             image.style.top = "0"
-            scrollAbout.style.top = "0"
         }else{
             image.style.top = divHeight - image.offsetHeight + "px"
-            scrollAbout.style.top = divHeight - image.offsetHeight + "px"
         }
     }
     
@@ -68,7 +62,6 @@ const About = () => {
                                 <div className='personal-img def-border-radius' id="imgScroll">
                                     <img src={'./img/Laura-Lavorini.png'} alt="Laura" className="img-sizes" ref={parallax.ref}/>
                                 </div>
-                                <p id="scrollAbout" className="scrollAbout">about me</p>
                             </div>
                         </div>
                         <div className="p-data-wp mt-50">
