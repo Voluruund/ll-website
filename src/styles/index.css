@@ -1,56 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
 @font-face {
-  font-family: 'CabinetGrotesk-Variable';
-  src: url('../fonts/CabinetGrotesk-Variable.woff2') format('woff2'),
-       url('../fonts/CabinetGrotesk-Variable.woff') format('woff'),
-       url('../fonts/CabinetGrotesk-Variable.ttf') format('truetype');
-       font-weight: 100 900;
-       font-display: swap;
-       font-style: normal;
-}
-
-/* @font-face {
-  font-family: 'CabinetGrotesk-Thin';
-  src: url('../fonts/CabinetGrotesk-Thin.woff2') format('woff2'),
-       url('../fonts/CabinetGrotesk-Thin.woff') format('woff'),
-       url('../fonts/CabinetGrotesk-Thin.ttf') format('truetype');
-       font-weight: 100;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'CabinetGrotesk-Extralight';
-  src: url('../fonts/CabinetGrotesk-Extralight.woff2') format('woff2'),
-       url('../fonts/CabinetGrotesk-Extralight.woff') format('woff'),
-       url('../fonts/CabinetGrotesk-Extralight.ttf') format('truetype');
-       font-weight: 200;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'CabinetGrotesk-Light';
-  src: url('../fonts/CabinetGrotesk-Light.woff2') format('woff2'),
-       url('../fonts/CabinetGrotesk-Light.woff') format('woff'),
-       url('../fonts/CabinetGrotesk-Light.ttf') format('truetype');
-       font-weight: 300;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'CabinetGrotesk-Regular';
-  src: url('../fonts/CabinetGrotesk-Regular.woff2') format('woff2'),
-       url('../fonts/CabinetGrotesk-Regular.woff') format('woff'),
-       url('../fonts/CabinetGrotesk-Regular.ttf') format('truetype');
-       font-weight: 400;
-       font-display: swap;
-       font-style: normal;
-} */
-
-@font-face {
   font-family: 'CabinetGrotesk-Medium';
   src: url('../fonts/CabinetGrotesk-Medium.woff2') format('woff2'),
        url('../fonts/CabinetGrotesk-Medium.woff') format('woff'),
@@ -59,36 +9,6 @@
        font-display: swap;
        font-style: normal;
 }
-
-/* @font-face {
-  font-family: 'CabinetGrotesk-Bold';
-  src: url('../fonts/CabinetGrotesk-Bold.woff2') format('woff2'),
-       url('../fonts/CabinetGrotesk-Bold.woff') format('woff'),
-       url('../fonts/CabinetGrotesk-Bold.ttf') format('truetype');
-       font-weight: 700;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'CabinetGrotesk-Extrabold';
-  src: url('../fonts/CabinetGrotesk-Extrabold.woff2') format('woff2'),
-       url('../fonts/CabinetGrotesk-Extrabold.woff') format('woff'),
-       url('../fonts/CabinetGrotesk-Extrabold.ttf') format('truetype');
-       font-weight: 800;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'CabinetGrotesk-Black';
-  src: url('../fonts/CabinetGrotesk-Black.woff2') format('woff2'),
-       url('../fonts/CabinetGrotesk-Black.woff') format('woff'),
-       url('../fonts/CabinetGrotesk-Black.ttf') format('truetype');
-       font-weight: 900;
-       font-display: swap;
-       font-style: normal;
-} */
 
 @font-face {
   font-family: 'ClashDisplay-Variable';
@@ -100,83 +20,14 @@
        font-style: normal;
 }
 
-/* @font-face {
-  font-family: 'ClashDisplay-Extralight';
-  src: url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),
-       url('../fonts/ClashDisplay-Extralight.woff') format('woff'),
-       url('../fonts/ClashDisplay-Extralight.ttf') format('truetype');
-       font-weight: 200;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'ClashDisplay-Light';
-  src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
-       url('../fonts/ClashDisplay-Light.woff') format('woff'),
-       url('../fonts/ClashDisplay-Light.ttf') format('truetype');
-       font-weight: 300;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'ClashDisplay-Regular';
-  src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
-       url('../fonts/ClashDisplay-Regular.woff') format('woff'),
-       url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
-       font-weight: 400;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'ClashDisplay-Medium';
-  src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
-       url('../fonts/ClashDisplay-Medium.woff') format('woff'),
-       url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
-       font-weight: 500;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'ClashDisplay-Semibold';
-  src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-       url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
-       url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
-       font-weight: 600;
-       font-display: swap;
-       font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'ClashDisplay-Bold';
-  src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
-       url('../fonts/ClashDisplay-Bold.woff') format('woff'),
-       url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
-       font-weight: 700;
-       font-display: swap;
-       font-style: normal;
-} */
-
 :root{
-  /* --default-lilac: #CCB5E2; */
   --default-lilac: #B59BCE;
   --default-bg-color: #F6F6F4;
   --default-black: #121212;
   --default-brd-rad: 10px;
   --secondary-font: 'Pinyon Script', cursive;
   --clash-display-variable: 'ClashDisplay-Variable';
-  --cabinet-variable: 'CabinetGrotesk-Variable';
-  --cabinet-regular: 'CabinetGrotesk-Regular';
-  --cabinet-thin: 'CabinetGrotesk-Thin';
-  --cabinet-extralight: 'CabinetGrotesk-ExtraLight';
-  --cabinet-light: 'CabinetGrotesk-Light';
   --cabinet-medium: 'CabinetGrotesk-Medium';
-  --cabinet-bold: 'CabinetGrotesk-Bold';
-  --cabinet-extrabold: 'CabinetGrotesk-Extrabold';
-  --cabinet-black: 'CabinetGrotesk-Black';
   --menu-content: 'menu';
 }
 
@@ -379,12 +230,6 @@ input::placeholder {
   animation-delay: 1000ms !important;
   transition-delay: 1000ms !important;
 }
-
-/* .fl-bot{
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-} */
 
 img{
   border-radius: var(--default-brd-rad) !important;
@@ -793,14 +638,6 @@ img{
   overflow: hidden;
 }
 
-/* .serious-cta{
-  font-family: var(--clash-display-variable);
-  font-size: 1.041vw;
-  margin: 0 0 0 20px;
-  text-transform: uppercase;
-  font-weight: 500;
-} */
-
 hr{
   display: block;
   height: 1px;
@@ -814,9 +651,7 @@ hr{
   width: 17vw;
   height: 45vh;
   overflow: hidden;
-  /* position: relative; */
   position: absolute;
-  /* top: 0; */
   left: 0;
 }
 
@@ -826,7 +661,6 @@ hr{
   left: -12.5vw;
   border-radius: 10px;
   width: 800px;
-  /* height: 700px; */
 }
 
 .text-wrapper h1{
@@ -917,10 +751,6 @@ hr{
   bottom: 0px;
   margin-bottom: 2px;
 }
-/* 
-.menu-toggle:hover::before{
-  opacity: .8;
-} */
 
 .menu-toggle.active{
   width: 23.5vw;
@@ -1019,7 +849,6 @@ hr{
 .data-footer-wp p a{
   text-decoration: none;
   color: var(--default-lilac);
-  /* font-size: 1.041vw; */
   font-size: .8vw;
   font-family: var(--clash-display-variable);
   font-weight: 500;
@@ -1049,18 +878,6 @@ hr{
 /* ================================================== */
 
 /* ======================================= works wp styles */
-/* .works-bg{
-  width: 100vw;
-  min-height: 100vh;
-  padding: 50px 0;
-  background-color: #121212;
-  height: fit-content;
-  position: absolute;
-  top: 100vh;
-  animation: showWorks .7s forwards cubic-bezier(.48,.3,.3,.9);
-  z-index: 999;
-  border-radius: 10px;
-} */
 
 @keyframes showWorks {
     to{
@@ -1443,7 +1260,6 @@ hr{
   height: 97vh;
   width: 97vw;
   margin: auto;
-  /* margin-bottom: 30vh; */
   margin-bottom: 10vh;
   position: relative;
 }
@@ -1524,16 +1340,13 @@ hr{
 }
 
 .main-p-wp{
-  /* width: 85vw; */
   width: 100vw;
-  /* margin: 60vh auto; */
   margin: 0 auto 55vh auto;
 }
 
 .mp-wp{
   display: grid;
   grid-template-columns: 60% 40%;
-  /* width: 60vw; */
   height: 30vh;
 }
 
@@ -1609,7 +1422,7 @@ hr{
 
 .scrollAbout{
   position: absolute;
-  z-index: 1000000000;
+  z-index: 100;
   max-height: fit-content;
   margin-top: 43vh;
   margin-left: 46%;
@@ -1639,13 +1452,11 @@ hr{
 }
 
 .main-img-wp img{
-  /* position: absolute; */
   transition: all 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .main-img-wp img:hover{
   border-radius: 50% !important;
-  /* border-radius: 17em !important; */
 }
 
 .main-img-wp div a{
@@ -1767,6 +1578,10 @@ hr{
   top: 50%;
   left: 42%;
   transform: translateY(-50%);
+}
+
+.rowAnim-mob{
+  left: 50%;
 }
 
 .animateRow{
@@ -1929,11 +1744,9 @@ hr{
 
 .left {
   display: flex;
-  /* position: absolute; */
   justify-content: center;
   align-items: center;
   width: 55px;
-  /* height: 100%; */
   top: 0;
   left: 0;
   pointer-events: none;
@@ -2152,6 +1965,11 @@ hr{
   }
 
   /* responsive about */
+
+  .scrollAbout{
+    display: none;
+  }
+
   .img-sizes{
     left: -65vw;
     top: -7vh;
@@ -2314,13 +2132,6 @@ hr{
   }
 
   /* responsive home */
-  /* .main-img-wp{
-    display: grid;
-    grid-template-columns: 100%;
-    row-gap: 10vh;
-    width: 90vw;
-    height: fit-content;
-  } */
 
   .works-grid{
     display: flex;
@@ -2369,12 +2180,6 @@ hr{
     margin: auto;
   }
 
-  /* .main-img-wp .img-home{
-    display: block;
-    position: initial;
-    width: 100% !important;
-  } */
-
   .parag-cv-wp{
     width: 90vw;
   }
@@ -2409,11 +2214,7 @@ hr{
   .ml-10{
     margin-left: 0 !important;
   }
-  
-  /* .mt-20{
-    margin-top: 0 !important;
-  } */
-  
+
   .mt-50{
     margin-top: 0 !important;
   }

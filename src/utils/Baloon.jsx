@@ -18,7 +18,7 @@ export default function Baloon(){
     const first = useRef()
 
     // const { perfVisible } = useControls('debug', {
-    //     perfVisible: false
+    //     perfVisible: true
     // })
     
     var model
@@ -40,8 +40,6 @@ export default function Baloon(){
             <Lights />
             {/* <OrbitControls makeDefault/> */}
             <Physics gravity={ [ 0,  0, 0 ]}>
-
-{/* scale={[0.887, 3.162, 0.887]} */}
 
             <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={first}>
                     <Float

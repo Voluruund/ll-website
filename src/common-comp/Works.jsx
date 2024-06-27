@@ -19,29 +19,6 @@ export default function Works({stato}){
         loaded = 1
     }
 
-    //numero totale delle pagine dei lavori
-    // const pageCount = 4;
-    // const [currentIndex, setCurrentIndex] = useState(1);
-    // console.log(stato)
-
-    // const handlePrevClick = () => {
-    //     if (currentIndex > 1) {
-    //       setCurrentIndex(currentIndex - 1);
-    //     }else{
-    //         setCurrentIndex(pageCount);
-    //     }
-    //     window.lenis.scrollTo((0,0), {immediate: true})
-    //   };
-      
-    // const handleNextClick = () => {
-    //     if (currentIndex < pageCount) {
-    //         setCurrentIndex(currentIndex + 1);
-    //     }else{
-    //         setCurrentIndex(1);
-    //     }
-    //     window.lenis.scrollTo((0,0), {immediate: true})
-    // };
-
     return <>
         <StrictMode>
             <div className="provaDiv">

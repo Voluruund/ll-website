@@ -25,27 +25,6 @@ function DraggableButton(){
       }
     }, []);
 
-    window.addEventListener("load", ()=>{
-        // dragItem = document.querySelector("#item");
-        // container = document.querySelector("#container");
-        // if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-        //   container.addEventListener("mouseup", dragEnd, false);
-        //   container.addEventListener("click", toggleSwitch, false);
-        // } else {
-        //   container.addEventListener("touchstart", dragStart, false);
-        //   container.addEventListener("touchend", dragEnd, false);
-        //   container.addEventListener("touchmove", drag, false);
-        
-        //   container.addEventListener("mousedown", dragStart, false);
-        //   dragItem.addEventListener("mousedown", itemDragStart, false);
-        
-        //   container.addEventListener("mousemove", drag, false);
-        
-        //   container.addEventListener("mouseup", dragEnd, false);
-        //   container.addEventListener("click", toggleSwitch, false);
-        // }
-      });
-
     var dragItem;
     var container;
 

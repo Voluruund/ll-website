@@ -6,24 +6,6 @@ import Transition from "../common-comp/Transition";
 
 const About = () => {
 
-    // if(window.innerWidth > 960){
-    //     window.addEventListener("scroll", function(){        
-    //         var scrollingDiv = document.getElementById("scrollingDiv")
-    //         var image = document.getElementById("imgScroll")
-    //         var scrollTop = window.scrollY
-    //         var divTop = scrollingDiv.offsetTop
-    //         var divHeight = scrollingDiv.offsetHeight
-    //         var imageHeight = image.offsetHeight
-    //         if(scrollTop + 40 > divTop && scrollTop + 40 < divTop + divHeight - imageHeight){
-    //             image.style.top = scrollTop - divTop + 40 + "px"
-    //         }else if (scrollTop + 40 <= divTop){
-    //             image.style.top = "0"
-    //         }else{
-    //             image.style.top = divHeight - image.offsetHeight + "px"
-    //         }
-    //     })
-    // }
-
     function followImage(){
         var scrollingDiv = document.getElementById("scrollingDiv")
         var image = document.getElementById("imgScroll")

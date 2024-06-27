@@ -61,8 +61,6 @@ window.setTimeout(
   , 200)
 
   window.onload = function(){
-    // Loader logic from navigation.jsx
-    
     window.localStorage.clear();
 
     let menu_option = "'menu'"
@@ -87,10 +85,8 @@ function App () {
   var navigation
 
   document.onreadystatechange = function () {
-    // console.log("fuori")
     if (document.readyState === "complete") {
         navigation = document.getElementById('btNav')
-        // console.log("dentro")
         window.addEventListener('scroll', function(e) {
           navigation.classList.add("navigation-anim")
         })

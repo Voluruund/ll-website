@@ -2,6 +2,8 @@ import { useGLTF } from "@react-three/drei";
 import { Float} from "@react-three/drei";
 import Lights from "./Lights";
 import { StrictMode } from "react";
+import { useControls } from "leva";
+import { Perf } from "r3f-perf";
 
 export default function BaloonMobile(){
 
@@ -9,7 +11,13 @@ export default function BaloonMobile(){
 
     var model = nodes.Sphere002.geometry
 
+    // const { perfVisible } = useControls('debug', {
+    //     perfVisible: true
+    // })
+
     return <>
+        {/* ATTIVA LEVA PERF */}
+        {/* { perfVisible && <Perf position="top-left" /> } */}
         <StrictMode>
             <Lights />
             <Float

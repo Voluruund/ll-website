@@ -54,56 +54,19 @@ localStorage.setItem("state", "0");
 
 export default function Loader(){
 
-    // function TransitionIn(){
-    //   var elem = document.getElementById("transIn");
-    //   elem.classList.add("animateTransition-in")
-    // }
-
     useEffect(() => {
-      // if(localStorage.getItem("state") == 0){
-      //   move()
-      // }else{
-      //   TransitionIn()
-      //   var titleH = document.querySelectorAll(".main-title-h")
-      //   var subtH = document.querySelectorAll(".subtitle-h")
-      //   var logo = document.getElementById("deskLogo")
-      //   setTimeout(() => {
-      //     titleH.forEach(tit => {
-      //       tit.classList.add("appearTitle")
-      //     })
-      //     subtH.forEach(subt => {
-      //       subt.classList.add("appearTitle")
-      //     })
-      //   }, 1500)
-      //   setTimeout(() => {
-      //     logo.classList.add("appearLogo")
-      //   }, 1800)
-      // }
       move()
     }, [move])
 
     return <>
-    {
-      localStorage.getItem("state") == 0 ? 
         <section className="loader-wp" id="wrapper">
           <div className="appearAnim">
               <div className="animate d-900">
                   <section id="myProgress">
-                      <div id="myBar">0%</div>
+                     { localStorage.getItem("state") == 0 ? <div id="myBar">0%</div> : <div id="myBar" style={{display: "none"}}></div> }
                   </section>
               </div>
           </div>
         </section>
-      : 
-        <section className="loader-wp" id="wrapper">
-          <div className="appearAnim">
-              <div className="animate d-900">
-                  <section id="myProgress">
-                      <div id="myBar" style={{display: "none"}}></div>
-                  </section>
-              </div>
-          </div>
-        </section>
-      }
     </>
 }

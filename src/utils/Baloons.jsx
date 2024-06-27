@@ -14,8 +14,6 @@ export default function Baloons(){
 
     const {nodes, materials} = useGLTF('/models/balloon-laura-low-new.gltf')
 
-    // const first = useRef()
-    // const second = useRef()
     const third = useRef()
     const fourth = useRef()
     const fifth = useRef()
@@ -37,52 +35,6 @@ export default function Baloons(){
             {/* <OrbitControls makeDefault/> */}
 
             <Physics gravity={ [ 0,  0, 0 ]}>
-                
-                {/* <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={first}>
-                    <Float
-                        speed={2}
-                        rotationIntensity={1.2}
-                        floatingRange={[-.05, .05]} // defaults to [-0.1,0.1]
-                    >
-                        <mesh
-                            castShadow
-                            receiveShadow
-                            geometry={model}
-                            material={materials["Material.001"]}
-                            position={[5, -0.6, 1.229]}
-                            // scale y 2.502
-                            // old scale .502
-                            scale={[0.687, 1.32, 0.687]}
-                            rotation-x={1.5}
-                            onPointerEnter={() => {
-                                first.current.applyImpulse({ x: generateImpulseX() * 20, y: generateImpulseY() * 20, z: 0 }, true)
-                            }}
-                        />
-                    </Float>
-                </RigidBody> */}
-
-                {/* <RigidBody colliders="hull" lockRotations restitution={ .5 } ref={second}>
-                    <Float
-                        speed={2}
-                        rotationIntensity={.5}
-                        floatingRange={[-.05, .05]} // defaults to [-0.1,0.1]
-                    >
-                        <mesh
-                            castShadow
-                            receiveShadow
-                            geometry={model}
-                            material={materials["Material.001"]}
-                            position={[3, 3, 1.229]}
-                            // 2.502
-                            scale={[0.687, 1.32, 0.687]}
-                            rotation-x={1.5}
-                            onPointerEnter={() => {
-                                second.current.applyImpulse({ x: generateImpulseX() * 3, y: generateImpulseY() * 3, z: 0 }, true)
-                            }}
-                        />
-                    </Float>
-                </RigidBody> */}
-
                 <RigidBody colliders="hull" ref={third} lockRotations restitution={ .5 }>
                     <Float
                         speed={2}

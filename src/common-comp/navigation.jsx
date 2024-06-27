@@ -6,34 +6,6 @@ var navigation
 
 export default function Navigation(){
 
-    // window.onload = function(){
-        // let menu_option = "'menu'"
-        // let menu_other_option = "'x'"
-        // let menuToggle = document.querySelector('.menu-toggle')
-        // let menuToggle_after = window.getComputedStyle(menuToggle, '::before');
-        // menuToggle.onclick = function (){
-        //     menuToggle.classList.toggle('active')
-        //     console.log('clicked')
-        //     setTimeout(function(){
-        //         if(menuToggle_after.content === '"menu"'){
-        //             menuToggle.style.setProperty('--menu-content', menu_other_option)
-        //         }else{
-        //             menuToggle.style.setProperty('--menu-content', menu_option)
-        //         }
-        //     }, 500)
-        // }
-    // }
-    
-    // document.onreadystatechange = function (){
-    //     if (document.readyState === "complete") {
-    //         navigation = document.getElementById('btNav')
-    //         window.addEventListener('scroll', function(e) {
-    //             navigation.classList.add("navigation-anim")
-    //             console.log(navigation)
-    //         }, false)
-    //     }
-    // }
-
     const history = useNavigate();
 
     function delayAndGo(e, path) {
