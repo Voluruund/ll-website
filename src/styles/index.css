@@ -1518,6 +1518,40 @@ hr{
   width: 60%;
 }
 
+@keyframes fadeInSx {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1 !important;
+  }
+}
+
+.sx, .dx{
+  opacity: 0;
+}
+
+.fadeInSx-animation {
+  animation: 1s fadeInSx ease-in forwards;
+}
+
+@keyframes fadeInDx {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1 !important;
+  }
+}
+
+.fadeInDx-animation {
+  animation: 1s fadeInDx ease-in forwards;
+}
+
 .view-more{
   visibility: hidden;
   position: absolute;
@@ -1677,12 +1711,14 @@ hr{
 #container {
   position: relative;
   width: 98vw;
-  height: 45px;
+  height: 55px;
   background-color: white;
   border: 1px solid #e3e8ec;
   margin: 0;
   border-radius: 36px;
   touch-action: none;
+  display: grid;
+  align-items: center;
 }
 
 #container.select-left .left span {

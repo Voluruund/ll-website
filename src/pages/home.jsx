@@ -11,6 +11,7 @@ import Image from '../common-comp/Image'
 
 // import Distortion from '../utils/Distortion';
 import Transition from '../common-comp/Transition';
+import { element } from 'three/examples/jsm/nodes/Nodes.js';
 
 var isInViewport = function(elem) {
     var distance = elem.getBoundingClientRect();
@@ -30,6 +31,8 @@ var imgList
 var showMore
 var navigation
 var rowAnim
+var imgSx
+var imgDx
 
 const Home = () => {
 
@@ -64,6 +67,22 @@ const Home = () => {
         });
     }
 
+    function mountImgFade(){
+        imgSx.forEach(element => {
+            if(isInViewport(element)){
+                element.classList.add("fadeInSx-animation")
+                element.classList.remove("sx")
+            }
+        })
+
+        imgDx.forEach(element => {
+            if(isInViewport(element)){
+                element.classList.add("fadeInDx-animation")
+                element.classList.remove("dx")
+            }
+        })
+    }
+
     function hideShowMore(){
         window.addEventListener('mousemove', function(e){
             showMore.style.visibility = 'hidden'
@@ -81,11 +100,14 @@ const Home = () => {
         pBtn2 = document.getElementById('btnP2')
         rowAnim = document.getElementById('row')
         imgList = document.querySelectorAll('.img-home')
+        imgSx = document.querySelectorAll(".sx")
+        imgDx = document.querySelectorAll(".dx")
         showMore = document.getElementById("view-more");
         showMore.setAttribute('listener', 'false')
 
         window.addEventListener('scroll', mountGeneric)
         window.addEventListener('scroll', mountTextAnim)
+        window.addEventListener('scroll', mountImgFade)
 
         if(window.innerWidth > 1024){
             imgList.forEach(element => {
@@ -101,6 +123,7 @@ const Home = () => {
             window.removeEventListener('mouseover', mountShowMore)
             window.removeEventListener('mouseout', hideShowMore)
             window.removeEventListener('scroll', mountTextAnim)
+            window.removeEventListener('scroll', mountImgFade)
         }
 
     }, [lenis])
@@ -264,7 +287,7 @@ const Home = () => {
                 </div>
 
                 <section className="main-img-wp demo-1__gallery" id='work'>
-                    <div>
+                    <div className='sx'>
                         <Link to="/works/cesarelampronti" onClick={(e) => delayAndGo(e, "/works/cesarelampronti")}>
                             <Image url="./img/gallery-london.png" nextUrl="./img/monica-logo-home.png"></Image>
                             <div className="info-work">
@@ -274,7 +297,7 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-                    <div>
+                    <div className='dx'>
                         <Link to="/works/branchetti" onClick={(e) => delayAndGo(e, "/works/branchetti")}>
                             <Image url="./img/monica-logo-home.png" nextUrl="./img/monica.gif"></Image>
                             <div className="info-work" id='monica'>
@@ -284,7 +307,7 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-                    <div>
+                    <div className='sx'>
                         <Link to="/works/cavallini" onClick={(e) => delayAndGo(e, "/works/cavallini")}>
                             <Image url="./img/bisteccamore.png" nextUrl="./img/faccia.jpg"></Image>
                             <div className="info-work" id='monica'>
@@ -294,8 +317,7 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-
-                    <div>
+                    <div className='dx'>
                         <Link to="/works/guianerli" onClick={(e) => delayAndGo(e, "/works/guianerli")}>
                             <Image url="./img/guia-nerli.png" nextUrl="./img/faccia.jpg"></Image>
                             <div className="info-work" id='monica'>
@@ -305,8 +327,7 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-
-                    <div>
+                    <div className='sx'>
                         <Link to="/works/percorsisomatici" onClick={(e) => delayAndGo(e, "/works/percorsisomatici")}>
                             <Image url="./img/somatici-home.png" nextUrl="./img/faccia.jpg"></Image>
                             <div className="info-work" id='monica'>
@@ -316,8 +337,7 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-
-                    <div>
+                    <div className='dx'>
                         <Link to="/works/vanni" onClick={(e) => delayAndGo(e, "/works/vanni")}>
                             <Image url="./img/domizia-home.png" nextUrl="./img/vanni.gif"></Image>
                             <div className="info-work" id='monica'>
@@ -327,8 +347,7 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-
-                    <div>
+                    <div className='sx'>
                         <Link to="/works/studiobigne" onClick={(e) => delayAndGo(e, "/works/studiobigne")}>
                             <Image url="./img/bigne-home.png" nextUrl="./img/bigne.gif"></Image>
                             <div className="info-work" id='monica'>
@@ -338,8 +357,7 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-
-                    <div>
+                    <div className='dx'>
                         <Link to="/works/pegaso" onClick={(e) => delayAndGo(e, "/works/pegaso")}>
                             <Image url="./img/pegaso-home.png" nextUrl="./img/faccia.jpg"></Image>
                             <div className="info-work" id='monica'>
@@ -349,8 +367,7 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-
-                    <div>
+                    <div className='sx'>
                         <Image url="./img/agricola.png" nextUrl="./img/faccia.jpg"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(09)</p> Personal project</p>
@@ -468,8 +485,5 @@ const Home = () => {
         </>
     )
 }
-
-
-// new Demo()
 
 export default Home;

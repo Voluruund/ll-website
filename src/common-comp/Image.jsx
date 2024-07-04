@@ -19,7 +19,13 @@ const Image = (props) => {
   }
 
   return (
-      <img ref={imageRef} src={props.url} onMouseEnter={() => handleHover()} onMouseLeave={() => handleHoverOut()} className='img-home demo-1__gallery__figure'/>
+      <img 
+        ref={imageRef} 
+        src={props.url} 
+        onMouseEnter={() => handleHover()} 
+        onMouseLeave={() => handleHoverOut()} 
+        className={ "img-home demo-1__gallery__figure " + ( props.styleName || "") }
+      />
   );
 }
 
