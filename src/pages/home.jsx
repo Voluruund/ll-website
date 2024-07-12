@@ -70,15 +70,13 @@ const Home = () => {
     function mountImgFade(){
         imgSx.forEach(element => {
             if(isInViewport(element)){
-                element.classList.add("fadeInSx-animation")
-                // element.classList.remove("sx")
+                element.classList.add("fadeInUp-animation")
             }
         })
 
         imgDx.forEach(element => {
             if(isInViewport(element)){
-                element.classList.add("fadeInDx-animation")
-                // element.classList.remove("dx")
+                element.classList.add("fadeInUp-animation")
             }
         })
     }

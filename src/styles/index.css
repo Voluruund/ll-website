@@ -1518,49 +1518,39 @@ hr{
   width: 60%;
 }
 
-@keyframes fadeInSx {
+.sx, .dx{
+  width: 100%;
+  background-color: var(--default-bg-color);
+  position: absolute;
+  height: 70%;
+  top: 0;
+}
+
+/* .fadeInSx-animation {
+  animation-delay: 1s;
+  animation: .8s fadeInSx .7s cubic-bezier(.77,0,.175,1) forwards;
+} */
+
+/* @keyframes fadeInSx {
   0% {
     left: 0;
   }
   100% {
    left: 100%;
   }
+} */
+
+.fadeInUp-animation {
+  animation: 1s fadeInUp .3s cubic-bezier(.77,0,.175,1) forwards;
 }
 
-.sx, .dx{
-  width: 100%;
-  background-color: var(--default-bg-color);
-  position: absolute;
-}
-
-.sx{
-  height: 100%;
-  border-top-right-radius: var(--default-brd-rad);
-  border-bottom-right-radius: var(--default-brd-rad);
-}
-
-.dx{
-  height: 100%;
-  top: 0;
-}
-
-.fadeInSx-animation {
-  animation-delay: 1s;
-  animation: .8s fadeInSx .7s cubic-bezier(.77,0,.175,1) forwards;
-}
-
-@keyframes fadeInDx {
+@keyframes fadeInUp {
   0% {
     top: 0;
   }
   100% {
-    top: -100%;
+    top: -70%;
   }
-}
-
-.fadeInDx-animation {
-  animation-delay: 1s;
-  animation: .8s fadeInDx .7s cubic-bezier(.77,0,.175,1) forwards;
 }
 
 .view-more{
