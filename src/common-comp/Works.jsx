@@ -113,14 +113,14 @@ export default function Works({stato}){
                 <div><p>2024</p></div>
                 <div><p>-{'>'}</p></div>
             </div>
-            <div className="work-wp">
+            <div className="work-wp mb-150">
                 <div><p>01</p></div>
                 <div><p>nome progetto 01</p></div>
                 <div><p>web design</p></div>
                 <div><p>2024</p></div>
                 <div><p>-{'>'}</p></div>
             </div>
-            <div className="r-5">
+            <div className="r-5 mt-120">
                 <div className="text-wrapper">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Logo Design</h1>

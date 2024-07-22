@@ -1376,6 +1376,17 @@ hr{
   font-size:2.3083vw !important;
 }
 
+.pd-60-y{
+  padding: 60px 0;
+}
+
+.pd-60-bot{
+  padding-bottom: 60px;
+}
+
+.b-bottom{
+  border-bottom: solid 1px var(--default-lilac);
+}
 
 .grid-2{
   display: grid;
@@ -2268,6 +2279,10 @@ hr{
   .mb-150{
     margin-bottom: 0 !important;
   }
+
+  .mb-80{
+    margin-bottom: 80px !important;
+  }
   
   .mt-120{
     margin-top: 0 !important;
@@ -2408,5 +2423,9 @@ hr{
   
   .subtitle-h{
     font-size: 4.6666vw;
+  }
+
+  .sx,.dx{
+    display: none;
   }
 }
