@@ -5,7 +5,7 @@ const Navigation = () => {
     return( <>
         <StrictMode>
             <section className='cta-wp'>
-                <a className="button-outline button--atlas-outline scrollto" id="footer-cta" href="#work">
+                <a className="button-outline button--atlas-outline scrollto" id="footer-cta" href="/works">
                     <span>Works</span>
                     <div className="marqueebutton-outline" aria-hidden="true">
                         <div className="marquee__inner-outline">

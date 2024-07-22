@@ -908,6 +908,18 @@ hr{
   margin: auto;
 }
 
+.work-wp{
+  height: 80px;
+  display: grid;
+  grid-template-columns: 5% 60% 15% 10% 10%;
+  align-items: center;
+  border-bottom: solid 1px var(--default-lilac);
+}
+
+.bt{
+  border-top: solid 1px var(--default-lilac);
+}
+
 .work-cta-wp{
   padding: 20vh 0 10vh 0;
 }
@@ -1360,7 +1372,8 @@ hr{
 }
 
 .mp-wp .parag-cv{
-  font-size:2.7083vw !important;
+  /* font-size:2.7083vw !important; */
+  font-size:2.3083vw !important;
 }
 
 

@@ -202,16 +202,24 @@ const Home = () => {
                         <div>
                             <div className="text-anim-wp mobile-hidden">
                                 <p className='p-num d-100' id='01'>(01)</p>
-                                <p className="parag-cv d-100">I’m a designer based in </p>
+                                <p className="parag-cv d-100">I’m a web graphic designer based  </p>
                             </div>
                             <div className="text-anim-wp mobile-hidden">
-                                <p className="parag-cv d-200"><span className='cursive-title-h'>Florence</span>. Specialized in Graphic design </p>
+                                <p className='parag-cv d-200'>in Florence, specializing in Graphic</p>
+                                {/* <p className="parag-cv d-200"><span className='cursive-title-h'>Florence</span>. Specialized in Graphic design </p> */}
                             </div>
                             <div className="text-anim-wp mobile-hidden">
-                                <p className="parag-cv d-300">and Digital branding, with 8+ years of</p>
+                                <p className="parag-cv d-300">Design Design and Digital Branding. With over 8 </p>
                             </div>
                             <div className="text-anim-wp mobile-hidden">
-                                <p className="parag-cv d-400">experience in <span className='cursive-title-h'>design </span>field.</p>
+                                <p className="parag-cv d-400">years of experience in the design field, I</p>
+                                {/* <p className="parag-cv d-400">experience in <span className='cursive-title-h'>design </span>field.</p> */}
+                            </div>
+                            <div className="text-anim-wp mobile-hidden">
+                                <p className='parag-cv d-500'> have honed my skills in crafting visually </p>
+                            </div>
+                            <div className="text-anim-wp mobile-hidden">
+                                <p className='parag-cv d-600'>compelling and user-friendly designs.</p>
                             </div>
                         </div>
                         <div>
@@ -226,7 +234,10 @@ const Home = () => {
                             <img src={'./img/laura-home.png'} alt="Laura" className="img-home-l"/>
                         </div>
                         <div className='second-col-g2'>
-                            <p>Thanks to the years spent to study art and the experience of all these years as a freelancer, I gained a great experience in creative process. In the last 4 years I had the chance to teach Web Graphic Design at Nemo Academy in Florence. </p>
+                            <p>I work as a freelancer and as a web design teacher in Florence. My journey through the
+                                creative design process has been enriched by my passion for fine arts, which continues to
+                                inspire my work. 
+                            </p>
                             <div className="per-hobbies">
                                 <p>Swimmer</p>
                                 <p>Music lover</p>
@@ -275,9 +286,6 @@ const Home = () => {
                         <div className="more-info">
                             <p>
                                 more about me
-                                {/* TODO */}
-                                {/* NON FUNZIONA */}
-                                {/* <div className="rowAnim" id='row'></div> */}
                             </p>
                             <Link to="/about" onClick={(e) => delayAndGo(e, "/about")}  className='circular-btn-mob' id='btnP2'><span className="material-symbols-outlined">arrow_forward</span></Link>
                         </div>
@@ -288,7 +296,7 @@ const Home = () => {
                     <div className='o-hidden'>
                         <div className="sx"></div>
                         <Link to="/works/cesarelampronti" onClick={(e) => delayAndGo(e, "/works/cesarelampronti")}>
-                            <Image url="./img/gallery-london.png" nextUrl="./img/monica-logo-home.png"></Image>
+                            <Image url="./img/cover-statica-lampronti.jpg" nextUrl="./img/cover-lampronti.gif"></Image>
                             <div className="info-work">
                                 <p><p className='p-num'>(01)</p> DYS44 ART GALLERY LONDON</p>
                                 <p>WEB DESIGN</p>
@@ -310,7 +318,7 @@ const Home = () => {
                     <div className='o-hidden'>
                         <div className="sx"></div>
                         <Link to="/works/cavallini" onClick={(e) => delayAndGo(e, "/works/cavallini")}>
-                            <Image url="./img/bisteccamore.png" nextUrl="./img/faccia.jpg"></Image>
+                            <Image url="./img/bisteccamore.png" nextUrl="./img/cover-bisteccamore.gif"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(03)</p> Valentina Cavallini</p>
                                 <p>Branding</p>
@@ -321,7 +329,7 @@ const Home = () => {
                     <div className='o-hidden'>
                         <div className="dx"></div>
                         <Link to="/works/guianerli" onClick={(e) => delayAndGo(e, "/works/guianerli")}>
-                            <Image url="./img/guia-nerli.png" nextUrl="./img/faccia.jpg"></Image>
+                            <Image url="./img/guia-nerli.png" nextUrl="./img/cover-guia-nerli.gif"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(04)</p> Guia Nerli</p>
                                 <p>Branding</p>
@@ -332,7 +340,7 @@ const Home = () => {
                     <div className='o-hidden'>
                         <div className="sx"></div>
                         <Link to="/works/percorsisomatici" onClick={(e) => delayAndGo(e, "/works/percorsisomatici")}>
-                            <Image url="./img/somatici-home.png" nextUrl="./img/faccia.jpg"></Image>
+                            <Image url="./img/somatici-home.png" nextUrl="./img/cover-percorsi-somatici.gif"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(05)</p> Percorsi somatici</p>
                                 <p>Web Design</p>
@@ -343,7 +351,7 @@ const Home = () => {
                     <div className='o-hidden'>
                         <div className='dx'></div>
                         <Link to="/works/vanni" onClick={(e) => delayAndGo(e, "/works/vanni")}>
-                            <Image url="./img/domizia-home.png" nextUrl="./img/vanni.gif"></Image>
+                            <Image url="./img/nuova-coverdomiziavanni.jpg" nextUrl="./img/vanni.gif"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(06)</p> Domizia Vanni</p>
                                 <p>Web Design</p>
@@ -365,7 +373,7 @@ const Home = () => {
                     <div className='o-hidden'>
                         <div className="dx"></div>
                         <Link to="/works/pegaso" onClick={(e) => delayAndGo(e, "/works/pegaso")}>
-                            <Image url="./img/pegaso-home.png" nextUrl="./img/faccia.jpg"></Image>
+                            <Image url="./img/pegaso-home.png" nextUrl="./img/cover-pegaso-home.gif"></Image>
                             <div className="info-work" id='monica'>
                                 <p><p className='p-num'>(08)</p> Pasticceria Pegaso</p>
                                 <p>Web Design</p>
@@ -375,7 +383,7 @@ const Home = () => {
                     </div>
                     <div className='o-hidden'>
                         <div className="sx"></div>
-                        <Image url="./img/agricola.png" nextUrl="./img/faccia.jpg"></Image>
+                        <Image url="./img/agricola.png" nextUrl="./img/cover-ludus.gif"></Image>
                         <div className="info-work" id='monica'>
                             <p><p className='p-num'>(09)</p> Personal project</p>
                             <p>Illustration</p>
