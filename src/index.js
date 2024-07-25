@@ -106,18 +106,17 @@ function App () {
               <Route index exact path="/" element={<Home />}></Route>
               <Route exact path="/home" element={<Home />}></Route>
               <Route exact path="/about" element={<About />}></Route>
-              <Route exact path="/works" element={<Works />}>
-                <Route path='/works/vanni' element={<Vanni></Vanni>}></Route>
-                <Route path='/works/Orchestra' element={<Orchestra></Orchestra>}></Route>
-                <Route path='/works/Cavallini' element={<Cavallini></Cavallini>}></Route>
-                <Route path='/works/Orchestra' element={<Orchestra></Orchestra>}></Route>
-                <Route path='/works/Branchetti' element={<Branchetti></Branchetti>}></Route>
-                <Route path='/works/StudioBigne' element={<StudioBigne></StudioBigne>}></Route>
-                <Route path='/works/CesareLampronti' element={<CesareLampronti></CesareLampronti>}></Route>
-                <Route path='/works/Pegaso' element={<Pegaso></Pegaso>}></Route>
-                <Route path='/works/PercorsiSomatici' element={<PercorsiSomatici></PercorsiSomatici>}></Route>
-                <Route path='/works/GuiaNerli' element={<GuiaNerli></GuiaNerli>}></Route>
-              </Route>
+              <Route exact path="/works" element={<Works />}></Route>
+              <Route path='/works/vanni' element={<Vanni></Vanni>}></Route>
+              <Route path='/works/Orchestra' element={<Orchestra></Orchestra>}></Route>
+              <Route path='/works/Cavallini' element={<Cavallini></Cavallini>}></Route>
+              <Route path='/works/Orchestra' element={<Orchestra></Orchestra>}></Route>
+              <Route path='/works/Branchetti' element={<Branchetti></Branchetti>}></Route>
+              <Route path='/works/StudioBigne' element={<StudioBigne></StudioBigne>}></Route>
+              <Route path='/works/CesareLampronti' element={<CesareLampronti></CesareLampronti>}></Route>
+              <Route path='/works/Pegaso' element={<Pegaso></Pegaso>}></Route>
+              <Route path='/works/PercorsiSomatici' element={<PercorsiSomatici></PercorsiSomatici>}></Route>
+              <Route path='/works/GuiaNerli' element={<GuiaNerli></GuiaNerli>}></Route>
           </Routes>
         </Router>
       </ParallaxProvider>

@@ -343,7 +343,7 @@ img{
   font-weight: 500;
 	font-size:  0.9375vw;
 	position: relative;
-	display: inline-block;
+	display: inline-block !important;
   text-transform:uppercase !important;
   border-radius:25px;
   color:var(--default-lilac) !important;
@@ -357,7 +357,7 @@ img{
 }
 
 .button--atlas-outline > span {
-	display: inline-block;
+	display: inline-block !important;
 }
 
 .button--atlas-outline:hover > span {
@@ -387,7 +387,7 @@ img{
 
 .marquee__inner-outline {
 	width: fit-content;
-	display: flex;
+	display: flex !important;
 	position: relative;
 	--offset: 1rem;
 	--move-initial: calc(-25% + var(--offset));
@@ -592,6 +592,16 @@ img{
   grid-template-columns: repeat(2,1fr);
   column-gap: 50px;
   place-items: center;
+}
+
+.work-cta-container{
+  position: absolute;
+  bottom: 0;
+  display: block !important;
+}
+
+.rel{
+  position: relative;
 }
 
 .cv-job{
@@ -905,7 +915,7 @@ hr{
 
 .work-cta-wp, .works-desc-wp,.works-grid{
   width: 97vw;
-  margin: auto;
+  margin: 10vh auto auto auto;
 }
 
 .work-wp{
@@ -965,7 +975,7 @@ hr{
 
 .row{
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   border-radius: 10px;
 }
 
@@ -998,7 +1008,7 @@ hr{
 }
 
 #branchetti .row:nth-child(2){
-  background-image: url(../branchetti/bg-first.png);
+  background-image: url(../img/branchetti/bg-first.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -1034,14 +1044,14 @@ hr{
 }
 
 #branchetti .row:nth-child(4){
-  background-image: url(../branchetti/third.png);
+  background-image: url(../img/branchetti/third.png);
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: third;
 }
 
 #branchetti .row:nth-child(5){
-  background-image: url(../branchetti/fourth.png);
+  background-image: url(../img/branchetti/fourth.png);
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: forleft;
@@ -1120,6 +1130,92 @@ hr{
   grid-area: fifth;
 }
 
+.works-grid *{
+  background-repeat: no-repeat !important;
+  background-position: 0 !important;
+  background-size: cover !important;
+}
+
+.work-grid-2 div{
+  border-radius: 10px;
+}
+
+#percorsi #first{
+  background-image: url(../img/percorsi/Mask\ group.png);
+}
+
+#percorsi #second .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/percorsi/Group\ 115.png");
+}
+
+#percorsi #second .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/percorsi/Group\ 116.png");
+}
+
+#percorsi #third .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/percorsi/Group\ 223.png");
+}
+
+#percorsi #third .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/percorsi/Mask\ group-1.png");
+}
+
+#percorsi #fourth{
+  background-image: url("../img/percorsi/Group\ 224.png");
+}
+
+#percorsi #fifth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/percorsi/Group\ 112.png");
+}
+
+#percorsi #fifth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/percorsi/Mask\ group-2.png");
+}
+
+#percorsi #sixth{
+  background-image: url("../img/percorsi/Group\ 113.png");
+}
+
+#bigne #first{
+  background-image: url("../img/bigne/1.png");
+}
+
+#bigne #second .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/bigne/2-1.png");
+}
+
+#bigne #second .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/bigne/2-2.png");
+}
+
+#bigne #third{
+  background-image: url("../img/bigne/3.png");
+}
+
+#bigne #fourth{
+  background-image: url("../img/bigne/4.png");
+}
+
+#bigne #fifth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/bigne/5-1.png");
+}
+
+#bigne #fifth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/bigne/5-2.png");
+}
+
+#bigne #sixth{
+  background-image: url("../img/bigne/6.png");
+}
+
+#bigne #seventh .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/bigne/7-1.png");
+}
+
+#bigne #seventh .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/bigne/7-2.png");
+}
+
 #vanni{
   grid-template-areas: 
             "first first"
@@ -1166,12 +1262,12 @@ hr{
 #vanni .row:nth-child(3){
   display: grid;
   place-items: center;
-  background-image: url(../vanni/sr.png);
+  background-image: url(../img/vanni/sr.png);
   grid-area: sr;
 }
 
 #vanni .row:nth-child(4){
-  background-image: url(../vanni/vanni-third.png);
+  background-image: url(../img/vanni/vanni-third.png);
   grid-area: third;
 }
 
@@ -1195,8 +1291,11 @@ hr{
 }
 
 #vanni .row:nth-child(6){
-  background-image: url(../vanni/vanni-fifth.png);
+  background-image: url(../img/vanni/vanni-fifth.png);
   grid-area: fl;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #vanni .row:nth-child(7){
@@ -1394,6 +1493,20 @@ hr{
   width: 100%;
   height: 65vh;
   align-items: flex-end;
+}
+
+.work-grid-2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  place-items: center;
+  height: inherit;
+  column-gap: 20px;
+}
+
+.work-grid-2 > div{
+  height: inherit;
+  width: 100%;
 }
 
 .grid-2 > div{
@@ -2098,6 +2211,10 @@ hr{
   }
   .title-cv-wp.mt-120{
     margin-top: 70px !important;
+  }
+
+  .work-grid-2{
+    display: block;
   }
 
   /* responsive navbar */

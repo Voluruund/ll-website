@@ -34,7 +34,7 @@ export default function Works({stato}){
             <div className="provaDiv">
                 {loaded === 1 ? <Navigation></Navigation> : null}
             </div>
-            <Outlet></Outlet>
+            {/* <Outlet></Outlet> */}
             
             <div className="work-wp bt">
                 <div><p>01</p></div>
