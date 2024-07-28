@@ -36,9 +36,9 @@ export default function CesareLampronti() {
       <Transition />
       <div className="works-desc-wp mt-70">
         <div className="rel">
-          <p className="work-p">Florence Pops Orchestra</p>
-          <p className="work-subtitle mt-20">UX Design / Web Design</p>
-          <p className="work-subtitle mt-70">2023</p>
+          <p className="work-p">DYS44 Art Gallery London</p>
+          <p className="work-subtitle mt-20">Web Design</p>
+          <p className="work-subtitle mt-70">2022</p>
           <div className="work-cta-container">
             <a className="button-outline button--atlas-outline" id="footer-cta">
               <span>Visit Website</span>
@@ -62,13 +62,45 @@ export default function CesareLampronti() {
         </div>
         <div>
           <p className="work-p">
-            Florence Pops Orchestra is a Florentine orchestra who plays
-            animation movies soundtrack all around the world, with the passion
-            and the dedication of the director Carlo Chiarotti. The website is
+            Collaborating with Francesco Bianciardi, I had the opportunity to
+            work on the DYS44 Art Gallery London project. I was responsible for
+            the graphic design of the website, aiming to create an elegant and
+            fluid layout. The design balances sophistication with functionality,
+            adhering to the gallery's standards and enhancing the overall user
+            experience.
           </p>
         </div>
       </div>
-      <div className="works-grid" id="cesare"></div>
+      <div className="works-grid" id="cesare">
+        <div className="row" id="first">
+            <img src="/img/cesarelampronti/1.png" alt="1" />
+        </div>
+        <div className="row" id="second">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className="row" id="third">
+          <div>
+            <img src="/img/cesarelampronti/3-1.png" alt="" />
+            <img src="/img/cesarelampronti/3-2.png" alt="" />
+          </div>
+        </div>
+        <div className="row" id="fourth">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className="row" id="fifth">
+          <div>
+          <img src="/img/cesarelampronti/5-1.png" alt="" />
+          <img src="/img/cesarelampronti/5-2.png" alt="" />
+          <img src="/img/cesarelampronti/5-3.png" alt="" />
+          </div>
+        </div>
+      </div>
       <div className="works-desc-wp">
         <div>
           <Link

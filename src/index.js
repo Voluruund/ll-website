@@ -28,6 +28,13 @@ import CesareLampronti from './pages/work-pages/CesareLampronti.jsx';
 import Pegaso from './pages/work-pages/Pegaso.jsx';
 import PercorsiSomatici from './pages/work-pages/PercorsiSomatici.jsx';
 import GuiaNerli from './pages/work-pages/GuiaNerli.jsx';
+import Agricola from './pages/work-pages/Agricola.jsx';
+import Viaggi from './pages/work-pages/Viaggi.jsx';
+import Alexandra from './pages/work-pages/AlexandraMichelozzi.jsx';
+import Chimera from './pages/work-pages/Chimera.jsx';
+import Gastone from './pages/work-pages/Gastone.jsx';
+import Easea from './pages/work-pages/Easea.jsx';
+import Mancinelli from './pages/work-pages/Mancinelli.jsx';
 
 // import Distortion from './utils/Distortion.jsx';
 
@@ -110,13 +117,19 @@ function App () {
               <Route path='/works/vanni' element={<Vanni></Vanni>}></Route>
               <Route path='/works/Orchestra' element={<Orchestra></Orchestra>}></Route>
               <Route path='/works/Cavallini' element={<Cavallini></Cavallini>}></Route>
-              <Route path='/works/Orchestra' element={<Orchestra></Orchestra>}></Route>
               <Route path='/works/Branchetti' element={<Branchetti></Branchetti>}></Route>
               <Route path='/works/StudioBigne' element={<StudioBigne></StudioBigne>}></Route>
               <Route path='/works/CesareLampronti' element={<CesareLampronti></CesareLampronti>}></Route>
               <Route path='/works/Pegaso' element={<Pegaso></Pegaso>}></Route>
               <Route path='/works/PercorsiSomatici' element={<PercorsiSomatici></PercorsiSomatici>}></Route>
               <Route path='/works/GuiaNerli' element={<GuiaNerli></GuiaNerli>}></Route>
+              <Route path='/works/agricola' element={<Agricola></Agricola>}></Route>
+              <Route path='/works/viaggi' element={<Viaggi></Viaggi>}></Route>
+              <Route path='/works/alexandra' element={<Alexandra></Alexandra>}></Route>
+              <Route path='/works/chimera' element={<Chimera></Chimera>}></Route>
+              <Route path='/works/easea' element={<Easea></Easea>}></Route>
+              <Route path='/works/mancinelli' element={<Mancinelli></Mancinelli>}></Route>
+              <Route path='/works/gastone' element={<Gastone></Gastone>}></Route>
           </Routes>
         </Router>
       </ParallaxProvider>

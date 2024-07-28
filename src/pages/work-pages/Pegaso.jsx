@@ -73,27 +73,28 @@ export default function Pegaso() {
           </p>
         </div>
       </div>
-      <div className="work-cta-wp">
-        <a className="button-outline button--atlas-outline" id="footer-cta">
-          <span>Visit Website</span>
-          <div className="marqueebutton-outline" aria-hidden="true">
-            <div className="marquee__inner-outline">
-              <span>Visit Website</span>
-              <span>Visit Website</span>
-              <span>Visit Website</span>
-              <span>Visit Website</span>
-              <span>Visit Website</span>
-
-              <span>Visit Website</span>
-              <span>Visit Website</span>
-              <span>Visit Website</span>
-              <span>Visit Website</span>
-              <span>Visit Website</span>
-            </div>
+      <div className="works-grid" id="pegaso">
+      <div className="row" id="first"></div>
+        <div className="row" id="second">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
           </div>
-        </a>
+        </div>
+        <div className="row" id="third">
+        <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className="row" id="fourth">
+        <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className="row" id="fifth"></div>
       </div>
-      <div className="works-grid" id="pegaso"></div>
       <div className="works-desc-wp">
         <div>
           <Link

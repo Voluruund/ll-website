@@ -36,9 +36,9 @@ export default function GuiaNerli() {
       <Transition />
       <div className="works-desc-wp mt-70">
         <div className="rel">
-          <p className="work-p">Florence Pops Orchestra</p>
-          <p className="work-subtitle mt-20">UX Design / Web Design</p>
-          <p className="work-subtitle mt-70">2023</p>
+          <p className="work-p">Guia Nerli - Psychologist</p>
+          <p className="work-subtitle mt-20">Branding / Web Design</p>
+          <p className="work-subtitle mt-70">2020</p>
           <div className="work-cta-container">
             <a className="button-outline button--atlas-outline" id="footer-cta">
               <span>Visit Website</span>
@@ -62,13 +62,32 @@ export default function GuiaNerli() {
         </div>
         <div>
           <p className="work-p">
-            Florence Pops Orchestra is a Florentine orchestra who plays
-            animation movies soundtrack all around the world, with the passion
-            and the dedication of the director Carlo Chiarotti. The website is
+            Guia Nerli, a dedicated psychologist, sought to create a welcoming
+            online presence. My task was to design both her logo and website,
+            drawing inspiration from the comfort and support provided by
+            psychotherapeutic journeys. The logo features two individuals
+            holding hands, symbolizing connection and trust, setting a warm and
+            empathetic tone for her brand.
           </p>
         </div>
       </div>
-      <div className="works-grid" id="guia"></div>
+      <div className="works-grid" id="guia">
+        <div className="row" id="first"></div>
+        <div className="row" id="second">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className="row-sm"></div>
+        <div className="row" id="fourth"></div>
+        <div className="row" id="fifth">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
       <div className="works-desc-wp">
         <div>
           <Link

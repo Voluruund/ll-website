@@ -383,12 +383,14 @@ const Home = () => {
                     </div>
                     <div className='o-hidden'>
                         <div className="sx"></div>
-                        <Image url="./img/agricola.png" nextUrl="./img/cover-ludus.gif"></Image>
-                        <div className="info-work" id='monica'>
-                            <p><p className='p-num'>(09)</p> Personal project</p>
-                            <p>Illustration</p>
-                            <p className='proj-date'>2023</p>
-                        </div>
+                        <Link to="/works/agricola" onClick={(e) => delayAndGo(e, "/works/agricola")}>
+                            <Image url="./img/agricola.png" nextUrl="./img/cover-ludus.gif"></Image>
+                            <div className="info-work" id='monica'>
+                                <p><p className='p-num'>(09)</p> Personal project</p>
+                                <p>Illustration</p>
+                                <p className='proj-date'>2023</p>
+                            </div>
+                        </Link>
                     </div>
                 </section>
 

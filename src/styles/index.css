@@ -921,9 +921,29 @@ hr{
 .work-wp{
   height: 80px;
   display: grid;
-  grid-template-columns: 5% 60% 15% 10% 10%;
+  grid-template-columns: 5% 55% 20% 15% 5%;
   align-items: center;
   border-bottom: solid 1px var(--default-lilac);
+  transition: all 200ms ease-in;
+}
+
+.work-wp:hover{
+  padding: 0 1%;
+}
+
+#follow-img{
+  position: absolute;
+  pointer-events: none;
+  display: none;
+}
+
+.work-wp .parag-cv{
+  font-size: 1.8vw;
+}
+
+.dec-none{
+  text-decoration: none !important;
+  color: var(--default-lilac);
 }
 
 .bt{
@@ -985,12 +1005,43 @@ hr{
   margin: auto;
 }
 
+#guia #first{
+  background-image: url("../img/guia/1.jpg");
+}
+
+#guia #second .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/guia/2-1.png");
+}
+
+#guia #second .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/guia/2-2.png");
+}
+
+#guia .row-sm{
+  background-image: url("../img/guia/3.png");
+  height: 37vh;
+}
+
+#guia #fourth{
+  background-image: url("../img/guia/4.png");
+}
+
+#guia #fifth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/guia/5-1.png");
+}
+
+#guia #fifth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/guia/5-2.png");
+  background-size: 200%;
+}
+
 #branchetti{
   grid-template-areas: 
               "frleft frright"
               "second second"
               "third third"
               "forleft forright"
+              "fifth-sm fifth-sm"
               "fifth fifth";
 }
 
@@ -1093,41 +1144,60 @@ hr{
   margin: 3vh 0 0 0;
 }
 
-#branchetti .row:nth-child(7){
+#branchetti .row:nth-child(8){
   background-color: #bababa;
   grid-area: fifth;
   display: grid;
   place-items: center;
 }
 
-#branchetti .row:nth-child(7) > .inner-row{
+#branchetti .row:nth-child(8) > .inner-row{
   width: 70%;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 40px;
 }
 
-#branchetti .row:nth-child(7) > .inner-row img{
+#branchetti .row:nth-child(8) > .inner-row img{
   border-radius: 0 !important;
 }
 
-#cavallini{
-  grid-template-areas: 
-              "first first"
-              "sl sr"
-              "third third"
-              "fl fr"
-              "fifth fifth";
+#cavallini #first{
+  background-image: url("../img/cavallini/1.jpg");
 }
 
-#cavallini .row.row:nth-child(4){
-  grid-area: fr;
-  background-color: #AC745D;
+#cavallini #second .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/cavallini/2-1.png");
 }
 
-#cavallini .row.row:nth-child(5){
-  background-color: #e8decf;
-  grid-area: fifth;
+#cavallini #second .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/cavallini/2-2.jpg");
+}
+
+#cavallini #third{
+  background-image: url("../img/cavallini/3.png");
+}
+
+#cavallini #fourth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/cavallini/4-1.png");
+}
+
+#cavallini #fourth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/cavallini/4-2.png");
+}
+
+#cavallini #fifth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/cavallini/5-1.png");
+}
+
+#cavallini #fifth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/cavallini/5-2.png");
+}
+
+#branchetti .row-sm{
+  grid-area: fifth-sm;
+  height: 37vh;
+  background-image: url("../img/branchetti/5-sm.png");
 }
 
 .works-grid *{
@@ -1138,6 +1208,269 @@ hr{
 
 .work-grid-2 div{
   border-radius: 10px;
+}
+
+#easea #first{
+  background-image: url("../img/easea/1.png");
+}
+
+#easea #second .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/easea/2-1.png");
+}
+
+#easea #second .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/easea/2-2.png");
+}
+
+#easea #third{
+  background-image: url("../img/easea/3.png");
+}
+
+#easea #fourth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/easea/4-1.png");
+}
+
+#easea #fourth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/easea/4-2.png");
+}
+
+#easea #fifth{
+  background-image: url("../img/easea/5.png");
+}
+
+#mancinelli #first{
+  background-image: url("../img/mancinelli/1.png");
+}
+
+#mancinelli #second .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/mancinelli/2-1.png");
+}
+
+#mancinelli #second .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/mancinelli/2-2.png");
+}
+
+#mancinelli #third{
+  background-image: url("../img/mancinelli/3.png");
+}
+
+#mancinelli #fourth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/mancinelli/4-1.png");
+}
+
+#mancinelli #fourth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/mancinelli/4-2.png");
+}
+
+#mancinelli #fifth{
+  background-image: url("../img/mancinelli/5.png");
+}
+
+#gastone #first{
+  background-image: url("../img/gastone/1.png");
+}
+
+#gastone #second .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/gastone/2-1.png");
+}
+
+#gastone #second .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/gastone/2-2.png");
+}
+
+#gastone #third{
+  background-image: url("../img/gastone/3.png");
+}
+
+#gastone #fourth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/gastone/4-1.png");
+}
+
+#gastone #fourth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/gastone/4-2.png");
+}
+
+#gastone #fifth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/gastone/5-1.png");
+}
+
+#gastone #fifth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/gastone/5-2.png");
+}
+
+#chimera #first .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/chimera/1-1.png");
+}
+#chimera #first .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/chimera/1-2.png");
+}
+
+#chimera #second{
+  background-image: url("../img/chimera/2.png");
+}
+
+#chimera #third{
+  background-image: url("../img/chimera/3.png");
+}
+
+#chimera #fourth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/chimera/4-1.png");
+}
+
+#chimera #fourth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/chimera/4-2.png");
+}
+
+#alexandra #first .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/alexandra/1-1.png");
+}
+
+#alexandra #first .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/alexandra/1-2.jpg");
+}
+
+#alexandra #second{
+  background-image: url("../img/alexandra/2.png");
+}
+
+#alexandra #third .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/alexandra/3-1.png");
+}
+
+#alexandra #third .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/alexandra/3-2.png");
+}
+
+#alexandra #fourth{
+  background-image: url("../img/alexandra/4.png");
+}
+
+#viaggi #first .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/viaggi/1-1.png");
+}
+
+#viaggi #first .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/viaggi/1-2.jpg");
+}
+
+#viaggi #second{
+  background-image: url("../img/viaggi/2.png");
+}
+
+#viaggi #third{
+  background-image: url("../img/viaggi/3.png");
+}
+
+#viaggi #fourth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/viaggi/4-1.png");
+}
+
+#viaggi #fourth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/viaggi/4-2.png");
+}
+
+#viaggi #fifth{
+  background-image: url("../img/viaggi/5.png");
+}
+
+#orchestra #first .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/orchestra/1-1.png");
+}
+
+#orchestra #first .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/orchestra/1-2.png");
+}
+
+#orchestra #second{
+  background-image: url("../img/orchestra/2.png")
+}
+
+#orchestra #third .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/orchestra/3-1.png");
+}
+
+#orchestra #third .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/orchestra/3-2.png");
+}
+
+#orchestra #fourth{
+  background-image: url("../img/orchestra/4.png")
+}
+
+#orchestra #fifth{
+  background-image: url("../img/orchestra/5.png")
+}
+
+#orchestra #sixth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/orchestra/6-1.png");
+}
+
+#orchestra #sixth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/orchestra/6-2.png");
+}
+
+#agricola #first{
+  background-image: url("../img/agricola/1.png");
+}
+
+#agricola #second .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/agricola/2-1.png");
+}
+
+#agricola #second .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/agricola/2-2.png");
+}
+
+#agricola #third{
+  background-image: url("../img/agricola/3.png");
+}
+
+#agricola #fourth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/agricola/4-1.png");
+}
+
+#agricola #fourth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/agricola/4-2.png");
+}
+
+#agricola #fifth{
+  background-image: url("../img/agricola/5.png");
+}
+
+#agricola #sixth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/agricola/6-1.png");
+}
+
+#agricola #sixth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/agricola/6-2.png");
+}
+
+#pegaso #first{
+  background-image: url("../img/pegaso/1.png");
+}
+
+#pegaso #second{
+  background-image: url("../img/pegaso/2.png");
+}
+
+#pegaso #third .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/pegaso/3-1.png");
+}
+
+#pegaso #third .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/pegaso/3-2.png");
+}
+
+#pegaso #fourth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/pegaso/4-1.png");
+}
+
+#pegaso #fourth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/pegaso/4-2.png");
+}
+
+#pegaso #fifth{
+  background-image: url("../img/pegaso/5.png");
 }
 
 #percorsi #first{
@@ -1214,6 +1547,71 @@ hr{
 
 #bigne #seventh .work-grid-2 div:nth-of-type(2){
   background-image: url("../img/bigne/7-2.png");
+}
+
+#cesare #first{
+  background-color: #E8E6E3;
+  display: grid;
+  place-items: center;
+}
+
+#cesare #first img{
+  width: 50%;
+}
+
+#cesare #second .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/cesarelampronti/2-1.png");
+}
+
+#cesare #second .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/cesarelampronti/2-2.png");
+}
+
+#cesare #third{
+  background-color: #265035;
+  display: grid;
+  place-items: center;
+}
+
+#cesare #third div{
+  width: 70%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#cesare #third img:nth-of-type(1){
+  margin: -5vh 0 0 0;
+}
+
+#cesare #third img:nth-of-type(2){
+  margin: 5vh 0 0 0;
+}
+
+#cesare #fourth .work-grid-2 div:nth-of-type(1){
+  background-image: url("../img/cesarelampronti/4-1.png");
+}
+
+#cesare #fourth .work-grid-2 div:nth-of-type(2){
+  background-image: url("../img/cesarelampronti/4-2.png");
+}
+
+#cesare #fifth{
+  background-color: #E8E6E3;
+  display: grid;
+  place-items: center;
+}
+
+#cesare #fifth div{
+  width: 70%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#cesare #fifth img{
+  width: 70%;
 }
 
 #vanni{
@@ -1570,6 +1968,25 @@ hr{
 
 #monica .p-num{
   padding-right: 20px;
+}
+
+.work-wp .p-num{
+  text-align: right;
+  width: 80%;
+}
+
+.work-wp .services-grid{
+  grid-template-columns: 1fr;
+  width: fit-content;
+}
+
+.work-wp .services-grid .cv-job{
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .proj-date{

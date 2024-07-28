@@ -37,8 +37,8 @@ export default function Branchetti() {
       <div className="works-desc-wp mt-70">
         <div className="rel">
           <p className="work-p">Monica Branchetti</p>
-          <p className="work-subtitle mt-20">UX Design / Web Design</p>
-          <p className="work-subtitle mt-70">2023</p>
+          <p className="work-subtitle mt-20">UX Design / Web Design / Graphic Design</p>
+          <p className="work-subtitle mt-70">2024</p>
           <div className="work-cta-container">
             <a className="button-outline button--atlas-outline" id="footer-cta">
               <span>Visit Website</span>
@@ -62,11 +62,14 @@ export default function Branchetti() {
         </div>
         <div>
           <p className="work-p">
-            Monica is the meaning of Artist. A real painter, interior designer,
-            decorator, that comunicate through her art with elegance and
-            professionality. Her website had to represent her works of art and
-            herself with a minimal layout style that let to her works, colours,
-            subjects to lead the scene.
+            Monica embodies the true meaning of an Artist. A real painter,
+            interior designer, and decorator, she communicates through her art
+            with elegance and professionalism. Her website needed to represent
+            her works of art and herself with a minimalist layout style,
+            allowing her works, colors, and subjects to take center stage. The
+            essential design ensures that the focus remains on the artworks,
+            while intuitive navigation and a clear structure reflect her refined
+            artistic sensibility.
           </p>
         </div>
       </div>
@@ -99,6 +102,7 @@ export default function Branchetti() {
             </div>
           </div>
         </div>
+        <div className="row-sm"></div>
         <div className="row">
           <div className="inner-row">
             <div>

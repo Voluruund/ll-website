@@ -62,14 +62,36 @@ export default function Orchestra() {
         </div>
         <div>
           <p className="work-p">
-            Florence Pops Orchestra is a Florentine orchestra who plays
-            animation movies soundtrack all around the world, with the passion
-            and the dedication of the director Carlo Chiarotti. The website is
+            For the Florence Pops Orchestra, I designed a comprehensive suite of
+            visual communication materials, including their website, press kit,
+            and concert visuals. This stimulating project allowed me to explore
+            various design elements, resulting in a cohesive and dynamic visual
+            identity that enhances their vibrant musical performances.
           </p>
         </div>
       </div>
-      <div className="works-grid">
-        
+      <div className="works-grid" id="orchestra">
+        <div className="row" id="first">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className="row" id="second"></div>
+        <div className="row" id="third">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className="row" id="fourth"></div>
+        <div className="row" id="fifth"></div>
+        <div className="row" id="sixth">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </div>
       <div className="works-desc-wp">
         <div>

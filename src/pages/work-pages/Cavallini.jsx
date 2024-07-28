@@ -36,9 +36,9 @@ export default function Cavallini() {
       <Transition />
       <div className="works-desc-wp mt-70">
         <div className="rel">
-          <p className="work-p">Cavallini</p>
-          <p className="work-subtitle mt-20">Logo Design / Packaging Design</p>
-          <p className="work-subtitle mt-70">2023</p>
+          <p className="work-p">Bisteccamore</p>
+          <p className="work-subtitle mt-20">Branding</p>
+          <p className="work-subtitle mt-70">2024</p>
           <div className="work-cta-container">
             <a className="button-outline button--atlas-outline" id="footer-cta">
               <span>Visit Website</span>
@@ -62,21 +62,39 @@ export default function Cavallini() {
         </div>
         <div>
           <p className="work-p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-            laboriosam repellendus blanditiis sequi ex delectus autem, quaerat
-            voluptas soluta minima ullam ipsam culpa eum, ducimus quos modi
-            perspiciatis ipsum? Illum.
+            The core business of Bisteccamore is based on the love for steak and
+            its premium variations. The brand needed to communicate these values
+            effectively and distinctively. To achieve this goal, I adopted a
+            subtle approach to lettering, which allowed me to play with the
+            letters and integrate illustrated elements that harmoniously
+            accompany the logo. This design not only visually represents the
+            client's passion for the quality and variety of steaks but also
+            creates an elegant and recognizable image that reflects the
+            restaurant's identity.
           </p>
         </div>
       </div>
       <div className="works-grid" id="cavallini">
-        <div className="row"></div>
-        <div className="row"></div>
-        <div className="row"></div>
-        <div className="row"></div>
-        <div className="row"></div>
-        <div className="row"></div>
-        <div className="row"></div>
+        <div className="row" id="first"></div>
+        <div className="row" id="second">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className="row" id="third"></div>
+        <div className="row" id="fourth">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div className="row" id="fifth">
+          <div className="work-grid-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </div>
       <div className="works-desc-wp">
         <div>
