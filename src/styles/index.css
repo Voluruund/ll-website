@@ -582,6 +582,10 @@ img{
   font-size: 2.083vw;
 }
 
+.about-page .parag-cv{
+  font-size: 1.75vw;
+}
+
 .work-pos-wp{
   font-family: var(--clash-display-variable);
   margin-top: 60px;
@@ -623,7 +627,7 @@ img{
 
 .services-grid .cv-job{
   border: solid 1px var(--default-lilac);
-  border-radius: 10px;
+  border-radius: 60px;
   text-align: center;
 }
 
@@ -668,7 +672,7 @@ hr{
 .img-sizes{
   position: absolute;
   top: -4vh;
-  left: -12.5vw;
+  left: -10.5vw;
   border-radius: 10px;
   width: 800px;
 }
@@ -2564,7 +2568,7 @@ hr{
   }
 
   .img-sizes{
-    left: -65vw;
+    left: -48vw;
     top: -7vh;
     width: 900px;
   }

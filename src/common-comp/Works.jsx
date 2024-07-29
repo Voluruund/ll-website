@@ -168,7 +168,7 @@ export default function Works({stato}){
             </Link>
 
             <Link to="/works/agricola" onClick={(e) => delayAndGo(e, "/works/agricola")} className="dec-none">
-                <div className="work-wp hover-div" data-url="img/work/">
+                <div className="work-wp hover-div" data-url="img/work/agricola.png">
                     <div><p className="p-num">10</p></div>
                     <div><p className="parag-cv">Agricola Ludus</p></div>
                     <div className="services-grid"><p className="cv-job">Packaging / Graphic Design</p></div>
@@ -208,7 +208,7 @@ export default function Works({stato}){
             </Link>
 
             <Link to="/works/easea" onClick={(e) => delayAndGo(e, "/works/easea")} className="dec-none">
-                <div className="work-wp hover-div" data-url="img/work/">
+                <div className="work-wp hover-div" data-url="img/work/easea.png">
                     <div><p className="p-num">14</p></div>
                     <div><p className="parag-cv">Easea</p></div>
                     <div className="services-grid"><p className="cv-job">Branding</p></div>
@@ -218,7 +218,7 @@ export default function Works({stato}){
             </Link>
 
             <Link to="/works/mancinelli" onClick={(e) => delayAndGo(e, "/works/mancinelli")} className="dec-none">
-                <div className="work-wp hover-div" data-url="img/work/">
+                <div className="work-wp hover-div" data-url="img/work/mancinelli.png">
                     <div><p className="p-num">15</p></div>
                     <div><p className="parag-cv">Fabrizio Mancinelli</p></div>
                     <div className="services-grid"><p className="cv-job">Web design</p></div>
@@ -228,7 +228,7 @@ export default function Works({stato}){
             </Link>
 
             <Link to="/works/gastone" onClick={(e) => delayAndGo(e, "/works/gastone")} className="dec-none">
-                <div className="work-wp hover-div" data-url="img/work/">
+                <div className="work-wp hover-div" data-url="img/work/gastone.png">
                     <div><p className="p-num">16</p></div>
                     <div><p className="parag-cv">Gastone's</p></div>
                     <div className="services-grid"><p className="cv-job">Branding</p></div>
