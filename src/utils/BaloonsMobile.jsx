@@ -22,7 +22,7 @@ export default function BaloonsMobile(){
                     receiveShadow
                     geometry={model}
                     material={materials["Material.001"]}
-                    position={[0, -0.2, 1.229]}
+                    position={[0, 0.6, 1.229]}
                     // 1.262
                     scale={[0.1887, .22, 0.1887]}
                     rotation-x={1.5}
@@ -38,7 +38,7 @@ export default function BaloonsMobile(){
                     receiveShadow
                     geometry={model}
                     material={materials["Material.001"]}
-                    position={[1, .9, 1.229]}
+                    position={[1, 1.5, 1.229]}
                     // 1.262
                     scale={[0.1387, .22, 0.1387]}
                     rotation-x={1.5}
@@ -54,7 +54,7 @@ export default function BaloonsMobile(){
                     receiveShadow
                     geometry={model}
                     material={materials["Material.001"]}
-                    position={[1.2, -1.9, 1.229]}
+                    position={[1.2, -1.3, 1.229]}
                     // 1.262
                     scale={[0.1387, .22, 0.1387]}
                     rotation-x={1.5}
@@ -70,7 +70,7 @@ export default function BaloonsMobile(){
                     receiveShadow
                     geometry={model}
                     material={materials["Material.001"]}
-                    position={[-1, 1.6, 1.229]}
+                    position={[-1, 2.2, 1.229]}
                     // 1.262
                     scale={[0.2387, .32, 0.2387]}
                     rotation-x={1.5}
@@ -86,7 +86,7 @@ export default function BaloonsMobile(){
                     receiveShadow
                     geometry={model}
                     material={materials["Material.001"]}
-                    position={[.2, 2, 1.229]}
+                    position={[.2, 2.6, 1.229]}
                     // 1.262
                     scale={[0.1987, .32, 0.1987]}
                     rotation-x={1.5}
@@ -102,7 +102,7 @@ export default function BaloonsMobile(){
                     receiveShadow
                     geometry={model}
                     material={materials["Material.001"]}
-                    position={[-.55, -1.6, 1.229]}
+                    position={[-1.1, -.8, 1.229]}
                     // 1.262
                     scale={[0.2887, .32, 0.2887]}
                     rotation-x={1.5}

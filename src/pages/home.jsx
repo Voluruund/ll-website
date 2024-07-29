@@ -239,7 +239,7 @@ const Home = () => {
                                 inspire my work. 
                             </p>
                             <div className="per-hobbies">
-                                <p>Swimmer</p>
+                                <p>Swimmer for hobby</p>
                                 <p>Music lover</p>
                                 <p>Film/TV series devourer</p>
                             </div>
@@ -258,19 +258,28 @@ const Home = () => {
                     <div className='mob-who-am-i-wp'>
                         <div className="text-anim-wp">
                             <p className='p-num d-100' id='01'>(01)</p>
-                            <p className="parag-cv d-100">I’m a designer</p>
+                            <p className="parag-cv d-100"> web graphic designer</p>
                         </div>
                         <div className="text-anim-wp">
-                            <p className="parag-cv d-200">based in <span className='cursive-title-h'>Florence</span>. Specialized</p>
+                            <p className="parag-cv d-200">based in Florence, specializing </p>
                         </div>
                         <div className="text-anim-wp">
                             <p className="parag-cv">in Graphic design and Digital </p>
                         </div>
                         <div className="text-anim-wp">
-                            <p className="parag-cv d-300">branding, with 8+ years of</p>
+                            <p className="parag-cv d-300">branding, with 8 years of</p>
                         </div>
                         <div className="text-anim-wp">
-                            <p className="parag-cv d-400">experience in <span className='cursive-title-h'>design </span>field.</p>
+                            <p className="parag-cv d-400">experience in the design field</p>
+                        </div>
+                        <div className="text-anim-wp">
+                            <p className='parag-cv d-500'>I have honed my skills in</p>
+                            </div>
+                        <div className="text-anim-wp">
+                            <p className='parag-cv d-600'> crafting visually compelling</p>
+                        </div>
+                        <div className="text-anim-wp">
+                            <p className='parag-cv d-700'> and user-friendly designs.</p>
                         </div>
                     </div>
                     <div className='first-col-g2'>

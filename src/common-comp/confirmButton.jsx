@@ -11,9 +11,9 @@ function DraggableButton(){
         container.addEventListener("mouseup", dragEnd, false);
         container.addEventListener("click", toggleSwitch, false);
       } else {
-        container.addEventListener("touchstart", dragStart, {passive: true});
-        container.addEventListener("touchend", dragEnd, {passive: true});
-        container.addEventListener("touchmove", drag, {passive: true});
+        container.addEventListener("touchstart", dragStart, {passive: false});
+        container.addEventListener("touchend", dragEnd, {passive: false});
+        container.addEventListener("touchmove", drag, {passive: false});
       
         container.addEventListener("mousedown", dragStart, false);
         dragItem.addEventListener("mousedown", itemDragStart, false);
@@ -41,10 +41,11 @@ function DraggableButton(){
 
     const handleSent = () =>  {
       textPippo("Successfully sent!")
+      console.log("inviato")
     }
 
     const handleNotSent = () => {
-      textPippo("Send")
+      console.log("non inviato")
     }
 
     function dragStart(e) {
@@ -172,12 +173,12 @@ function DraggableButton(){
     const [dragging, setDragging] = useState(false);
 
     const handleTouchStart = (event) => {
-      event.preventDefault();
+      // event.preventDefault();
       setDragging(true);
     };
   
     const handleTouchMove = (event) => {
-      event.preventDefault();
+      // event.preventDefault();
     };
   
     const handleTouchEnd = () => {

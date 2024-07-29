@@ -2281,7 +2281,7 @@ hr{
   position: relative;
   width: 98vw;
   height: 55px;
-  background-color: white;
+  background-color: transparent;
   border: 1px solid #e3e8ec;
   margin: 0;
   border-radius: 36px;
@@ -2310,6 +2310,7 @@ hr{
   user-select: none;
   display: grid;
   place-items: center;
+  touch-action: none;
 }
 
 .select-left #item::after {
@@ -2321,6 +2322,7 @@ hr{
   height: calc(100% + 10px);
   background-color: var(--default-lilac);
   content: "";
+  touch-action: none;
 }
 
 .select-right #item::after {
@@ -2333,6 +2335,7 @@ hr{
   content: "";
   background-color: white;
   border: 1px solid #e3e8ec;
+  touch-action: none;
 }
 
 .select-right#container{
@@ -2423,6 +2426,7 @@ hr{
   border-color: var(--default-lilac);
   outline: none;
   background-color: var(--default-bg-color);
+  /* width: 99%; */
 }
 
 .form-button {
@@ -2646,6 +2650,10 @@ hr{
 
   .work-grid-2{
     display: block;
+  }
+
+  #messaggio, #email{
+    border-top: none;
   }
 
   /* responsive navbar */
