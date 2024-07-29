@@ -40,7 +40,7 @@ export default function Orchestra() {
           <p className="work-subtitle mt-20">UX Design / Web Design</p>
           <p className="work-subtitle mt-70">2023</p>
           <div className="work-cta-container">
-            <a className="button-outline button--atlas-outline" id="footer-cta">
+            <a className="button-outline button--atlas-outline" id="footer-cta" href="https://florencepopsorchestra.it/" target="BLANK">
               <span>Visit Website</span>
               <div className="marqueebutton-outline" aria-hidden="true">
                 <div className="marquee__inner-outline">
@@ -84,7 +84,7 @@ export default function Orchestra() {
             <div></div>
           </div>
         </div>
-        <div className="row" id="fourth"></div>
+        <div className="row-sm" id="fourth"></div>
         <div className="row" id="fifth"></div>
         <div className="row" id="sixth">
           <div className="work-grid-2">

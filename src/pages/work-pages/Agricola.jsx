@@ -39,7 +39,7 @@ export default function Agricola() {
           <p className="work-p">Agricola Ludus</p>
           <p className="work-subtitle mt-20">Packaging / Graphic Design</p>
           <p className="work-subtitle mt-70">2020-2023</p>
-          <div className="work-cta-container">
+          {/* <div className="work-cta-container">
             <a className="button-outline button--atlas-outline" id="footer-cta">
               <span>Visit Website</span>
               <div className="marqueebutton-outline" aria-hidden="true">
@@ -58,7 +58,7 @@ export default function Agricola() {
                 </div>
               </div>
             </a>
-          </div>
+          </div> */}
         </div>
         <div>
           <p className="work-p">

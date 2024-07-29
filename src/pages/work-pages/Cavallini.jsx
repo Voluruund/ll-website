@@ -39,7 +39,7 @@ export default function Cavallini() {
           <p className="work-p">Bisteccamore</p>
           <p className="work-subtitle mt-20">Branding</p>
           <p className="work-subtitle mt-70">2024</p>
-          <div className="work-cta-container">
+          {/* <div className="work-cta-container">
             <a className="button-outline button--atlas-outline" id="footer-cta">
               <span>Visit Website</span>
               <div className="marqueebutton-outline" aria-hidden="true">
@@ -58,7 +58,7 @@ export default function Cavallini() {
                 </div>
               </div>
             </a>
-          </div>
+          </div> */}
         </div>
         <div>
           <p className="work-p">

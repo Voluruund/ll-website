@@ -1396,11 +1396,13 @@ hr{
 }
 
 #orchestra #fourth{
-  background-image: url("../img/orchestra/4.png")
+  background-image: url("../img/orchestra/4.png");
+  height: 53vh;
+  border-radius: 10px;
 }
 
 #orchestra #fifth{
-  background-image: url("../img/orchestra/5.png")
+  background-image: url("../img/orchestra/5.png");
 }
 
 #orchestra #sixth .work-grid-2 div:nth-of-type(1){

@@ -40,7 +40,7 @@ export default function Branchetti() {
           <p className="work-subtitle mt-20">UX Design / Web Design / Graphic Design</p>
           <p className="work-subtitle mt-70">2024</p>
           <div className="work-cta-container">
-            <a className="button-outline button--atlas-outline" id="footer-cta">
+            <a className="button-outline button--atlas-outline" id="footer-cta" href="https://monicabranchetti.com/" target="BLANK">
               <span>Visit Website</span>
               <div className="marqueebutton-outline" aria-hidden="true">
                 <div className="marquee__inner-outline">

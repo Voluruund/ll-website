@@ -40,7 +40,7 @@ export default function GuiaNerli() {
           <p className="work-subtitle mt-20">Branding / Web Design</p>
           <p className="work-subtitle mt-70">2020</p>
           <div className="work-cta-container">
-            <a className="button-outline button--atlas-outline" id="footer-cta">
+            <a className="button-outline button--atlas-outline" id="footer-cta" href="https://www.guianerli.it/" target="BLANK">
               <span>Visit Website</span>
               <div className="marqueebutton-outline" aria-hidden="true">
                 <div className="marquee__inner-outline">

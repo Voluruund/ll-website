@@ -39,7 +39,7 @@ export default function Easea() {
           <p className="work-p">Easea</p>
           <p className="work-subtitle mt-20">Branding</p>
           <p className="work-subtitle mt-70">2024</p>
-          <div className="work-cta-container">
+          {/* <div className="work-cta-container">
             <a className="button-outline button--atlas-outline" id="footer-cta">
               <span>Visit Website</span>
               <div className="marqueebutton-outline" aria-hidden="true">
@@ -58,7 +58,7 @@ export default function Easea() {
                 </div>
               </div>
             </a>
-          </div>
+          </div> */}
         </div>
         <div>
           <p className="work-p">
