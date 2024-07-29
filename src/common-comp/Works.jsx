@@ -11,43 +11,17 @@ import {useNavigate} from 'react-router-dom';
 export default function Works({stato}){
 
     const lenis = window.lenis
-    // const followImg = document.getElementById('follow-img');
-    // const hoverDivs = document.querySelectorAll('.hover-div');
-    // var mouseX = 0;
-    // var mouseY = 0;
 
     useEffect(() => {
         lenis.scrollTo('top')
         TransitionIn()
-    
-        // document.addEventListener('mousemove', (e) => {
-        //     mouseX = e.pageX;
-        //     mouseY = e.pageY;
-        //     updateImagePosition();
-        // });
-    
-        // document.addEventListener('scroll', () => {
-        //     updateImagePosition();
-        // });
-    
-        // hoverDivs.forEach(div => {
-        //     div.addEventListener('mouseenter', () => {
-        //         const url = div.getAttribute('data-url');
-        //         followImg.src = url;
-        //         followImg.style.display = 'block';
-        //     });
-    
-        //     div.addEventListener('mouseleave', () => {
-        //         followImg.style.display = 'none';
-        //     });
-        // });
 
         const followImg = document.getElementById('follow-img');
         const hoverDivs = document.querySelectorAll('.hover-div');
     
         document.addEventListener('mousemove', (e) => {
-            followImg.style.left = e.pageX + 10 + 'px'; // 10px offset for better visibility
-            followImg.style.top = e.pageY + 10 + 'px';
+            followImg.style.left = e.pageX - 150 + 'px';
+            followImg.style.top = e.pageY - 150 + 'px';
         });
     
         hoverDivs.forEach(div => {
@@ -262,7 +236,7 @@ export default function Works({stato}){
                     <div><img src="/img/next.svg" alt="next" /></div>
                 </div>
             </Link>
-            <div className="r-5 mt-120">
+            <div className="r-5" id="banner-works">
                 <div className="text-wrapper">
                     <h1><span className="circle"></span>Graphic Design</h1>
                     <h1><span className="circle"></span>Logo Design</h1>
