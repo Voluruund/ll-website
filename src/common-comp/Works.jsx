@@ -11,23 +11,43 @@ import {useNavigate} from 'react-router-dom';
 export default function Works({stato}){
 
     const lenis = window.lenis
-    const followImg = document.getElementById('follow-img');
-    const hoverDivs = document.querySelectorAll('.hover-div');
-    var mouseX = 0;
-    var mouseY = 0;
+    // const followImg = document.getElementById('follow-img');
+    // const hoverDivs = document.querySelectorAll('.hover-div');
+    // var mouseX = 0;
+    // var mouseY = 0;
 
     useEffect(() => {
         lenis.scrollTo('top')
         TransitionIn()
     
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-            updateImagePosition();
-        });
+        // document.addEventListener('mousemove', (e) => {
+        //     mouseX = e.pageX;
+        //     mouseY = e.pageY;
+        //     updateImagePosition();
+        // });
     
-        document.addEventListener('scroll', () => {
-            updateImagePosition();
+        // document.addEventListener('scroll', () => {
+        //     updateImagePosition();
+        // });
+    
+        // hoverDivs.forEach(div => {
+        //     div.addEventListener('mouseenter', () => {
+        //         const url = div.getAttribute('data-url');
+        //         followImg.src = url;
+        //         followImg.style.display = 'block';
+        //     });
+    
+        //     div.addEventListener('mouseleave', () => {
+        //         followImg.style.display = 'none';
+        //     });
+        // });
+
+        const followImg = document.getElementById('follow-img');
+        const hoverDivs = document.querySelectorAll('.hover-div');
+    
+        document.addEventListener('mousemove', (e) => {
+            followImg.style.left = e.pageX + 10 + 'px'; // 10px offset for better visibility
+            followImg.style.top = e.pageY + 10 + 'px';
         });
     
         hoverDivs.forEach(div => {
@@ -68,10 +88,10 @@ export default function Works({stato}){
         }, 1500);
     }
 
-    function updateImagePosition() {
-        followImg.style.left = mouseX + 10 + 'px'; // 10px offset for better visibility
-        followImg.style.top = mouseY + 10 + 'px';
-    }
+    // function updateImagePosition() {
+    //     followImg.style.left = mouseX + 10 + 'px'; // 10px offset for better visibility
+    //     followImg.style.top = mouseY + 10 + 'px';
+    // }
 
     return <>
         <StrictMode>
