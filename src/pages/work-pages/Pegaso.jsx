@@ -95,7 +95,7 @@ export default function Pegaso() {
         </div>
         <div className="row" id="fifth"></div>
       </div>
-      <div className="works-desc-wp">
+      <div className="works-desc-wp next-wp">
         <div>
           <Link
             to="/works/Orchestra"

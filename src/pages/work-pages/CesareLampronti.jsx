@@ -101,7 +101,7 @@ export default function CesareLampronti() {
           </div>
         </div>
       </div>
-      <div className="works-desc-wp">
+      <div className="works-desc-wp next-wp">
         <div>
           <Link
             to="/works/Cavallini"

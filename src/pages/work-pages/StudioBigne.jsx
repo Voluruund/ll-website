@@ -73,7 +73,7 @@ export default function StudioBigne() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="bigne">
+      <div className="works-grid mobile-hidden" id="bigne">
         <div className="row" id="first"></div>
         <div className="row" id="second">
           <div className="work-grid-2">
@@ -97,7 +97,10 @@ export default function StudioBigne() {
           </div>
         </div>
       </div>
-      <div className="works-desc-wp">
+      <div className="works-mob desk-hidden" id="bigne-mob">
+            
+      </div>
+      <div className="works-desc-wp next-wp">
         <div>
           <Link
             to="/works/PercorsiSomatici"

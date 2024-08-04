@@ -3,6 +3,12 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import twoOne from "../../img/cavallini/2-1.png";
+import twoTwo from "../../img/cavallini/2-2.jpg";
+import fourOne from "../../img/cavallini/4-1.png";
+import fourTwo from "../../img/cavallini/4-2.png";
+import fiveOne from "../../img/cavallini/5-1.png";
+import fiveTwo from "../../img/cavallini/5-2.png";
 
 export default function Cavallini() {
   const lenis = window.lenis;
@@ -74,7 +80,7 @@ export default function Cavallini() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="cavallini">
+      <div className="works-grid mobile-hidden" id="cavallini">
         <div className="row" id="first"></div>
         <div className="row" id="second">
           <div className="work-grid-2">
@@ -96,7 +102,30 @@ export default function Cavallini() {
           </div>
         </div>
       </div>
-      <div className="works-desc-wp">
+      <div className="works-mob desk-hidden" id="cavallini-mob">
+            <div>
+              <img src="/img/cavallini/1-mob.jpg" alt="first" />
+            </div>
+            <div>
+              <img src={twoOne} alt="twoOne" />
+            </div>
+            <div>
+              <img src={twoTwo} alt="twoOne" />
+            </div>
+            <div>
+              <img src={fourOne} alt="twoOne" />
+            </div>
+            <div>
+              <img src={fourTwo} alt="twoOne" />
+            </div>
+            <div>
+              <img src={fiveOne} alt="twoOne" />
+            </div>
+            <div>
+              <img src={fiveTwo} alt="twoOne" />
+            </div>
+      </div>
+      <div className="works-desc-wp next-wp">
         <div>
           <Link
             to="/works/Branchetti"

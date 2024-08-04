@@ -10,7 +10,12 @@ const About = () => {
         var scrollingDiv = document.getElementById("scrollingDiv")
         var image = document.getElementById("imgScroll")
         var scrollTop = window.scrollY
+
+        // TODO 
+        // ERRORE NON SO PERCHE'
         var divTop = scrollingDiv.offsetTop
+        // TODO
+
         var divHeight = scrollingDiv.offsetHeight
         var imageHeight = image.offsetHeight
         if(scrollTop + 40 > divTop && scrollTop + 40 < divTop + divHeight - imageHeight){

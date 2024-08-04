@@ -30,9 +30,9 @@ export default function BaloonMobile(){
                     receiveShadow
                     geometry={model}
                     material={materials["Material.001"]}
-                    position={[0, -0.2, 1.229]}
+                    position={[0, .8, 1.229]}
                     // 1.262
-                    scale={[0.4887, .48, 0.4887]}
+                    scale={[0.2887, .28, 0.2887]}
                     rotation-x={1.5}
                 />
             </Float>

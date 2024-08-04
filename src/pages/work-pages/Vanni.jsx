@@ -70,7 +70,7 @@ export default function Vanni() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="vanni">
+      <div className="works-grid mobile-hidden" id="vanni">
         <div className="row">
           <img src="/img/vanni/first.png" alt="prova" />
         </div>
@@ -93,7 +93,30 @@ export default function Vanni() {
           <img src="/img/vanni/fr.png" alt="prova" />
         </div>
       </div>
-      <div className="works-desc-wp">
+      <div className="works-mob desk-hidden" id="vanni-mob">
+            <div>
+              <img src="/img/vanni/1-mob.png" alt="first" />
+            </div>
+            <div>
+              <img src="/img/vanni/2-1.jpg" alt="twoOne" />
+            </div>
+            <div>
+              <img src="/img/vanni/2-2.png" alt="twoOne" />
+            </div>
+            <div>
+              <img src="/img/vanni/3-mob.png" alt="twoOne" />
+            </div>
+            <div>
+              <img src="/img/vanni/4-mob.png" alt="twoOne" />
+            </div>
+            <div>
+              <img src="/img/vanni/5-1.png" alt="twoOne" />
+            </div>
+            <div>
+              <img src="/img/vanni/5-2.png" alt="twoOne" />
+            </div>
+      </div>
+      <div className="works-desc-wp next-wp">
         <div>
           <Link
             to="/works/StudioBigne"

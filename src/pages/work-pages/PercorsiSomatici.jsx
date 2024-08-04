@@ -97,7 +97,7 @@ export default function PercorsiSomatici() {
         </div>
         <div className="row" id="sixth"></div>
       </div>
-      <div className="works-desc-wp">
+      <div className="works-desc-wp next-wp">
         <div>
           <Link
             to="/works/Pegaso"

@@ -73,7 +73,7 @@ export default function Branchetti() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="branchetti">
+      <div className="works-grid mobile-hidden" id="branchetti">
         <div className="row">
           <img src="/img/branchetti/firstop.png" alt="prova" />
         </div>
@@ -117,7 +117,30 @@ export default function Branchetti() {
           </div>
         </div>
       </div>
-      <div className="works-desc-wp">
+      <div className="works-mob desk-hidden" id="branchetti-mob">
+          <div>
+            <img src="/img/branchetti/1-1.png" alt="img" />
+          </div>
+          <div>
+            <img src="/img/branchetti/1-2.png" alt="img" />
+          </div>
+          <div>
+            <img src="/img/branchetti/2.png" alt="img" />
+          </div>
+          <div>
+            <img src="/img/branchetti/3.png" alt="img" />
+          </div>
+          <div>
+            <img src="/img/branchetti/4-1.png" alt="img" />
+          </div>
+          <div>
+            <img src="/img/branchetti/4-2.png" alt="img" />
+          </div>
+          <div>
+            <img src="/img/branchetti/5.png" alt="img" />
+          </div>
+      </div>
+      <div className="works-desc-wp next-wp">
         <div>
           <Link
             to="/works/vanni"

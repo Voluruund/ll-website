@@ -18,23 +18,25 @@ export default function Works({stato}){
 
         const followImg = document.getElementById('follow-img');
         const hoverDivs = document.querySelectorAll('.hover-div');
-    
-        document.addEventListener('mousemove', (e) => {
-            followImg.style.left = e.pageX - 150 + 'px';
-            followImg.style.top = e.pageY - 150 + 'px';
-        });
-    
-        hoverDivs.forEach(div => {
-            div.addEventListener('mouseenter', () => {
-                const url = div.getAttribute('data-url');
-                followImg.src = url;
-                followImg.style.display = 'block';
+        
+        if(window.innerWidth > 1000){
+            document.addEventListener('mousemove', (e) => {
+                followImg.style.left = e.pageX - 150 + 'px';
+                followImg.style.top = e.pageY - 150 + 'px';
             });
-    
-            div.addEventListener('mouseleave', () => {
-                followImg.style.display = 'none';
+        
+            hoverDivs.forEach(div => {
+                div.addEventListener('mouseenter', () => {
+                    const url = div.getAttribute('data-url');
+                    followImg.src = url;
+                    followImg.style.display = 'block';
+                });
+        
+                div.addEventListener('mouseleave', () => {
+                    followImg.style.display = 'none';
+                });
             });
-        });
+        }
     }, [])
 
     window.lenis.scrollTo((0,0), {immediate: true})
@@ -61,11 +63,6 @@ export default function Works({stato}){
             elem.classList.remove("animateTransition")
         }, 1500);
     }
-
-    // function updateImagePosition() {
-    //     followImg.style.left = mouseX + 10 + 'px'; // 10px offset for better visibility
-    //     followImg.style.top = mouseY + 10 + 'px';
-    // }
 
     return <>
         <StrictMode>
@@ -201,7 +198,7 @@ export default function Works({stato}){
                 <div className="work-wp hover-div" data-url="img/work/chimera.png">
                     <div><p className="p-num">13</p></div>
                     <div><p className="parag-cv">Chimera Sleepwear</p></div>
-                    <div className="services-grid"><p className="cv-job">UX Design / Web Design / Graphic Design</p></div>
+                    <div className="services-grid"><p className="cv-job">UX Design / Graphic Design</p></div>
                     <div><p className="text-center">2023</p></div>
                     <div><img src="/img/next.svg" alt="next" /></div>
                 </div>

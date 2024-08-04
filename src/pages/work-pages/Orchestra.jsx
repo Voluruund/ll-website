@@ -3,6 +3,10 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import threeOne from "../../img/orchestra/3-1.png";
+import threeTwo from "../../img/orchestra/3-2.png";
+import sixOne from "../../img/orchestra/6-1.png";
+import sixTwo from "../../img/orchestra/6-2.png";
 
 export default function Orchestra() {
   const lenis = window.lenis;
@@ -70,7 +74,7 @@ export default function Orchestra() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="orchestra">
+      <div className="works-grid mobile-hidden" id="orchestra">
         <div className="row" id="first">
           <div className="work-grid-2">
             <div></div>
@@ -93,7 +97,30 @@ export default function Orchestra() {
           </div>
         </div>
       </div>
-      <div className="works-desc-wp">
+      <div className="works-mob desk-hidden" id="orchestra-mob">
+            <div>
+              <img src="/img/orchestra/1.png" alt="first" />
+            </div>
+            <div>
+              <img src="/img/orchestra/2.png" alt="twoOne" />
+            </div>
+            <div>
+              <img src={threeOne} alt="twoOne" />
+            </div>
+            <div>
+              <img src={threeTwo} alt="twoOne" />
+            </div>
+            <div>
+              <img src="/img/orchestra/4.png" alt="twoOne" />
+            </div>
+            <div>
+              <img src={sixOne} alt="twoOne" />
+            </div>
+            <div>
+              <img src={sixTwo} alt="twoOne" />
+            </div>
+      </div>
+      <div className="works-desc-wp next-wp">
         <div>
           <Link
             to="/works/GuiaNerli"

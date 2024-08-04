@@ -86,7 +86,7 @@ export default function Gastone() {
         </div>
         <div className="row" id="fourth"></div>
       </div>
-      <div className="works-desc-wp">
+      <div className="works-desc-wp next-wp">
         <div>
           <Link
             to="/works/vanni"
