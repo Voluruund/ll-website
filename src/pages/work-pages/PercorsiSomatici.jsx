@@ -3,6 +3,12 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import threeOne from "../../img/percorsi/Group 112.png";
+import threeTwo from "../../img/percorsi/Group 115.png";
+import fourOne from "../../img/percorsi/Group 116.png";
+import fourTwo from "../../img/percorsi/Group 223.png";
+import fiveOne from "../../img/percorsi/Mask group-1.png";
+import fiveTwo from "../../img/percorsi/Mask group-2.png";
 
 export default function PercorsiSomatici() {
   const lenis = window.lenis;
@@ -74,7 +80,7 @@ export default function PercorsiSomatici() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="percorsi">
+      <div className="works-grid mobile-hidden" id="percorsi">
         <div className="row" id="first"></div>
         <div className="row" id="second">
           <div className="work-grid-2">
@@ -96,6 +102,32 @@ export default function PercorsiSomatici() {
           </div>
         </div>
         <div className="row" id="sixth"></div>
+      </div>
+      <div className="works-mob desk-hidden" id="percorsi-mob">
+          <div>
+            <img src="/img/percorsi/1-mob.png" alt="img" />
+          </div>
+          <div>
+            <img src={threeTwo} alt="img" />
+          </div>
+          <div>
+            <img src={fourOne} alt="img" />
+          </div>
+          <div>
+          <div>
+            <img src={fourTwo} alt="img" />
+          </div>
+          <div>
+            <img src={fiveOne} alt="img" />
+          </div>
+          <div>
+            <img src={fiveTwo} alt="img" />
+          </div>
+            <img src={threeOne} alt="img" />
+          </div>
+          <div>
+            <img src="/img/percorsi/5-mob.png" alt="img" />
+          </div>
       </div>
       <div className="works-desc-wp next-wp">
         <div>

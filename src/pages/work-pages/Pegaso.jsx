@@ -3,6 +3,10 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import threeOne from "../../img/pegaso/3-1.png";
+import threeTwo from "../../img/pegaso/3-2.png";
+import fourOne from "../../img/pegaso/4-1.png";
+import fourTwo from "../../img/pegaso/4-2.png";
 
 export default function Pegaso() {
   const lenis = window.lenis;
@@ -73,7 +77,7 @@ export default function Pegaso() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="pegaso">
+      <div className="works-grid mobile-hidden" id="pegaso">
       <div className="row" id="first"></div>
         <div className="row" id="second">
           <div className="work-grid-2">
@@ -94,6 +98,29 @@ export default function Pegaso() {
           </div>
         </div>
         <div className="row" id="fifth"></div>
+      </div>
+      <div className="works-mob desk-hidden" id="pegaso-mob">
+          <div>
+            <img src="/img/pegaso/1-mob.png" alt="img" />
+          </div>
+          <div>
+            <img src="/img/pegaso/2-mob.png" alt="img" />
+          </div>
+          <div>
+            <img src={threeOne} alt="img" />
+          </div>
+          <div>
+            <img src={threeTwo} alt="img" />
+          </div>
+          <div>
+            <img src={fourOne} alt="img" />
+          </div>
+          <div>
+            <img src={fourTwo} alt="img" />
+          </div>
+          <div>
+            <img src="/img/pegaso/5-mob.png" alt="img" />
+          </div>
       </div>
       <div className="works-desc-wp next-wp">
         <div>

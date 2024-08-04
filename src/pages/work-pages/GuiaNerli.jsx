@@ -3,6 +3,10 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import threeOne from "../../img/guia/2-1.png";
+import threeTwo from "../../img/guia/2-2.png";
+import fourOne from "../../img/guia/5-1.png";
+import fourTwo from "../../img/guia/5-2.png";
 
 export default function GuiaNerli() {
   const lenis = window.lenis;
@@ -71,7 +75,7 @@ export default function GuiaNerli() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="guia">
+      <div className="works-grid mobile-hidden" id="guia">
         <div className="row" id="first"></div>
         <div className="row" id="second">
           <div className="work-grid-2">
@@ -87,6 +91,29 @@ export default function GuiaNerli() {
             <div></div>
           </div>
         </div>
+      </div>
+      <div className="works-mob desk-hidden" id="guia-mob">
+          <div>
+            <img src="/img/guia/1-mob.png" alt="img" />
+          </div>
+          <div>
+            <img src={threeOne} alt="img" />
+          </div>
+          <div>
+            <img src={threeTwo} alt="img" />
+          </div>
+          <div>
+            <img src="/img/guia/3-mob.png" alt="img" />
+          </div>
+          <div>
+            <img src="/img/guia/4-mob.png" alt="img" />
+          </div>
+          <div>
+            <img src={fourOne} alt="img" />
+          </div>
+          <div>
+            <img src={fourTwo} alt="img" />
+          </div>
       </div>
       <div className="works-desc-wp next-wp">
         <div>

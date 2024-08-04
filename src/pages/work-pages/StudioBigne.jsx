@@ -3,6 +3,12 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import twoOne from "../../img/bigne/2-1.png";
+import twoTwo from "../../img/bigne/2-2.png";
+import fourOne from "../../img/bigne/5-1.png";
+import fourTwo from "../../img/bigne/5-2.png";
+import sixOne from "../../img/bigne/7-2.png";
+import sixTwo from "../../img/bigne/7-1.png";
 
 export default function StudioBigne() {
   const lenis = window.lenis;
@@ -98,7 +104,33 @@ export default function StudioBigne() {
         </div>
       </div>
       <div className="works-mob desk-hidden" id="bigne-mob">
-            
+            <div>
+              <img src="/img/bigne/1.png" alt="img" />
+            </div>
+            <div>
+              <img src={twoOne} alt="img" />
+            </div>
+            <div>
+              <img src={twoTwo} alt="img" />
+            </div>
+            <div>
+              <img src="/img/bigne/3.png" alt="img" />
+            </div>
+            <div>
+              <img src={fourOne} alt="img" />
+            </div>
+            <div>
+              <img src={fourTwo} alt="img" />
+            </div>
+            <div>
+              <img src="/img/bigne/5.png" alt="img" />
+            </div>
+            <div>
+              <img src={sixOne} alt="img" />
+            </div>
+            <div>
+              <img src={sixTwo} alt="img" />
+            </div>
       </div>
       <div className="works-desc-wp next-wp">
         <div>

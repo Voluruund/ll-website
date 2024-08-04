@@ -3,6 +3,10 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import threeOne from "../../img/cesarelampronti/2-1.png";
+import threeTwo from "../../img/cesarelampronti/2-2.png";
+import sixOne from "../../img/cesarelampronti/4-1.png";
+import sixTwo from "../../img/cesarelampronti/4-2.png";
 
 export default function CesareLampronti() {
   const lenis = window.lenis;
@@ -71,9 +75,9 @@ export default function CesareLampronti() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="cesare">
+      <div className="works-grid mobile-hidden" id="cesare">
         <div className="row" id="first">
-            <img src="/img/cesarelampronti/1.png" alt="1" />
+          <img src="/img/cesarelampronti/1.png" alt="1" />
         </div>
         <div className="row" id="second">
           <div className="work-grid-2">
@@ -95,10 +99,33 @@ export default function CesareLampronti() {
         </div>
         <div className="row" id="fifth">
           <div>
-          <img src="/img/cesarelampronti/5-1.png" alt="" />
-          <img src="/img/cesarelampronti/5-2.png" alt="" />
-          <img src="/img/cesarelampronti/5-3.png" alt="" />
+            <img src="/img/cesarelampronti/5-1.png" alt="" />
+            <img src="/img/cesarelampronti/5-2.png" alt="" />
+            <img src="/img/cesarelampronti/5-3.png" alt="" />
           </div>
+        </div>
+      </div>
+      <div className="works-mob desk-hidden" id="cesare-mob">
+        <div>
+          <img src="/img/cesarelampronti/1-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={threeOne} alt="img" />
+        </div>
+        <div>
+          <img src={threeTwo} alt="img" />
+        </div>
+        <div>
+          <img src="/img/cesarelampronti/3-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={sixOne} alt="img" />
+        </div>
+        <div>
+          <img src={sixTwo} alt="img" />
+        </div>
+        <div>
+          <img src="/img/cesarelampronti/5-mob.png" alt="img" />
         </div>
       </div>
       <div className="works-desc-wp next-wp">
