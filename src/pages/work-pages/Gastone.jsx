@@ -3,6 +3,12 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import twoOne from "../../img/gastone/2-1.png";
+import twoTwo from "../../img/gastone/2-2.png";
+import fourOne from "../../img/gastone/4-1.png";
+import fourTwo from "../../img/gastone/4-2.png";
+import fiveOne from "../../img/gastone/5-1.png";
+import fiveTwo from "../../img/gastone/5-2.png";
 
 export default function Gastone() {
   const lenis = window.lenis;
@@ -72,7 +78,7 @@ export default function Gastone() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="gastone">
+      <div className="works-grid mobile-hidden" id="gastone">
         <div className="row" id="first"></div>
         <div className="row" id="second">
           <div className="work-grid-2">
@@ -92,6 +98,32 @@ export default function Gastone() {
             <div></div>
             <div></div>
           </div>
+        </div>
+      </div>
+      <div className="works-mob desk-hidden" id="gastone-mob">
+        <div>
+          <img src="/img/gastone/1-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={twoOne} alt="img" />
+        </div>
+        <div>
+          <img src={twoTwo} alt="img" />
+        </div>
+        <div>
+          <img src="/img/gastone/3-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={fourOne} alt="img" />
+        </div>
+        <div>
+          <img src={fourTwo} alt="img" />
+        </div>
+        <div>
+          <img src={fiveOne} alt="img" />
+        </div>
+        <div>
+          <img src={fiveTwo} alt="img" />
         </div>
       </div>
       <div className="works-desc-wp next-wp">

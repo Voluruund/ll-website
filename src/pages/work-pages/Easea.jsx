@@ -3,6 +3,10 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import threeOne from "../../img/easea/2-1.png";
+import threeTwo from "../../img/easea/2-2.png";
+import fourOne from "../../img/chimera/4-1.png";
+import fourTwo from "../../img/chimera/4-2.png";
 
 export default function Easea() {
   const lenis = window.lenis;
@@ -72,7 +76,7 @@ export default function Easea() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="easea">
+      <div className="works-grid mobile-hidden" id="easea">
         <div className="row" id="first"></div>
         <div className="row" id="second">
           <div className="work-grid-2">
@@ -88,6 +92,29 @@ export default function Easea() {
           </div>
         </div>
         <div className="row" id="fifth"></div>
+      </div>
+      <div className="works-mob desk-hidden" id="easea-mob">
+        <div>
+          <img src="/img/easea/1-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={threeOne} alt="img" />
+        </div>
+        <div>
+          <img src={threeTwo} alt="img" />
+        </div>
+        <div>
+          <img src="/img/easea/2-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={fourOne} alt="img" />
+        </div>
+        <div>
+          <img src={fourTwo} alt="img" />
+        </div>
+        <div>
+          <img src="/img/easea/4-mob.png" alt="img" />
+        </div>
       </div>
       <div className="works-desc-wp next-wp">
         <div>

@@ -3,6 +3,10 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import threeOne from "../../img/viaggi/1-1.png";
+import threeTwo from "../../img/viaggi/1-2.jpg";
+import fourOne from "../../img/viaggi/4-1.png";
+import fourTwo from "../../img/viaggi/4-2.png";
 
 export default function Viaggi() {
   const lenis = window.lenis;
@@ -70,7 +74,7 @@ export default function Viaggi() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="viaggi">
+      <div className="works-grid mobile-hidden" id="viaggi">
         <div className="row" id="first">
           <div className="work-grid-2">
             <div></div>
@@ -86,6 +90,29 @@ export default function Viaggi() {
           </div>
         </div>
         <div className="row" id="fifth"></div>
+      </div>
+      <div className="works-mob desk-hidden" id="viaggi-mob">
+        <div>
+          <img src={threeOne} alt="img" />
+        </div>
+        <div>
+          <img src={threeTwo} alt="img" />
+        </div>
+        <div>
+          <img src="/img/viaggi/2-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src="/img/viaggi/3-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={fourOne} alt="img" />
+        </div>
+        <div>
+          <img src={fourTwo} alt="img" />
+        </div>
+        <div>
+          <img src="/img/viaggi/5-mob.png" alt="img" />
+        </div>
       </div>
       <div className="works-desc-wp next-wp">
         <div>

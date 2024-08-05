@@ -3,6 +3,12 @@ import { useEffect } from "react";
 import Transition from "../../common-comp/Transition";
 import Form from "../../common-comp/form";
 import Footer from "../../common-comp/footer";
+import threeOne from "../../img/agricola/2-1.png";
+import threeTwo from "../../img/agricola/2-2.png";
+import fourOne from "../../img/agricola/4-1.png";
+import fourTwo from "../../img/agricola/4-2.png";
+import sixOne from "../../img/agricola/6-1.png";
+import sixTwo from "../../img/agricola/6-2.png";
 
 export default function Agricola() {
   const lenis = window.lenis;
@@ -71,7 +77,7 @@ export default function Agricola() {
           </p>
         </div>
       </div>
-      <div className="works-grid" id="agricola">
+      <div className="works-grid mobile-hidden" id="agricola">
         <div className="row" id="first"></div>
         <div className="row" id="second">
           <div className="work-grid-2">
@@ -92,6 +98,35 @@ export default function Agricola() {
             <div></div>
             <div></div>
           </div>
+        </div>
+      </div>
+      <div className="works-mob desk-hidden" id="agricola-mob">
+        <div>
+          <img src="/img/agricola/1-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={threeOne} alt="img" />
+        </div>
+        <div>
+          <img src={threeTwo} alt="img" />
+        </div>
+        <div>
+          <img src="/img/agricola/3-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={fourOne} alt="img" />
+        </div>
+        <div>
+          <img src={fourTwo} alt="img" />
+        </div>
+        <div>
+          <img src="/img/agricola/5-mob.png" alt="img" />
+        </div>
+        <div>
+          <img src={sixOne} alt="img" />
+        </div>
+        <div>
+          <img src={sixTwo} alt="img" />
         </div>
       </div>
       <div className="works-desc-wp next-wp">
