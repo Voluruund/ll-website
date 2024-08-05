@@ -2303,7 +2303,7 @@ hr {
   width: 98vw;
   height: 55px;
   background-color: transparent;
-  border: 1px solid #e3e8ec;
+  border: 1px solid var(--default-lilac);
   margin: 0;
   border-radius: 36px;
   touch-action: none;
@@ -2409,6 +2409,7 @@ hr {
   color: var(--secondary-font);
   transition: all 0.2s ease;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 /* TODO */
@@ -2715,6 +2716,11 @@ hr {
   .work-pos-wp {
     display: none;
   }
+
+  .cta-page-switch button{
+    font-size: 6.385vw;
+  }
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2843,11 +2849,23 @@ hr {
     display: block;
   }
 
+  .cta-page-switch{
+    margin: 0 !important;
+  }
+
   .next-wp {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 97vw;
-    margin: 10vh auto;
+    margin: 5vh auto 10vh auto;
+  }
+
+  #myProgress{
+    top: 85vh;
+  }
+
+  #myBar{
+    font-size: 18vw !important;
   }
 
   .works-desc-wp div:nth-child(1) > .work-p {

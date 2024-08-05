@@ -129,7 +129,7 @@ export default function Pegaso() {
             onClick={(e) => delayAndGo(e, "/works/orchestra")}
           >
             <p className="cta-page-switch">
-              <button>Previous</button>
+              <button>Prev</button>
             </p>
           </Link>
           <img src="/img/previous.svg" alt="previous" />

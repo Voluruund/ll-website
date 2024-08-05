@@ -132,7 +132,7 @@ export default function Cavallini() {
             onClick={(e) => delayAndGo(e, "/works/branchetti")}
           >
             <p className="cta-page-switch">
-              <button>Previous</button>
+              <button>Prev</button>
             </p>
           </Link>
           <img src="/img/previous.svg" alt="previous" />

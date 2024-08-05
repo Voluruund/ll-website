@@ -136,7 +136,7 @@ export default function PercorsiSomatici() {
             onClick={(e) => delayAndGo(e, "/works/pegaso")}
           >
             <p className="cta-page-switch">
-              <button>Previous</button>
+              <button>Prev</button>
             </p>
           </Link>
           <img src="/img/previous.svg" alt="previous" />
