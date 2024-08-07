@@ -13,13 +13,15 @@ class mymailer extends PHPMailer
     public function serverSettings()
     {
         //Server settings
+        $mail->SMTPDebug = 2;  
         $this->isSMTP();                                                    //Send using SMTP
-        $this->Host       = 'smtp.gmail.com';                               //Set the SMTP server to send through, if gmail smtp.gmail.com
+        $this->Host       = 'smtps.inherhost.it';                               //Set the SMTP server to send through, if gmail smtp.gmail.com
         $this->SMTPAuth   = true;                                           //Enable SMTP authentication
-        $this->Username   = 'majidalessio@gmail.com';                       //SMTP username of the sender
-        $this->Password   = '';                              //SMTP password of the sender
-        $this->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;                 //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $this->Port       = 587;                                            //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $this->Username   = 'info@lauralavorini.com';                       //SMTP username of the sender
+        $this->Password   = '11ess9S10ore';                              //SMTP password of the sender
+        $this->SMTPSecure = 'ssl';
+        // $this->SMTPSecure = PHPMailer::PHPMailer::ENCRYPTION_SMTPS;                 //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $this->Port       = 465;                                            //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
     }
 
     //function that sets the recipients of the mail. You can add as many users as you want
@@ -27,7 +29,7 @@ class mymailer extends PHPMailer
     {   
         //Recipients
         $this->setFrom ($data["email"]["Email"]);                     //from
-        $this->addAddress ('majidalessio@gmail.com');                    //to
+        $this->addAddress ('info@lauralavorini.com');                    //to
         $this->addReplyTo ($data["email"]["Email"]);                  //reply to
     }
 
@@ -45,6 +47,7 @@ class mymailer extends PHPMailer
     {
         try
         {
+            echo "Messaggio inviato.";
             $mail=new mymailer(true);                                               //new istance of mymailer obj
             $mail->serverSettings();
             $mail->setRecipients($data);
@@ -59,8 +62,18 @@ class mymailer extends PHPMailer
         }
     }
 }
-$data=file_get_contents("php://input");
-$data= json_decode($data, true);
-$mail=new mymailer(true);
-$mail->sendEmail($data);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Processa i dati del form
+    $response = ['status' => 'success', 'message' => 'Form submitted successfully'];
+    header('Content-Type: application/json');
+    echo json_encode($response);
+
+    $data=file_get_contents("php://input");
+    $data= json_decode($data, true);
+    $mail=new mymailer(true);
+    $mail->sendEmail($data);
+    exit;
+}
+
 ?>

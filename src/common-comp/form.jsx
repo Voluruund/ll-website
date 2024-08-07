@@ -1,6 +1,38 @@
 import {StrictMode} from 'react';
 import ConfirmButton from './confirmButton';
-import {invioEmail} from '../emailer.js'
+// import {invioEmail} from '../emailer.js'
+import $ from 'jquery';
+
+//API email
+function invioEmail(){
+    $(document).on('click','#submit',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+      let postData = {
+        "Nome": $("#name").val(),
+        "Email" : $("#email").val(),
+        "Content" : $("#content").val(),
+      } ;
+      //asynchronous http request
+      $.ajax({
+        url: "/php/email.php",
+        type: "POST",
+        dataType: "json",
+        data: JSON.stringify({"email": postData}),
+        accept: "*/*",
+        processData: false,
+        success: function(data)
+        {  
+          console.log(postData)
+          console.log(data);
+        },
+        error: function(errorThrown)
+        {
+          console.log( errorThrown);
+        }
+    });
+  });
+}
 
 export default function Form(){
 
