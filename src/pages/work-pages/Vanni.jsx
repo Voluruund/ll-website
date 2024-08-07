@@ -39,7 +39,7 @@ export default function Vanni() {
           <p className="work-p">Domizia Vanni</p>
           <p className="work-subtitle mt-20">UX Design / Web Design</p>
           <p className="work-subtitle mt-20">2023</p>
-          <div className="work-cta-container">
+          <div className="work-cta-container mobile-hidden">
             <a className="button-outline button--atlas-outline" id="footer-cta" href="https://domiziavanni.com/" target="BLANK">
               <span>Visit Website</span>
               <div className="marqueebutton-outline" aria-hidden="true">
@@ -68,6 +68,28 @@ export default function Vanni() {
             colorful outfits created by Domizia. This create a clear structure
             enhanced with subtle animations. This is Domizia Vanni.
           </p>
+        </div>
+        <div className="rel desk-hidden">
+        <div className="work-cta-container">
+            <a className="button-outline button--atlas-outline" id="footer-cta" href="https://domiziavanni.com/" target="BLANK">
+              <span>Visit Website</span>
+              <div className="marqueebutton-outline" aria-hidden="true">
+                <div className="marquee__inner-outline">
+                  <span>Visit Website</span>
+                  <span>Visit Website</span>
+                  <span>Visit Website</span>
+                  <span>Visit Website</span>
+                  <span>Visit Website</span>
+
+                  <span>Visit Website</span>
+                  <span>Visit Website</span>
+                  <span>Visit Website</span>
+                  <span>Visit Website</span>
+                  <span>Visit Website</span>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
       <div className="works-grid mobile-hidden" id="vanni">

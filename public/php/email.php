@@ -13,14 +13,14 @@ class mymailer extends PHPMailer
     public function serverSettings()
     {
         //Server settings
-        $mail->SMTPDebug = 2;  
+        // $mail->SMTPDebug = 2;  
         $this->isSMTP();                                                    //Send using SMTP
         $this->Host       = 'smtps.inherhost.it';                               //Set the SMTP server to send through, if gmail smtp.gmail.com
         $this->SMTPAuth   = true;                                           //Enable SMTP authentication
         $this->Username   = 'info@lauralavorini.com';                       //SMTP username of the sender
         $this->Password   = '11ess9S10ore';                              //SMTP password of the sender
-        $this->SMTPSecure = 'ssl';
-        // $this->SMTPSecure = PHPMailer::PHPMailer::ENCRYPTION_SMTPS;                 //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        //$this->SMTPSecure = 'ssl';
+        $this->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;                 //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $this->Port       = 465;                                            //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
     }
 

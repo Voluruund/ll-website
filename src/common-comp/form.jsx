@@ -46,9 +46,9 @@ export default function Form(){
                         <p className="title-form mobile-hidden">Email</p>
                         <p className="title-form mobile-hidden">Object</p>
                         <p className="title-form ml-10 mobile-hidden">Send</p>
-                        <input type="text" className="form-item" placeholder='Nome' id='name' name='nome'/>
+                        <input type="text" className="form-item" placeholder='Nome' id='name' name='name'/>
                         <input type="email" className="form-item" placeholder='Email'id='email' name='email'/>
-                        <input type="text" className="form-item" placeholder='Messaggio' id='content' name='messaggio'/>
+                        <input type="text" className="form-item" placeholder='Messaggio' id='content' name='content'/>
                         <button className="form-button ml-10 mobile-hidden" id='submit' onClick={invioEmail()}>
                             <span className="material-symbols-outlined">arrow_forward</span>
                         </button>
