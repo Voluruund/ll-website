@@ -1,27 +1,6 @@
 import {StrictMode} from 'react';
 import ConfirmButton from './confirmButton';
-
-function invia(){
-    var email = document.getElementById("email");
-    var nome = document.getElementById("nome");
-    var messaggio = document.getElementById("messaggio");
-    if ((email === "") || (email === "undefined")) {
-        alert("Inserire un indirizzo email valido.");
-        // document.modulo.email.focus();
-    }
-    else if ((nome === "") || (nome === "undefined")) {
-        alert("Inserire un nome.");
-        // document.modulo.nome.focus();
-    }
-    else if ((messaggio === "") || (messaggio === "undefined")) {
-        alert("Inserire un messaggio.");
-        // document.modulo.messaggio.focus();
-    }
-    else {
-        // window.location.href = "mailto:" + email + "?Subject=" + nome + "&Body=" + messaggio;
-        console.log("inviato")
-    }
-}
+import {invioEmail} from '../emailer.js'
 
 export default function Form(){
 
@@ -35,10 +14,10 @@ export default function Form(){
                         <p className="title-form mobile-hidden">Email</p>
                         <p className="title-form mobile-hidden">Object</p>
                         <p className="title-form ml-10 mobile-hidden">Send</p>
-                        <input type="text" className="form-item" placeholder='Nome' id='nome' name='nome'/>
+                        <input type="text" className="form-item" placeholder='Nome' id='name' name='nome'/>
                         <input type="email" className="form-item" placeholder='Email'id='email' name='email'/>
-                        <input type="text" className="form-item" placeholder='Messaggio' id='messaggio' name='messaggio'/>
-                        <button className="form-button ml-10 mobile-hidden" onClick={invia()}>
+                        <input type="text" className="form-item" placeholder='Messaggio' id='content' name='messaggio'/>
+                        <button className="form-button ml-10 mobile-hidden" id='submit' onClick={invioEmail()}>
                             <span className="material-symbols-outlined">arrow_forward</span>
                         </button>
                     </div>
@@ -53,6 +32,7 @@ export default function Form(){
                 </div> */}
                 <ConfirmButton />
             </section>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         </StrictMode>
     )
 }
